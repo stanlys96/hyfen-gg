@@ -7,16 +7,6 @@ import Image from 'next/image'
 function HeroHyfenPlay() {
 
 	const { t } = useTranslation()
-	const [windowWidth, setWindowWidth] = useState(0);
-	let resizeWindow = () => {
-	  setWindowWidth(window.innerWidth);
-	};
-  
-	useEffect(() => {
-	  resizeWindow();
-	  window.addEventListener("resize", resizeWindow);
-	  return () => window.removeEventListener("resize", resizeWindow);
-	}, []);
 	return (
 		<div className='container mx-auto pt-24 pb-24 md:pb-0 lg:pt-0 relative grid grid-cols-1 md:grid-cols-2 gap-x-10 justify-around md:flex-row'>
 			<div className="lg:mt-0">

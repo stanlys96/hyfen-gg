@@ -12,10 +12,10 @@ function HeroHyfenTools() {
 			<div className="lg:mt-0">
 				<div className='lg:pt-40'>
 					<Fade top>
-						<h1 className='md:text-5xl lg:text-6xl text-center lg:text-left font-bold hyfen-play-gradient'>
+						<h1 className='md:text-5xl lg:text-[96px] text-center lg:text-left font-bold hyfen-play-gradient mb-5'>
 							{t('Hyfen Tools')}
 						</h1>
-						<h1 className='text-2xl md:text-3xl lg:text-4xl text-center lg:text-left font-bold'>
+						<h1 className='text-xl lg:text-4xl lg:text-4xl text-center lg:text-left font-bold'>
 							{t('Manage Guild')}
 						</h1>
 					</Fade>
@@ -26,7 +26,7 @@ function HeroHyfenTools() {
 					>
 						<div className="flex justify-center lg:block">
 							<a href="#" className='w-fit header__download-button text-slate-900 bg-white py-3 px-6 inline-block text-xs md:text-sm font-bold cursor-pointer mt-5 flex items-center'>
-								<span className="inline-block mr-2">{t('Apply Here')} </span>
+								<span className="inline-block mr-2">{t('Onboard Your Guild')} </span>
 								<Image
 									src={`/images/arrow_right.svg`}
 									className='ml-5'

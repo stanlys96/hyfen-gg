@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import useTranslation from 'next-translate/useTranslation'
 import Fade from 'react-reveal/Fade';
 import ScrollDown from '../Common/ScrollDown'
@@ -7,15 +7,25 @@ import Image from 'next/image'
 function HeroHyfenPlay() {
 
 	const { t } = useTranslation()
+	const [windowWidth, setWindowWidth] = useState(0);
+	let resizeWindow = () => {
+	  setWindowWidth(window.innerWidth);
+	};
+  
+	useEffect(() => {
+	  resizeWindow();
+	  window.addEventListener("resize", resizeWindow);
+	  return () => window.removeEventListener("resize", resizeWindow);
+	}, []);
 	return (
 		<div className='container mx-auto pt-24 pb-24 md:pb-0 lg:pt-0 relative grid grid-cols-1 md:grid-cols-2 gap-x-10 justify-around md:flex-row'>
 			<div className="lg:mt-0">
 				<div className='lg:pt-40'>
 					<Fade top>
-						<h1 className='md:text-5xl lg:text-6xl text-center lg:text-left font-bold hyfen-play-gradient'>
+						<h1 className='text-4xl md:text-7xl text-center lg:text-left font-bold hyfen-play-gradient'>
 							{t('hyfen-play:Hyfen Play')}
 						</h1>
-						<h1 className='text-2xl md:text-3xl lg:text-4xl text-center lg:text-left font-bold'>
+						<h1 className='text-2xl md:text-4xl lg:text-4xl text-center lg:text-left font-bold'>
 							{t('hyfen-play:Earn Money')}
 						</h1>
 					</Fade>
@@ -69,7 +79,7 @@ function HeroHyfenPlay() {
 			<Fade right delay={600}>
 				<div className='inline-block relative h-1/2 lg:ml-0 max-w-[1440px] md:pt-12 h-[510px] md:h-[605px] flex justify-center items-center'>
 					<img 
-						src="/images/hyfen-play/hyfen-play-img.svg" 
+						src={`/images/hyfen-play/hyfen-play-img.svg`} 
 						alt="image" 
 						className='h-full w-full'
 					/>

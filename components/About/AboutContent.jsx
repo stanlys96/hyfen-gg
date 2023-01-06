@@ -11,7 +11,7 @@ function AboutContent() {
             <div className="container mx-auto">
                 <div className="grid grid-cols-1 md:grid-cols-4">
                     <Fade left>
-                        <p className="col-span-1 text-4xl text-center md:text-left mb-10 md:mb-0">{t('About')}</p>
+                        <p className="col-span-1 text-3xl text-center md:text-left mb-10 md:mb-0">{t('About')}</p>
                     </Fade>
                     <Fade right>
                         <div className="col-span-1 md:col-span-3">
@@ -23,7 +23,7 @@ function AboutContent() {
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-4 mt-20">
                     <Fade left>
-                        <p className="text-4xl col-span-1 text-center md:text-left">{t('Investors')}</p>
+                        <p className="text-3xl col-span-1 text-center md:text-left">{t('Investors')}</p>
                     </Fade>
                     <div className="col-span-1 md:col-span-3 grid grid-cols-2 md:grid-cols-3 gap-6">
                     {

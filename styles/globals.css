@@ -753,7 +753,7 @@ footer .copyright {
 }
 
 .easiest-way-title {
-	@apply text-xl md:text-4xl font-bold;
+	@apply font-bold;
 }
 
 .scroll-down {
@@ -1172,4 +1172,17 @@ opacity: 0.3;
 	background: url('/images/carousel/phone-bg.svg') no-repeat;
 	background-size: cover;
 	background-position: center;
+}
+
+.interested-in-img {
+	border-top-right-radius: 25px;
+	border-bottom-right-radius: 25px;
+}
+
+@media (max-width: 767px) {
+	.interested-in-img {
+		border-top-right-radius: 0;
+		border-bottom-right-radius: 25px;
+		border-bottom-left-radius: 25px;
+	}
 }

@@ -20,8 +20,8 @@ function ContactContent() {
                                     quality={100}
                                     key={i}
                                 />
-                                <p className="font-bold text-2xl my-5">{t(item.code)}</p>
-                                <p className="text-base">{t(item.code + '-desc')}</p>
+                                <p className="font-bold text-xl md:text-2xl my-5">{t(item.code)}</p>
+                                <p className="text-sm md:text-base">{t(item.code + '-desc')}</p>
                             </div>
                         </Fade>
                      ))

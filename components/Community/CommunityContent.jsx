@@ -22,8 +22,8 @@ function CommunityContent() {
                         </Fade>
                         <Fade right={i % 2 === 0} left={i % 2 !== 0} delay={i * 250}>
                             <div className={`flex flex-col justify-center w-full md:w-1/2 ${i % 2 != 0 ? "md:mr-10" : "md:ml-10"}`}>
-                                <p className="text-2xl">{t(item.code)}</p>
-                                <p className="text-base mt-6">{t(item.code + '-desc')}</p>
+                                <p className="text-xl md:text-2xl">{t(item.code)}</p>
+                                <p className="text-sm md:text-base mt-6">{t(item.code + '-desc')}</p>
                             </div>
                         </Fade>
                     </div>
@@ -32,7 +32,7 @@ function CommunityContent() {
                     <Fade right delay={150}>
                         <img
                             src={`/images/community/Interested In.png`}
-                            className='block w-full md:w-1/2'
+                            className='block w-full md:w-1/2 interested-in-img'
                             alt='BaseLogo'
                             height="100%"
                             quality={100}
@@ -40,8 +40,8 @@ function CommunityContent() {
                     </Fade>
                     <Fade left delay={250}>
                         <div className={`py-5 md:py-0 flex flex-col justify-center items-start w-full md:w-1/2 md:mr-10 pl-10 md:pl-0`}>
-                            <p className="text-2xl">{t('Interested In')}</p>
-                            <p className="text-base mt-6">{t('Gain Experience')}</p>
+                            <p className="text-xl md:text-2xl">{t('Interested In')}</p>
+                            <p className="text-sm md:text-base mt-6">{t('Gain Experience')}</p>
                             <a href="#" className='header__download-button text-slate-900 bg-white py-3 px-6 inline-block text-xs md:text-sm font-bold cursor-pointer mt-5 flex items-center'>
                                 <span className="inline-block mr-2">{t('Apply Here')} </span>
                                 <Image

@@ -111,12 +111,14 @@ export default function ExploreGames() {
         className='gamefi pt-[93px] pb-[200px] overflow-hidden'
     >
         <Fade top>
-            <h2 className='text-5xl text-center mb-5 font-bold'>
-                {t('home:Explore New Games')}
-            </h2>
-            <h2 className='text-xl text-center'>
-                {t('home:Immerse Yourself')}
-            </h2>
+			<div className="container mx-auto">
+				<h2 className='text-2xl md:text-5xl text-center mb-5 font-bold'>
+					{t('home:Explore New Games')}
+				</h2>
+				<h2 className='text-base md:text-xl text-center'>
+					{t('home:Immerse Yourself')}
+				</h2>
+			</div>
         </Fade>
 		<Fade top>
 			<div className="custom-carousel mt-[150px] 2xl:container 2xl:mx-auto">

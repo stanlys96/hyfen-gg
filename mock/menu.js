@@ -67,14 +67,7 @@ export const menus = [
 	{
 		id: 4,
 		title: 'Support',
-		link: '/whitepaper',
-		submenu: [
-			{
-				id: 1,
-				title: "Contact Us",
-				link: "#"
-			}
-		],
-		disable: true
+		link: '/contact',
+		disable: false
 	}
 ]

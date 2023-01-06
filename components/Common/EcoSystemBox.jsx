@@ -18,6 +18,7 @@ const EcoSystemBox = ({
 
   const titleSize = useMemo(() => {
     if (size === "lg") return "text-base md:text-xl"
+    if (size === "fairFunSimple") return "text-xl md:text-3xl"
     return "text-base"
   }, [size])
 
@@ -40,7 +41,7 @@ const EcoSystemBox = ({
             quality={100}
           />
         </span>
-        <h5 className={`${titleSize} font-bold uppercase`}>{title}</h5>
+        <h5 className={`${titleSize} font-bold`}>{title}</h5>
         <p className={`${descriptionSize} mt-4 opacity-80`}>
           {description}
         </p>

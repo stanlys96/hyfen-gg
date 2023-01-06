@@ -23,6 +23,7 @@ export default function FairFunSimple() {
 								description={`${t(item.code + "-desc")}`}
 								title={t(item.code)}
                                 withBorder={true}
+								size="fairFunSimple"
 							/>
 						</Fade>
 					))}

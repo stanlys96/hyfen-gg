@@ -32,11 +32,11 @@ export default function EasiestWay() {
     >
         <Fade top>
 			<div className="text-center md:text-left">
-				<h2 className='easiest-way-title easiest-way-gradient inline-block mx-auto'>
+				<h2 className='text-3xl md:text-6xl easiest-way-title easiest-way-gradient inline-block mx-auto'>
 					{t('home:easiest_way')}
 				</h2>
 			</div>
-            <h2 className='easiest-way-title text-center md:text-left'>
+            <h2 className='text-3xl md:text-6xl easiest-way-title text-center md:text-left'>
                 {t('home:play_crypto')}
             </h2>
         </Fade>
@@ -54,8 +54,8 @@ export default function EasiestWay() {
 							width={100}
 							quality={100}
 						/>
-						<p className={`${item.className} font-bold py-4 text-2xl`}>{item.title}</p>
-						<p className="text-base">{item.description}</p>
+						<p className={`${item.className} font-bold py-4 text-xl md:text-2xl`}>{item.title}</p>
+						<p className="text-sm md:text-base">{item.description}</p>
 					</div>
 				</Fade>
 			))}

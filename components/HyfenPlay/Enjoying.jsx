@@ -71,7 +71,7 @@ function Enjoying() {
 	return (
 		<div className='container mx-auto mb-[40] enjoying-wrap pb-[180px]'>
 			<Fade left>
-				<p className='text-xl sm:text-3xl md:text-40 text-center md:text-left font-bold'>{t('See How Other Players are')} {t('Enjoying')} {t('Blockchain Games')}</p>
+				<p className='text-3xl md:text-5xl md:text-40 text-center md:text-left font-bold'>{t('See How Other Players are')} {t('Enjoying')} {t('Blockchain Games')}</p>
 			</Fade>
 			<div className='mt-[20px] md:mt-[50px]'>
 				<Fade bottom>
@@ -87,13 +87,13 @@ function Enjoying() {
                                         height={256}
                                         className='rounded-[30px]'
                                     />
-                                    <p className='mt-7'>
+                                    <p className='mt-7 md:text-xl text-base'>
                                         “{t(item.author)}“
                                     </p>
                                     <div className='flex text-blue text-sm md:text-base mt-3'>
                                         <p className='mr-3'>-</p>
                                         <span>
-                                            <a className='color-blue'>{item.author} </a>
+                                            <a className='color-blue text-sm md:text-base'>{item.author} </a>
                                         </span>
                                     </div>
                                 </div>

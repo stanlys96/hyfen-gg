@@ -7,7 +7,7 @@ import Collapse from './Collapse'
 import Link from 'next/link'
 import { Social } from './Social'
 import useTranslation from 'next-translate/useTranslation'
-import { mediaSocialsData1, mediaSocialsData2 } from 'mock/socials'
+import { mediaSocialsData1, mediaSocialsData2 } from '../../mock/socials'
 
 export default function SideDrawer({ open, handleClose }) {
 	const menuDrawer = [...menus]

@@ -4,7 +4,7 @@ import { Fade } from 'react-reveal'
 import { Social } from './Social'
 import Link from 'next/link'
 import useTranslation from 'next-translate/useTranslation'
-import { mediaSocialsData1, mediaSocialsData2 } from 'mock/socials'
+import { mediaSocialsData1, mediaSocialsData2 } from '../../mock/socials'
 
 const Footer = ({ bgColor }) => {
 	"Home", "Player", "Guild", "Terms and Conditions", "Privacy Policy", "Contact"

@@ -1,7 +1,7 @@
 import React from 'react'
 import useTranslation from 'next-translate/useTranslation'
 import Image from 'next/image'
-import { contactSupportData } from 'mock/contact'
+import { contactSupportData } from '../../mock/contact'
 import { Fade } from 'react-reveal'
 
 function ContactContent() {

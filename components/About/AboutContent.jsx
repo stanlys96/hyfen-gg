@@ -1,7 +1,7 @@
 import React from 'react'
 import useTranslation from 'next-translate/useTranslation'
 import Image from 'next/image'
-import { investorsData } from 'mock/about'
+import { investorsData } from '../../mock/about'
 import { Fade } from 'react-reveal'
 
 function AboutContent() {

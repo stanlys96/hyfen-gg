@@ -3,7 +3,7 @@ import EcoSystemBox from '../Common/EcoSystemBox'
 import Section from '../Common/Section'
 import React from 'react'
 import { Fade } from 'react-reveal';
-import { secureInstantReliable } from 'mock/hyfen-tools';
+import { secureInstantReliable } from '../../mock/hyfen-tools';
 
 export default function SecureInstantReliable() {
 	const { t } = useTranslation('hyfen-tools')

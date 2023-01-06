@@ -1,7 +1,7 @@
 import React from 'react'
 import useTranslation from 'next-translate/useTranslation'
 import Image from 'next/image'
-import { communitySocials } from 'mock/community'
+import { communitySocials } from '../../mock/community'
 import { Fade } from 'react-reveal'
 
 function HeroCommunity() {

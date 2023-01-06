@@ -3,7 +3,7 @@ import EcoSystemBox from '../Common/EcoSystemBox'
 import Section from '../Common/Section'
 import React from 'react'
 import { Fade } from 'react-reveal';
-import { fairFunSimpleData } from 'mock/hyfen-play';
+import { fairFunSimpleData } from '../../mock/hyfen-play';
 
 export default function FairFunSimple() {
 	const { t } = useTranslation('hyfen-play')

@@ -238,7 +238,7 @@ function Header({ fixed = true }) {
 							</ul>
 						</nav>
 					</div>
-					<SideDrawer handleClose={() => setOpen(false)} open={open} />
+					<SideDrawer setOpen={setOpen} handleClose={() => setOpen(false)} open={open} />
 				</div>
 			</div>
 		</div>

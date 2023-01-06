@@ -8,19 +8,22 @@ import Link from 'next/link'
 import { Social } from './Social'
 import useTranslation from 'next-translate/useTranslation'
 import { mediaSocialsData1, mediaSocialsData2 } from '../../mock/socials'
+import { useRouter } from 'next/router'
 
-export default function SideDrawer({ open, handleClose }) {
+export default function SideDrawer({ open, handleClose, setOpen }) {
+	const router = useRouter();
 	const menuDrawer = [...menus]
 	const { t, lang } = useTranslation('common')
+	console.log(router.pathname, "<<<");
 
 	return (
 		open && (
 			<div className='sidebar fixed w-screen h-screen bg-black-100 top-0 left-0 z-50 text-lg'>
-				<div className='sidebar-header flex justify-between py-[23px] px-[20px]'>
-					<div className=''>
+				<div className='sidebar-header flex justify-between py-2 pl-[20px] pr-[30px]'>
+					<div className='flex items-center justify-center'>
 						<Link href='/' passHref>
 							<div
-								className='inline-block relative w-[145px] h-[44px]'
+								className='flex justify-center items-center relative w-[145px] h-[44px]'
 							>
 							<Image
 								src='/images/hyfenlogo.svg'
@@ -34,7 +37,7 @@ export default function SideDrawer({ open, handleClose }) {
 							</div>
 						</Link>
 					</div>
-					<div onClick={handleClose}>
+					<div className="flex justify-center items-center" onClick={handleClose}>
 						<div className='pr-3'>
 							<Image
 								src='/images/handleClose.png'
@@ -78,7 +81,9 @@ export default function SideDrawer({ open, handleClose }) {
 													<li key={submenu.id}>
 														<ActiveLink href={submenu.link}>
 															<div className="flex items-center">
-																<a className={`text-left block px-10 py-3 lg:text-lg text-sm ${submenu.active && 'cursor-pointer hover:text-blue'} ${!submenu.active && "text-white-50 cursor-default"}`}>
+																<a onClick={() => {
+																	if (router.pathname === submenu.link) setOpen(false)
+																}} className={`text-left block px-10 py-3 lg:text-lg text-sm ${router.pathname === submenu.link && "text-blue"} ${submenu.active && 'cursor-pointer hover:text-blue'} ${!submenu.active && "text-white-50 cursor-default"}`}>
 																	{/* {t(submenu.title)} */}
 																	{t(submenu.title)}
 																</a>
@@ -112,7 +117,9 @@ export default function SideDrawer({ open, handleClose }) {
 								) : (
 									<ActiveLink href={menu.link} disabled={menu.disable} passHref activeClassName='flex items-start'>
 										<div>
-											<a className='block py-5 text-left px-10 lg:text-lg text-sm cursor-pointer hover:text-blue'>{t(menu.title)}</a>
+											<a onClick={() => {
+												if (router.pathname === menu.link) setOpen(false)
+											}} className={`block py-5 text-left px-10 lg:text-lg text-sm cursor-pointer ${router.pathname === menu.link && "text-blue"} hover:text-blue`}>{t(menu.title)}</a>
 											<hr />
 										</div>
 									</ActiveLink>
@@ -224,7 +231,7 @@ export default function SideDrawer({ open, handleClose }) {
 						height={20} 
 					/>
 					<Social
-						className="grid grid-cols-3 lg:grid-cols-4 px-10 md:px-0 text-center lg:text-left pt-2"
+						className="grid grid-cols-3 lg:grid-cols-4 px-10 md:px-0 text-center lg:text-left"
 						width={20}
 						height={20}
 						mediaSocialsData={mediaSocialsData2}

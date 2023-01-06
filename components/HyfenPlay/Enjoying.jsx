@@ -78,7 +78,7 @@ function Enjoying() {
 					<Slider {...settings}>
                         {
                             peopleTestimonials.map((item, i) => (
-                                <div className='p-3 text-base md:text-lg'>
+                                <div key={i} className='p-3 text-base md:text-lg'>
                                     <Image
                                         src={`/images/hyfen-play/${item.author}.svg`}
                                         alt='appstore'

@@ -6,7 +6,8 @@ export const Social = ({ width = 17, height = 17, className, mediaSocialsData })
 		<div className={cx(className)}>
 			{
 				mediaSocialsData.map((item, i) => (
-					<a
+					<a 
+						key={i}
 						href={`${item.link}`}
 						className='icon-social inline-block'
 						target='_blank'

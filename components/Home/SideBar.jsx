@@ -2,9 +2,7 @@ import React from 'react'
 import useTranslation from 'next-translate/useTranslation'
 import Fade from 'react-reveal/Fade';
 import ScrollDown from '../Common/ScrollDown'
-import HomeBanner from './HomeBanner';
 import Image from 'next/image'
-import Link from 'next/link';
 
 function SideBar() {
 

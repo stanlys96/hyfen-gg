@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import Slider from 'react-slick'
 import useTranslation from 'next-translate/useTranslation'
 import Fade from 'react-reveal/Fade';
-import Image from 'next/image'
-import { useMediaQuery } from 'react-responsive';
 
 export default function ExploreGames() {
     const { t } = useTranslation('home')
@@ -92,10 +89,8 @@ export default function ExploreGames() {
 	  ];
 
 	  const [windowWidth, setWindowWidth] = useState(0);
-	  const [windowHeight, setWindowHeight] = useState(0);
 	  let resizeWindow = () => {
 		setWindowWidth(window.innerWidth);
-		setWindowHeight(window.innerHeight);
 	  };
 	
 	  useEffect(() => {
@@ -142,7 +137,9 @@ export default function ExploreGames() {
 					className += windowWidth > 768 ? " width-38" : " width-75";
 
 					return (
-						<a onClick={() => {
+						<a
+							key={i}
+						 	onClick={() => {
 							setIndex(i);
 							clearTimeout(timeoutId);
 						}}>

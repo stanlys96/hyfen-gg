@@ -11,7 +11,7 @@ function ContactContent() {
             <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-y-10 md:gap-x-10">
                 {
                     contactSupportData.map((item, i) => (
-                        <Fade top delay={i == 0 ? 0 : 200 * i}>
+                        <Fade key={i} top delay={i == 0 ? 0 : 200 * i}>
                             <div className="text-center contact-content-box">                
                                 <Image
                                     src={`/images/${item.imageUrl}`}

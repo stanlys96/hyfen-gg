@@ -16,8 +16,8 @@ function HeroCommunity() {
                 </Fade>
                 <div className="community-socials grid grid-cols-3 gap-y-10 md:gap-y-0 md:grid-cols-6">
                     {communitySocials.map((item, i) => (
-                        <Fade right delay={i == 0 ? 100 : i * 200}>
-                            <div key={i} className="community-social-container cursor-pointer">
+                        <Fade key={i} right delay={i == 0 ? 100 : i * 200}>
+                            <div className="community-social-container cursor-pointer">
                                 <Image
                                     src={`/images/social/${item.imageUrl}`}
                                     className='py-2'

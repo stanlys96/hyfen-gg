@@ -106,8 +106,8 @@ function Header({ fixed = true }) {
 													`}
 														aria-labelledby="dropdownMenuButton2"
 													>
-														{menu.submenu.map((submenu) => (
-															<DropdownItem additionalClassName={submenu.active && "hover:bg-gray-100"}>
+														{menu.submenu.map((submenu, i) => (
+															<DropdownItem key={i} additionalClassName={submenu.active && "hover:bg-gray-100"}>
 																<a href={submenu.link} className={`${submenu.active ? "" : "text-black-50 cursor-default"} font-bold`}>{t(submenu.title)}</a>
 															</DropdownItem>
 														))}

@@ -9,7 +9,7 @@ export default function TermsAndConditions() {
             <div>
                 <h1 className='text-2xl font-bold'>Terms and Conditions</h1>
                 <p>These Terms govern.</p>
-                <ul class="list-disc">
+                <ul className="list-disc">
                 <li>the use of this Application, and,</li>
                 <li>any other related Agreement or legal relationship with the Owner</li>
                 </ul>
@@ -21,8 +21,8 @@ export default function TermsAndConditions() {
                 <p>Quijano Chambers</p>
                 <p>P.O. Box 3159, Road Town, Tortola</p>
                 <p>British Virgin Islands.</p>
-                <p>"This Application" refers to</p>
-                <ul class="list-disc">
+                <p>&quot;This Application&quot; refers to</p>
+                <ul className="list-disc">
                 <li>this website, including its subdomains and any other website through which the Owner makes its Service available;</li>
                 <li>applications for mobile, tablet and other smart device systems;</li>
                 <li>the Application Program Interfaces (API);</li>
@@ -34,7 +34,7 @@ export default function TermsAndConditions() {
                 <p>Unless otherwise specified, the terms of use detailed in this section apply generally when using this Application.</p>
                 <p>Single or additional conditions of use or access may apply in specific scenarios and in such cases are additionally indicated within this document.</p>
                 <p>By using this Application, Users confirm to meet the following requirements:</p>
-                <ul class="list-disc">
+                <ul className="list-disc">
                 <li>There are no restrictions for Users in terms of being Consumers or Business Users;</li>
                 <li>Users must be older than 17;</li>
                 <li>Users aren’t located in a country that is subject to a U.S. Government embargo, or that has been designated by the U.S. Government as a “terrorist-supporting” country;</li>
@@ -51,7 +51,7 @@ export default function TermsAndConditions() {
                 <div className='mb-2'>
                 <h2>Conditions for account registration</h2>
                 <p>Registration of User accounts on this Application is subject to the conditions outlined below. By registering, Users agree to meet such conditions.</p>
-                <ul class="list-disc">
+                <ul className="list-disc">
                     <li>Accounts registered by bots or any other automated methods are not permitted.</li>
                     <li>Unless otherwise specified, each User must register only one account.</li>
                     <li>Unless explicitly permitted, a User account may not be shared with other persons.</li>
@@ -60,7 +60,7 @@ export default function TermsAndConditions() {
                 <div className='mb-2'>
                 <h2>Account termination</h2>
                 <p>Users can terminate their account and stop using the Service at any time by doing the following:</p>
-                <ul class="list-disc">
+                <ul className="list-disc">
                     <li>By using the tools provided for account termination on this Application.</li>
                     <li>By directly contacting the Owner at the contact details provided in this document.</li>
                 </ul>
@@ -81,7 +81,7 @@ export default function TermsAndConditions() {
                 <h2>Rights regarding content on this Application - All rights reserved</h2>
                 <p>The Owner holds and reserves all intellectual property rights for any such content.</p>
                 <p>Users may not therefore use such content in any way that is not necessary or implicit in the proper use of the Service.</p>
-                <p>In particular, but without limitation, Users may not copy, download, share (beyond the limits set forth below), modify, translate, transform, publish, transmit, sell, sublicense, edit, transfer/assign to third parties or create derivative works from the content available on this Application, nor allow any third party to do so through the User or their device, even without the User's knowledge.</p>
+                <p>In particular, but without limitation, Users may not copy, download, share (beyond the limits set forth below), modify, translate, transform, publish, transmit, sell, sublicense, edit, transfer/assign to third parties or create derivative works from the content available on this Application, nor allow any third party to do so through the User or their device, even without the User&apos;s knowledge.</p>
                 <p>Where explicitly stated on this Application, the User may download, copy and/or share some content available through this Application for its sole personal and non-commercial use and provided that the copyright attributions and all the other attributions requested by the Owner are correctly implemented.</p>
                 <p>Any applicable statutory limitation or exception to copyright shall stay unaffected.</p>
                 </div>
@@ -100,7 +100,7 @@ export default function TermsAndConditions() {
                 <h2>Liability for provided content</h2>
                 <p>Users are solely liable for any content they upload, post, share, or provide through this Application. Users acknowledge and accept that <strong>the Owner does not filter or moderate such content.</strong></p>
                 <p>However, the Owner reserves the right to remove, delete, block or rectify such content at its own discretion and to, without prior notice, deny the uploading User access to this Application:</p>
-                <ul class="list-disc">
+                <ul className="list-disc">
                     <li>if any complaint based on such content is received;</li>
                     <li>if a notice of infringement of intellectual property rights is received;</li>
                     <li>upon order of a public authority; or</li>
@@ -125,7 +125,7 @@ export default function TermsAndConditions() {
                 <p>This Application and the Service may only be used within the scope of what they are provided for, under these Terms and applicable law.</p>
                 <p>Users are solely responsible for making sure that their use of this Application and/or the Service violates no applicable law, regulations or third-party rights.</p>
                 <p>Therefore, the Owner reserves the right to take any appropriate measure to protect its legitimate interests including by denying Users access to this Application or the Service, terminating contracts, reporting any misconduct performed through this Application or the Service to the competent authorities – such as judicial or administrative authorities - whenever Users engage or are suspected to engage in any of the following activities:</p>
-                <ul class="list-disc">
+                <ul className="list-disc">
                     <li>violate laws, regulations and/or these Terms;</li>
                     <li>infringe any third-party rights;</li>
                     <li>considerably impair the Owner’s legitimate interests;</li>
@@ -155,7 +155,7 @@ export default function TermsAndConditions() {
                 <div className="mb-2">
                 <h2>API usage terms</h2>
                 <p>Users may access their data relating to this Application via the Application Program Interface (API). Any use of the API, including use of the API through a third-party product/service that accesses this Application, is bound by these Terms and, in addition, by the following specific terms:</p>
-                <ul class="list-disc">
+                <ul className="list-disc">
                     <li>the User expressly understands and agrees that the Owner bears no responsibility and shall not be held liable for any damages or losses resulting from the User’s use of the API or their use of any third-party products/services that access data through the API.</li>
                 </ul>
                 </div>
@@ -178,7 +178,7 @@ export default function TermsAndConditions() {
                 <h2>Purchasing process</h2>
                 <p>Any steps taken from choosing a Product to order submission form part of the purchasing process.</p>
                 <p>The purchasing process includes these steps:</p>
-                <ul class="list-disc">
+                <ul className="list-disc">
                     <li>Users must choose the desired Product and verify their purchase selection.</li>
                     <li>After having reviewed the information displayed in the purchase selection, Users may place the order by submitting it.</li>
                 </ul>
@@ -186,7 +186,7 @@ export default function TermsAndConditions() {
                 <div className="mb-2">
                 <h2>Order submission</h2>
                 <p>When the User submits an order, the following applies:</p>
-                <ul class="list-disc">
+                <ul className="list-disc">
                     <li>The submission of an order determines contract conclusion and therefore creates for the User the obligation to pay the price, taxes and possible further fees and expenses, as specified on the order page.</li>
                     <li>In case the purchased Product requires active input from the User, such as the provision of personal information or data, specifications or special wishes, the order submission creates an obligation for the User to cooperate accordingly.</li>
                     <li>Upon submission of the order, Users will receive a receipt confirming that the order has been received.</li>
@@ -231,7 +231,7 @@ export default function TermsAndConditions() {
                 </div>
                 <div className="mb-2">
                 <h2>Indemnification</h2>
-                <p>The User agrees to indemnify and hold the Owner and its subsidiaries, affiliates, officers, directors, agents, co-branders, partners and employees harmless from and against any claim or demand ⁠— including but not limited to lawyer's fees and costs ⁠— made by any third party due to or in relation with any culpable use of or connection to the Service, violation of these Terms, infringement of any third-party rights or statutory provision by the User or its affiliates, officers, directors, agents, co-branders, partners and employees to the extent allowed by applicable law.</p>
+                <p>The User agrees to indemnify and hold the Owner and its subsidiaries, affiliates, officers, directors, agents, co-branders, partners and employees harmless from and against any claim or demand ⁠— including but not limited to lawyer&apos;s fees and costs ⁠— made by any third party due to or in relation with any culpable use of or connection to the Service, violation of these Terms, infringement of any third-party rights or statutory provision by the User or its affiliates, officers, directors, agents, co-branders, partners and employees to the extent allowed by applicable law.</p>
                 </div>
                 <div className="mb-2">
                 <h2>Limitation of liability</h2>
@@ -239,7 +239,7 @@ export default function TermsAndConditions() {
                 <p>This does not apply to damages to life, health or physical integrity, damages resulting from the breach of an essential contractual obligation such as any obligation strictly necessary to achieve the purpose of the contract, and/or damages resulting from intent or gross negligence, as long as this Application has been appropriately and correctly used by the User.</p>
                 <p>Unless damages have been caused by way of intent or gross negligence, or they affect life, health or physical integrity, the Owner shall only be liable to the extent of typical and foreseeable damages at the moment the contract was entered into.</p>
                 <p>In particular, within the limits stated above, the Owner shall not be liable for:</p>
-                <ul class="list-disc">
+                <ul className="list-disc">
                     <li>any loss of business opportunities and any other loss, even indirect, that may be incurred by the User (such as, but not limited to, trading losses, loss of revenue, income, profits or anticipated savings, loss of contracts or business relationships, loss of reputation or goodwill, etc.);</li>
                     <li>damages or losses resulting from interruptions or malfunctions of this Application due to acts of force majeure, or unforeseen and unforeseeable events and, in any case, independent of the will and beyond the control of the Owner, such as, but not limited to, failures or disruptions of telephone or electrical lines, the Internet and / or other means of transmission, unavailability of websites, strikes, natural disasters, viruses and cyber attacks, interruptions in the delivery of products, third-party services or applications;</li>
                     <li>any losses that are not the direct consequence of a breach of the Terms by the Owner;</li>
@@ -269,7 +269,7 @@ export default function TermsAndConditions() {
                 <div className="mb-2">
                 <h2>Limitations of liability</h2>
                 <p>To the maximum extent permitted by applicable law, in no event shall the Owner, and its subsidiaries, affiliates, officers, directors, agents, co-branders, partners, suppliers and employees be liable for</p>
-                <ul class="list-disc">
+                <ul className="list-disc">
                     <li>any indirect, punitive, incidental, special, consequential or exemplary damages, including without limitation damages for loss of profits, goodwill, use, data or other intangible losses, arising out of or relating to the use of, or inability to use, the Service; and</li>
                     <li>any damage, loss or injury resulting from hacking, tampering or other unauthorised access or use of the Service or User account or the information contained therein;</li>
                     <li>any errors, mistakes, or inaccuracies of content;</li>
@@ -286,7 +286,7 @@ export default function TermsAndConditions() {
                 <div className="mb-2">
                 <h2>Indemnification</h2>
                 <p>The User agrees to defend, indemnify and hold the Owner and its subsidiaries, affiliates, officers, directors, agents, co-branders, partners, suppliers and employees harmless from and against any and all claims or demands, damages, obligations, losses, liabilities, costs or debt, and expenses, including, but not limited to, legal fees and expenses, arising from</p>
-                <ul class="list-disc">
+                <ul className="list-disc">
                     <li>User’s use of and access to the Service, including any data or content transmitted or received by User;</li>
                     <li>User’s violation of these terms, including, but not limited to, User’s breach of any of the representations and warranties set forth in these terms;</li>
                     <li>User’s violation of any third-party rights, including, but not limited to, any right of privacy or intellectual property rights;</li>
@@ -327,7 +327,7 @@ export default function TermsAndConditions() {
                 <p>The Owner reserves the right to amend or otherwise modify these Terms at any time. In such cases, the Owner will appropriately inform the User of these changes.</p>
                 <p>Such changes will only affect the relationship with the User for the future.</p>
                 <p>The continued use of the Service will signify the User’s acceptance of the revised Terms. If Users do not wish to be bound by the changes, they must stop using the Service. Failure to accept the revised Terms, may entitle either party to terminate the Agreement.</p>
-                <p>The applicable previous version will govern the relationship prior to the User's acceptance. The User can obtain any previous version from the Owner.</p>
+                <p>The applicable previous version will govern the relationship prior to the User&apos;s acceptance. The User can obtain any previous version from the Owner.</p>
                 <p>If required by applicable law, the Owner will specify the date by which the modified Terms will enter into force.</p>
                 </div>
                 <div className="mb-2">
@@ -375,13 +375,13 @@ export default function TermsAndConditions() {
                 <div className="mb-2">
                 <h2>Amicable dispute resolution</h2>
                 <p>Users may bring any disputes to the Owner who will try to resolve them amicably.</p>
-                <p>While Users' right to take legal action shall always remain unaffected, in the event of any controversy regarding the use of this Application or the Service, Users are kindly asked to contact the Owner at the contact details provided in this document.</p>
+                <p>While Users&apos; right to take legal action shall always remain unaffected, in the event of any controversy regarding the use of this Application or the Service, Users are kindly asked to contact the Owner at the contact details provided in this document.</p>
                 <p>The User may submit the complaint including a brief description and if applicable, the details of the related order, purchase, or account, to the Owner’s email address specified in this document.</p>
                 <p>The Owner will process the complaint without undue delay and within 21 days of receiving it.</p>
                 </div>
                 <div className="mb-2">
                 <h2>Amicable resolution of disputes between Users</h2>
-                <p>Users may bring disputes with other Users resulting from their interaction via this Application to the Owner, who will then try to mediate the conflict in order to achieve an amicable solution. While Users' right to take legal action shall always remain unaffected, if any such controversy between Users should arise in connection with using this Application or the Service, Users are kindly asked to contact the Owner at the contact details provided in this document.</p>
+                <p>Users may bring disputes with other Users resulting from their interaction via this Application to the Owner, who will then try to mediate the conflict in order to achieve an amicable solution. While Users&apos; right to take legal action shall always remain unaffected, if any such controversy between Users should arise in connection with using this Application or the Service, Users are kindly asked to contact the Owner at the contact details provided in this document.</p>
                 </div>
                 <div className="mb-2">
                 <h1 className='text-2xl'>Definitions and legal references</h1>

@@ -18,10 +18,8 @@ export default function OurProducts() {
 	]
 
 	const [windowWidth, setWindowWidth] = useState(0);
-	const [windowHeight, setWindowHeight] = useState(0);
 	let resizeWindow = () => {
 	  setWindowWidth(window.innerWidth);
-	  setWindowHeight(window.innerHeight);
 	};
   
 	useEffect(() => {
@@ -43,7 +41,8 @@ export default function OurProducts() {
         </Fade>
         {
             items.map((item, i) => (
-                <Fade
+                <Fade 
+                    key={i}
                     top
                     delay={i !== 0 ? i * 200 : 0}
                 >

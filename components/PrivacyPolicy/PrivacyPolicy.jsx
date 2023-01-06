@@ -34,7 +34,7 @@ export default function PrivacyPolicy() {
                     <p>Users who are uncertain about which Personal Data is mandatory are welcome to contact the Owner.
                     Any use of Cookies – or of other tracking tools – by this Application or by the owners of third-party services used by this Application serves the purpose of providing the Service required by the User, in addition to any other purposes described in the present document and in the Cookie Policy, if available.
                     </p>
-                    <p>Users are responsible for any third-party Personal Data obtained, published or shared through this Application and confirm that they have the third party's consent to provide the Data to the Owner.</p>
+                    <p>Users are responsible for any third-party Personal Data obtained, published or shared through this Application and confirm that they have the third party&apos;s consent to provide the Data to the Owner.</p>
                 </div>
                 <div>
                     <h1 className='text-2xl'>Mode and place of processing the Data</h1>
@@ -48,7 +48,7 @@ export default function PrivacyPolicy() {
                 <div>
                     <h2>Legal basis of processing</h2>
                     <p>The Owner may process Personal Data relating to Users if one of the following applies:</p>
-                    <ul class="list-disc">
+                    <ul className="list-disc">
                     <li>Users have given their consent for one or more specific purposes. Note: Under some legislations the Owner may be allowed to process Personal Data until the User objects to such processing (“opt-out”), without having to rely on consent or any other of the following legal bases. This, however, does not apply, whenever the processing of Personal Data is subject to European data protection law;</li>
                     <li>provision of Data is necessary for the performance of an agreement with the User and/or for any pre-contractual obligations thereof;</li>
                     <li>processing is necessary for compliance with a legal obligation to which the Owner is subject;</li>
@@ -59,8 +59,8 @@ export default function PrivacyPolicy() {
                 </div>
                 <div>
                     <h2>Place</h2>
-                    <p>The Data is processed at the Owner's operating offices and in any other places where the parties involved in the processing are located.</p>
-                    <p>Depending on the User's location, data transfers may involve transferring the User's Data to a country other than their own. To find out more about the place of processing of such transferred Data, Users can check the section containing details about the processing of Personal Data.</p>
+                    <p>The Data is processed at the Owner&apos;s operating offices and in any other places where the parties involved in the processing are located.</p>
+                    <p>Depending on the User&apos;s location, data transfers may involve transferring the User&apos;s Data to a country other than their own. To find out more about the place of processing of such transferred Data, Users can check the section containing details about the processing of Personal Data.</p>
                     <p>Users are also entitled to learn about the legal basis of Data transfers to a country outside the European Union or to any international organisation governed by public international law or set up by two or more countries, such as the UN, and about the security measures taken by the Owner to safeguard their Data.</p>
                     <p>If any such transfer takes place, Users can find out more by checking the relevant sections of this document or inquire with the Owner using the information provided in the contact section.</p>
                 </div>
@@ -68,7 +68,7 @@ export default function PrivacyPolicy() {
                     <h2>Retention time</h2>
                     <p>Personal Data shall be processed and stored for as long as required by the purpose they have been collected for.</p>
                     <p>Therefore:</p>
-                    <ul class="list-disc">
+                    <ul className="list-disc">
                     <li>Personal Data collected for purposes related to the performance of a contract between the Owner and the User shall be retained until such contract has been fully performed.</li>
                     <li>Personal Data collected for the purposes of the Owner’s legitimate interests shall be retained as long as needed to fulfil such purposes. Users may find specific information regarding the legitimate interests pursued by the Owner within the relevant sections of this document or by contacting the Owner.</li>
                     </ul>
@@ -169,7 +169,7 @@ export default function PrivacyPolicy() {
                 <div>
                     <h3>Tag Management</h3>
                     <p>This type of service helps the Owner to manage the tags or scripts needed on this Application in a centralised fashion.</p>
-                    <p>This results in the Users' Data flowing through these services, potentially resulting in the retention of this Data.</p>
+                    <p>This results in the Users&apos; Data flowing through these services, potentially resulting in the retention of this Data.</p>
                 </div>
                 <div>
                     <h3>Google Tag Manager (Google LLC)</h3>
@@ -183,14 +183,14 @@ export default function PrivacyPolicy() {
                     <h2>The rights of Users</h2>
                     <p>Users may exercise certain rights regarding their Data processed by the Owner.</p>
                     <p>In particular, Users have the right to do the following:</p>
-                    <ul class="list-disc">
+                    <ul className="list-disc">
                     <li><strong>Withdraw their consent at any time.</strong> Users have the right to withdraw consent where they have previously given their consent to the processing of their Personal Data.</li>
                     <li><strong>Object to processing of their Data.</strong> Users have the right to object to the processing of their Data if the processing is carried out on a legal basis other than consent. Further details are provided in the dedicated section below.</li>
                     <li><strong>Access their Data.</strong> Users have the right to learn if Data is being processed by the Owner, obtain disclosure regarding certain aspects of the processing and obtain a copy of the Data undergoing processing.</li>
                     <li><strong>Verify and seek rectification.</strong> Users have the right to verify the accuracy of their Data and ask for it to be updated or corrected.</li>
                     <li><strong>Restrict the processing of their Data.</strong> Users have the right, under certain circumstances, to restrict the processing of their Data. In this case, the Owner will not process their Data for any purpose other than storing it.</li>
                     <li><strong>Have their Personal Data deleted or otherwise removed.</strong> Users have the right, under certain circumstances, to obtain the erasure of their Data from the Owner.</li>
-                    <li><strong>Receive their Data and have it transferred to another controller.</strong> Users have the right to receive their Data in a structured, commonly used and machine readable format and, if technically feasible, to have it transmitted to another controller without any hindrance. This provision is applicable provided that the Data is processed by automated means and that the processing is based on the User's consent, on a contract which the User is part of or on pre-contractual obligations thereof.</li>
+                    <li><strong>Receive their Data and have it transferred to another controller.</strong> Users have the right to receive their Data in a structured, commonly used and machine readable format and, if technically feasible, to have it transmitted to another controller without any hindrance. This provision is applicable provided that the Data is processed by automated means and that the processing is based on the User&apos;s consent, on a contract which the User is part of or on pre-contractual obligations thereof.</li>
                     <li><strong>Lodge a complaint.</strong> Users have the right to bring a claim before their competent data protection authority.</li>
                     </ul>
                 </div>
@@ -212,10 +212,10 @@ export default function PrivacyPolicy() {
                 </div>
                 <div>
                     <h3>Legal action</h3>
-                    <p>The User's Personal Data may be used for legal purposes by the Owner in Court or in the stages leading to possible legal action arising from improper use of this Application or the related Services. The User declares to be aware that the Owner may be required to reveal personal data upon request of public authorities.</p>
+                    <p>The User&apos;s Personal Data may be used for legal purposes by the Owner in Court or in the stages leading to possible legal action arising from improper use of this Application or the related Services. The User declares to be aware that the Owner may be required to reveal personal data upon request of public authorities.</p>
                 </div>
                 <div>
-                    <h3>Additional information about User's Personal Data</h3>
+                    <h3>Additional information about User&apos;s Personal Data</h3>
                     <p>In addition to the information contained in this privacy policy, this Application may provide the User with additional and contextual information concerning particular Services or the collection and processing of Personal Data upon request.</p>
                 </div>
                 <div>
@@ -240,12 +240,12 @@ export default function PrivacyPolicy() {
                 <div>
                     <h2>Information for California consumers</h2>
                     <p>This part of the document integrates with and supplements the information contained in the rest of the privacy policy and is provided by the business running this Application and, if the case may be, its parent, subsidiaries and affiliates (for the purposes of this section referred to collectively as “we”, “us”, “our”).</p>
-                    <p>The provisions contained in this section apply to all Users who are consumers residing in the state of California, United States of America, according to "The California Consumer Privacy Act of 2018" (Users are referred to below, simply as “you”, “your”, “yours”), and, for such consumers, these provisions supersede any other possibly divergent or conflicting provisions contained in the privacy policy.</p>
+                    <p>The provisions contained in this section apply to all Users who are consumers residing in the state of California, United States of America, according to &quot;The California Consumer Privacy Act of 2018&quot; (Users are referred to below, simply as “you”, “your”, “yours”), and, for such consumers, these provisions supersede any other possibly divergent or conflicting provisions contained in the privacy policy.</p>
                     <p>This part of the document uses the term “personal information“ as it is defined in The California Consumer Privacy Act (CCPA).</p>
                 </div>
                 <div>
                     <h3>Categories of personal information collected, disclosed or sold</h3>
-                    <p>In this section we summarise the categories of personal information that we've collected, disclosed or sold and the purposes thereof. <strong>You can read about these activities in detail in the section titled “Detailed information on the processing of Personal Data” within this document.</strong></p>
+                    <p>In this section we summarise the categories of personal information that we&apos;ve collected, disclosed or sold and the purposes thereof. <strong>You can read about these activities in detail in the section titled “Detailed information on the processing of Personal Data” within this document.</strong></p>
                 </div>
                 <div>
                     <h3>Information we collect: the categories of personal information we collect</h3>
@@ -265,7 +265,7 @@ export default function PrivacyPolicy() {
                 </div>
                 <div>
                     <h3>Sale of your personal information</h3>
-                    <p>For our purposes, the word “sale” means any “selling, renting, releasing, disclosing, disseminating, making available, transferring or otherwise communicating orally, in writing, or by electronic means, a consumer's personal information by the business to <strong>another business or a third party, for monetary or other valuable consideration”</strong>.</p>
+                    <p>For our purposes, the word “sale” means any “selling, renting, releasing, disclosing, disseminating, making available, transferring or otherwise communicating orally, in writing, or by electronic means, a consumer&apos;s personal information by the business to <strong>another business or a third party, for monetary or other valuable consideration”</strong>.</p>
                     <p>This means that, for example, a sale can happen whenever an application runs ads, or makes statistical analyses on the traffic or views, or simply because it uses tools such as social network plugins and the like.</p>
                 </div>
                 <div>
@@ -289,17 +289,17 @@ export default function PrivacyPolicy() {
                 <div>
                     <h3>The right to know and to portability</h3>
                     <p>You have the right to request that we disclose to you:</p>
-                    <ul class="list-disc">
+                    <ul className="list-disc">
                     <li>the categories and sources of the personal information that we collect about you, the purposes for which we use your information and with whom such information is shared;</li>
                     <li>in case of sale of personal information or disclosure for a business purpose, two separate lists where we disclose:
-                        <ul class="list-disc">
+                        <ul className="list-disc">
                         <li>for sales, the personal information categories purchased by each category of recipient; and</li>
                         <li>for disclosures for a business purpose, the personal information categories obtained by each category of recipient.</li>
                         </ul>
                     </li>
                     </ul>
                     <p>The disclosure described above will be limited to the personal information collected or used over the past 12 months.</p>
-                    <p>If we deliver our response electronically, the information enclosed will be "portable", i.e. delivered in an easily usable format to enable you to transmit the information to another entity without hindrance – provided that this is technically feasible.</p>
+                    <p>If we deliver our response electronically, the information enclosed will be &quot;portable&quot;, i.e. delivered in an easily usable format to enable you to transmit the information to another entity without hindrance – provided that this is technically feasible.</p>
                 </div>
                 <div>
                     <h3>The right to request the deletion of your personal information</h3>
@@ -310,7 +310,7 @@ export default function PrivacyPolicy() {
                     <h3>How to exercise your rights</h3>
                     <p>To exercise the rights described above, you need to submit your verifiable request to us by contacting us via the details provided in this document.</p>
                     <p>For us to respond to your request, it’s necessary that we know who you are. Therefore, you can only exercise the above rights by making a verifiable request which must:</p>
-                    <ul class="list-disc">
+                    <ul className="list-disc">
                     <li>provide sufficient information that allows us to reasonably verify you are the person about whom we collected personal information or an authorised representative;</li>
                     <li>describe your request with sufficient detail that allows us to properly understand, evaluate, and respond to it.</li>
                     </ul>
@@ -330,13 +330,13 @@ export default function PrivacyPolicy() {
                 <div>
                     <h3>Information for Users residing in Brazil</h3>
                     <p>This part of the document integrates with and supplements the information contained in the rest of the privacy policy and is provided by the entity running this Application and, if the case may be, its parent, subsidiaries and affiliates (for the purposes of this section referred to collectively as “we”, “us”, “our”).</p>
-                    <p>The provisions contained in this section apply to all Users who reside in Brazil, according to the "Lei Geral de Proteção de Dados" (Users are referred to below, simply as “you”, “your”, “yours”). For such Users, these provisions supersede any other possibly divergent or conflicting provisions contained in the privacy policy.</p>
+                    <p>The provisions contained in this section apply to all Users who reside in Brazil, according to the &quot;Lei Geral de Proteção de Dados&quot; (Users are referred to below, simply as “you”, “your”, “yours”). For such Users, these provisions supersede any other possibly divergent or conflicting provisions contained in the privacy policy.</p>
                     <p>This part of the document uses the term “personal information“ as it is defined in the Lei Geral de Proteção de Dados (<strong>LGPD</strong>).</p>
                 </div>
                 <div>
                     <h3>The grounds on which we process your personal information</h3>
                     <p>We can process your personal information solely if we have a legal basis for such processing. Legal bases are as follows:</p>
-                    <ul class="list-disc">
+                    <ul className="list-disc">
                     <li>your consent to the relevant processing activities;</li>
                     <li>compliance with a legal or regulatory obligation that lies with us;</li>
                     <li>the carrying out of public policies provided in laws or regulations or based on contracts, agreements and similar legal instruments;</li>
@@ -364,7 +364,7 @@ export default function PrivacyPolicy() {
                 <div>
                     <h3>Your Brazilian privacy rights</h3>
                     <p>You have the right to:</p>
-                    <ul class="list-disc">
+                    <ul className="list-disc">
                     <li>obtain confirmation of the existence of processing activities on your personal information;</li>
                     <li>access to your personal information;</li>
                     <li>have incomplete, inaccurate or outdated personal information rectified;</li>
@@ -397,7 +397,7 @@ export default function PrivacyPolicy() {
                 <div>
                     <h3>Transfer of personal information outside of Brazil permitted by the law</h3>
                     <p>We are allowed to transfer your personal information outside of the Brazilian territory in the following cases:</p>
-                    <ul class="list-disc">
+                    <ul className="list-disc">
                     <li>when the transfer is necessary for international legal cooperation between public intelligence, investigation and prosecution bodies, according to the legal means provided by the international law;</li>
                     <li>when the transfer is necessary to protect your life or physical security or those of a third party;</li>
                     <p>when the transfer is authorised by the ANPD;</p>
@@ -407,7 +407,7 @@ export default function PrivacyPolicy() {
                     </ul>
                 </div>
                 <div>
-                    <h1 class="text-2xl">Definitions and legal references</h1>
+                    <h1 className="text-2xl">Definitions and legal references</h1>
                 </div>
                 <div>
                     <h2>Personal Data (or Data)</h2>
@@ -415,7 +415,7 @@ export default function PrivacyPolicy() {
                 </div>
                 <div>
                     <h2>Usage Data</h2>
-                    <p>Information collected automatically through this Application (or third-party services employed in this Application), which can include: the IP addresses or domain names of the computers utilised by the Users who use this Application, the URI addresses (Uniform Resource Identifier), the time of the request, the method utilised to submit the request to the server, the size of the file received in response, the numerical code indicating the status of the server's answer (successful outcome, error, etc.), the country of origin, the features of the browser and the operating system utilised by the User, the various time details per visit (e.g., the time spent on each page within the Application) and the details about the path followed within the Application with special reference to the sequence of pages visited, and other parameters about the device operating system and/or the User's IT environment.</p>
+                    <p>Information collected automatically through this Application (or third-party services employed in this Application), which can include: the IP addresses or domain names of the computers utilised by the Users who use this Application, the URI addresses (Uniform Resource Identifier), the time of the request, the method utilised to submit the request to the server, the size of the file received in response, the numerical code indicating the status of the server&apos;s answer (successful outcome, error, etc.), the country of origin, the features of the browser and the operating system utilised by the User, the various time details per visit (e.g., the time spent on each page within the Application) and the details about the path followed within the Application with special reference to the sequence of pages visited, and other parameters about the device operating system and/or the User&apos;s IT environment.</p>
                 </div>
                 <div>
                     <h2>User</h2>
@@ -447,7 +447,7 @@ export default function PrivacyPolicy() {
                 </div>
                 <div>
                     <h2>Cookie</h2>
-                    <p>Cookies are Trackers consisting of small sets of data stored in the User's browser.</p>
+                    <p>Cookies are Trackers consisting of small sets of data stored in the User&apos;s browser.</p>
                 </div>
                 <div>
                     <h2>Tracker</h2>

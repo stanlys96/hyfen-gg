@@ -119,7 +119,7 @@ export default function ExploreGames() {
             </h2>
         </Fade>
 		<Fade top>
-			<div className="custom-carousel mt-[150px]">
+			<div className="custom-carousel mt-[150px] 2xl:container 2xl:mx-auto">
 				{cards.map((item, i) => {
 					const indexLeft = mod(index - 1, cards.length);
 					const indexRight = mod(index + 1, cards.length);

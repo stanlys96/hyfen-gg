@@ -1,14 +1,14 @@
 export const fairFunSimpleData = [
     {
-        image: '/images/fair.svg',
+        image: '/images/Fair.svg',
         code: "Fair",
     },
     {
-        image: '/images/fun.svg',
+        image: '/images/Fun.svg',
         code: "Fun",
     },
     {
-        image: '/images/simple.svg',
+        image: '/images/Simple.svg',
         code: "Simple",
     },
 ]

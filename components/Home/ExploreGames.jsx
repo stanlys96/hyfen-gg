@@ -18,73 +18,73 @@ export default function ExploreGames() {
 	const cards = [
 		{
 		  id: "1",
-		  image: "/images/carousel/axie-infinity.svg",
-		  imagePhone: "/images/carousel/axie-phone.svg"
+		  image: "/images/carousel/axie-infinity.png",
+		  imagePhone: "/images/carousel/axie-phone.png"
 		},
 		{
 		  id: "2",
-		  image: "/images/carousel/gunstar.svg",
-		  imagePhone: "/images/carousel/gunstar-phone.svg"
+		  image: "/images/carousel/gunstar.png",
+		  imagePhone: "/images/carousel/gunstar-phone.png"
 		},
 		{
 		  id: "3",
-		  image: "/images/carousel/thetan-arena.svg",
-		  imagePhone: "/images/carousel/thetan-arena-phone.svg"
+		  image: "/images/carousel/thetan-arena.png",
+		  imagePhone: "/images/carousel/thetan-arena-phone.png"
 		},
 		{
 			id: "4",
-			image: "/images/carousel/castle-crush.svg",
-			imagePhone: "/images/carousel/castle-crush-phone.svg"
+			image: "/images/carousel/castle-crush.png",
+			imagePhone: "/images/carousel/castle-crush-phone.png"
 		  },
 		  {
 			id: "5",
-			image: "/images/carousel/draco-master.svg",
-			imagePhone: "/images/carousel/draco-master-phone.svg"
+			image: "/images/carousel/draco-master.png",
+			imagePhone: "/images/carousel/draco-master-phone.png"
 		  },
 		  {
 			id: "6",
-			image: "/images/carousel/galaxy-fight-club.svg",
-			imagePhone: "/images/carousel/galaxy-fight-club-phone.svg"
+			image: "/images/carousel/galaxy-fight-club.png",
+			imagePhone: "/images/carousel/galaxy-fight-club-phone.png"
 		  },
 		  {
 			id: "7",
-			image: "/images/carousel/mythic-protocol.svg",
-			imagePhone: "/images/carousel/mythic-protocol-phone.svg"
+			image: "/images/carousel/mythic-protocol.png",
+			imagePhone: "/images/carousel/mythic-protocol-phone.png"
 		  },
 		  {
 			id: "8",
-			image: "/images/carousel/sipher-odyssey.svg",
-			imagePhone: "/images/carousel/sipher-odyssey-phone.svg"
+			image: "/images/carousel/sipher-odyssey.png",
+			imagePhone: "/images/carousel/sipher-odyssey-phone.png"
 		  },
 		  {
 			id: "9",
-			image: "/images/carousel/league-of-kingdoms.svg",
-			imagePhone: "/images/carousel/league-of-kingdoms-phone.svg"
+			image: "/images/carousel/league-of-kingdoms.png",
+			imagePhone: "/images/carousel/league-of-kingdoms-phone.png"
 		  },
 		  {
 			id: "10",
-			image: "/images/carousel/aavegotchi.svg",
-			imagePhone: "/images/carousel/aavegotchi-phone.svg"
+			image: "/images/carousel/aavegotchi.png",
+			imagePhone: "/images/carousel/aavegotchi-phone.png"
 		  },
 		  {
 			id: "11",
-			image: "/images/carousel/pegaxy.svg",
-			imagePhone: "/images/carousel/pegaxy-phone.svg"
+			image: "/images/carousel/pegaxy.png",
+			imagePhone: "/images/carousel/pegaxy-phone.png"
 		  },
 		  {
 			id: "12",
-			image: "/images/carousel/stepn.svg",
-			imagePhone: "/images/carousel/stepn-phone.svg"
+			image: "/images/carousel/stepn.png",
+			imagePhone: "/images/carousel/stepn-phone.png"
 		  },
 		  {
 			id: "13",
-			image: "/images/carousel/walken.svg",
-			imagePhone: "/images/carousel/walken-phone.svg"
+			image: "/images/carousel/walken.png",
+			imagePhone: "/images/carousel/walken-phone.png"
 		  },
 		  {
 			id: "14",
-			image: "/images/carousel/geng.svg",
-			imagePhone: "/images/carousel/geng-phone.svg"
+			image: "/images/carousel/geng.png",
+			imagePhone: "/images/carousel/geng-phone.png"
 		  },
 	  ];
 

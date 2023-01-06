@@ -54,8 +54,10 @@ export default function OurProducts() {
                                     <p className="text-base md:text-xl">{item.description1} {item.description2 && item.description2}</p>
                                     {/* {item.description2 && <p className="text-xs md:text-base">{item.description2}</p>} */}
                                 </div>
-                                <div className="arrowIconContainer">
-                                    <div className="arrowIcon"></div>
+                                <div className="arrowWrapper">
+                                    <div className="arrowIconContainer">
+                                        <div className="arrowIcon"></div>
+                                    </div>
                                 </div>
                             </div>
                             <div className="absolute top-0 right-0 w-6/12 lg:w-5/12 h-full">

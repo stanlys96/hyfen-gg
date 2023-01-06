@@ -18,9 +18,8 @@ const SilderFeature = ({
   const [lineInit, setLineInit] = useState(false)
 
   const settings = {
-    dots: false,
     arrows: false,
-    infinite: true,
+    infinite: false,
     speed: 1000,
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -30,6 +29,10 @@ const SilderFeature = ({
     vertical: true,
     verticalSwiping: true,
     pauseOnHover: false,
+		className: 'slider-enjoying',
+    customPaging: function (i) {
+			return <a>{i + 1}</a>
+		},
     beforeChange: function (currentSlide, nextSlide) {
       setActiveSlide(nextSlide)
       setLineInit(false)
@@ -49,7 +52,7 @@ const SilderFeature = ({
   };
 
   return (
-    <div className="overflow-hidden">
+    <div className="overflow-hidden pb-8">
       <div className='container mx-auto'>
         <div className='grid grid-cols-12 items-center xl:items-start'>
           <div className='col-span-12 md:col-span-5 text-center md:text-left'>
@@ -98,7 +101,7 @@ const SilderFeature = ({
               </div>
             </div>
           </div>
-          <div className='col-span-12 mt-14 md:mt-0 md:col-span-7'>
+          <div className='col-span-12 mt-6 md:mt-0 md:col-span-7'>
             <Fade right>
               <Slider ref={sliderElement} {...settings}>
                 {items.map((item, i) => (
@@ -114,9 +117,9 @@ const SilderFeature = ({
                         objectFit='contain'
                       />
                     </div>
-                    <div className='mt-14 text-center md:hidden'>
-                      <h5 className='text-lg font-bold mb-2'>{item.title}</h5>
-                      <p className='text-sm text-gray-300'>{item.description}</p>
+                    <div className='mt-14 text-center'>
+                      <h5 className='text-lg text-white font-bold mb-2'>{t(item.code)}</h5>
+                      <p className='text-sm text-gray-300'>{t(item.code + "-desc")}</p>
                     </div>
                   </div>
                 ))}

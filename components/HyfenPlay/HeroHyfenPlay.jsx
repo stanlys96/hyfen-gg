@@ -67,7 +67,7 @@ function HeroHyfenPlay() {
 				</div>
 			</div>
 			<Fade right delay={600}>
-				<div className='inline-block relative h-1/2 lg:ml-0 max-w-[1440px] md:pt-12 h-[510px] md:h-[605px] flex justify-center items-center'>
+				<div className='inline-block relative h-full lg:ml-0 max-w-[1440px] md:pt-12 h-[510px] md:h-[605px] flex justify-center items-center'>
 					<img 
 						src={`/images/hyfen-play/hyfen-play-img.svg`} 
 						alt="image" 

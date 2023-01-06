@@ -11,7 +11,7 @@ function DownloadAppButton() {
       <div className="group">
         <div className="group dropdown relative" onClick={() => setShowDropdown(!showDropdown)}>
           <button
-            className="group header__download-button text-sm flex items-center justify-center w-full h-full hover:text-white transition py-2 px-6 dropdown-toggle"
+            className="group header__download-app-button text-sm flex items-center justify-center w-full h-full hover:text-white transition py-2 px-6 dropdown-toggle"
             type="button"
             id="dropdownMenuButton2"
             data-bs-toggle="dropdown"

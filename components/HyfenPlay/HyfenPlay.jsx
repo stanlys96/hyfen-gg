@@ -25,7 +25,7 @@ export default function HyfenPlay() {
                     titleGradient={true}
                 />
             </div>
-            <div className="bg-fair-fun-simple pt-32">
+            <div className="bg-fair-fun-simple pt-12">
                 <Enjoying /> 
             </div>
         </div>

@@ -13,7 +13,7 @@ export default function GuildPage() {
 				/>
 				<meta
 					name='description'
-					content='Metabase Guild Tools Allow Anyone To Earn Money From Investing And Lending NFTs To Players'
+					content='Hyfen Guild Tools Allow Anyone To Earn Money From Investing And Lending NFTs To Players'
 				/>
 				<meta
 					property='og:title'
@@ -21,7 +21,7 @@ export default function GuildPage() {
 				/>
 				<meta
 					property='og:description'
-					content='Metabase Guild Tools Allow Anyone To Earn Money From Investing And Lending NFTs To Players'
+					content='Hyfen Guild Tools Allow Anyone To Earn Money From Investing And Lending NFTs To Players'
 				/>
 				<meta property="og:image" content="https://metabase.gg/images/Banner.png"/>
 				<meta
@@ -30,7 +30,7 @@ export default function GuildPage() {
 				/>
 				<meta
 					property='twitter:description'
-					content='Metabase Guild Tools Allow Anyone To Earn Money From Investing And Lending NFTs To Players'
+					content='Hyfen Guild Tools Allow Anyone To Earn Money From Investing And Lending NFTs To Players'
 				/>
 				<meta property="twitter:image" content="https://metabase.gg/images/Banner.png"/>
 			</Head>

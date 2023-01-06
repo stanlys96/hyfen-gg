@@ -38,7 +38,7 @@ function SideBar() {
 						top
 						delay={600}
 					>
-						<div className="mt-7 mb-10" style={{
+						<div className="mt-7" style={{
 							display: 'flex',
 							flexDirection: 'row',
 							justifyContent: 'center'
@@ -77,7 +77,7 @@ function SideBar() {
 								</a>
 							</div>
 						</div>
-						<ScrollDown className="justify-center lg:justify-start hidden md:flex" />
+						<ScrollDown className="justify-center lg:justify-start hidden md:flex mt-10" />
 					</Fade>
 				</div>
 			</div>

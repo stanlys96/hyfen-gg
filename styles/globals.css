@@ -139,11 +139,12 @@ a {
 	background-position: center;
 }
 
-.header__download-button:hover {
+.header__download-app-button:hover {
 	background-color: rgba(255, 255, 255, 0.15);
 }
 
-.header__download-button {
+.header__download-button,
+.header__download-app-button {
 	border: 1px solid #ffffff;
 	box-sizing: border-box;
 	border-radius: 100px;
@@ -952,6 +953,7 @@ footer .copyright {
 }
 
 /* Arrow */
+
 .arrowIconContainer {
 	position: absolute;
 	top: 50%;
@@ -1189,5 +1191,16 @@ opacity: 0.3;
 		border-top-right-radius: 0;
 		border-bottom-right-radius: 25px;
 		border-bottom-left-radius: 25px;
+	}
+
+	/* .arrowIconContainer {
+		width: 40px;
+		height: 30px;
+	} */
+	
+
+	.arrowIcon {
+		width: 90%;
+		height: 10px;
 	}
 }

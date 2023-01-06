@@ -11,7 +11,7 @@ function DownloadAppButton() {
       <div className="group">
         <div className="group dropdown relative" onClick={() => setShowDropdown(!showDropdown)}>
           <button
-            className="group header__download-button text-sm flex items-center justify-center w-full h-full hover:text-black-100 transition hover:bg-white py-2 px-6 dropdown-toggle"
+            className="group header__download-button text-sm flex items-center justify-center w-full h-full hover:text-white transition py-2 px-6 dropdown-toggle"
             type="button"
             id="dropdownMenuButton2"
             data-bs-toggle="dropdown"
@@ -44,13 +44,13 @@ function DownloadAppButton() {
             aria-labelledby="dropdownMenuButton2"
           >
             <DropdownItem href="https://apps.apple.com/us/app/metabase-play/id1624878820">
-              <div style={{ marginRight: '15px' }}>
+              <div className="hover:bg-gray-100" style={{ marginRight: '15px' }}>
                 <AppleIcon />
               </div>
               <p>{t('common:For IOS')}</p>
             </DropdownItem>
             <DropdownItem href='https://play.google.com/store/apps/details?id=com.metabase.gg'>
-              <div style={{ marginRight: '15px' }}>
+              <div className="hover:bg-gray-100" style={{ marginRight: '15px' }}>
                 <AndroidLogo />
               </div>
               <p>{t('common:For Android')}</p>

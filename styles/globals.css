@@ -139,10 +139,15 @@ a {
 	background-position: center;
 }
 
+.header__download-button:hover {
+	background-color: rgba(255, 255, 255, 0.15);
+}
+
 .header__download-button {
 	border: 1px solid #ffffff;
 	box-sizing: border-box;
 	border-radius: 100px;
+	transition: all 0.25s ease-in;
 }
 
 a.btn {

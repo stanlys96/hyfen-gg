@@ -52,10 +52,10 @@ function Header({ fixed = true }) {
 							<Link href='/' className=''>
 								<a className='flex justify-start items-center '>
 									<Image
-										src='/images/hyfenlogo.png'
+										src='/images/hyfen-logo.svg'
 										className='block py-2'
 										alt='BaseLogo'
-										width={115}
+										width={155}
 										height={28}
 										layout='fixed'
 										quality={100}

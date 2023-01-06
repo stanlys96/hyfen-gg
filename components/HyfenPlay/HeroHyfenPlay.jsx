@@ -8,7 +8,7 @@ function HeroHyfenPlay() {
 
 	const { t } = useTranslation()
 	return (
-		<div className='container mx-auto pt-24 pb-24 md:pb-0 lg:pt-0 relative flex flex-col justify-around md:flex-row 2xl:container 2xl:mx-auto'>
+		<div className='container mx-auto pt-24 pb-24 md:pb-0 lg:pt-0 relative grid grid-cols-1 md:grid-cols-2 gap-x-10 justify-around md:flex-row'>
 			<div className="lg:mt-0">
 				<div className='lg:pt-40'>
 					<Fade top>
@@ -69,7 +69,7 @@ function HeroHyfenPlay() {
 			<Fade right delay={600}>
 				<div className='inline-block relative h-1/2 lg:ml-0 max-w-[1440px] md:pt-12 h-[510px] md:h-[605px] flex justify-center items-center'>
 					<img 
-						src="/images/hyfen-play-img.svg" 
+						src="/images/hyfen-play/hyfen-play-img.svg" 
 						alt="image" 
 						className='h-full w-full'
 					/>

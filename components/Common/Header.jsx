@@ -150,18 +150,34 @@ function Header({ fixed = true }) {
 												</a>
 											)}
 										>
-											<ul className='border-l-2 border-blue md:hidden ml-4'>
-												{languages.map((language) => (
-													<li key={language.locale}>
+											<ul className='hidden
+													dropdown-menu
+													absolute
+													bg-white
+													text-base
+													z-50
+													py-2
+													list-none
+													text-left
+													rounded-lg
+													shadow-lg
+													top-full
+													m-0
+													ml-5
+													bg-clip-padding
+													border-none
+													group-hover:block'>
+												{languages.map((language, i) => (
+													<DropdownItem key={i} additionalClassName={"hover:bg-gray-100"}>
 														<ActiveLink
 															href={router.pathname}
 															locale={language.locale}
 														>
-															<a className='block w-full hover:text-blue py-2 px-4'>
+															<a className='block w-full py-2 px-4 font-bold'>
 																{language.title}
 															</a>
 														</ActiveLink>
-													</li>
+													</DropdownItem>
 												))}
 											</ul>
 										</Collapse>
@@ -183,18 +199,34 @@ function Header({ fixed = true }) {
 
 												<ArrowDown className='fill-current w-4 h-4' />
 											</a>
-											<ul className='soft-shadow hidden min-w-full absolute top-full group-hover:block py-2 border-1'>
-												{languages.map((language) => (
-													<li key={language.locale}>
+											<ul className='hidden
+													dropdown-menu
+													absolute
+													bg-white
+													text-base
+													z-50
+													py-2
+													list-none
+													text-left
+													rounded-lg
+													shadow-lg
+													top-full
+													m-0
+													bg-clip-padding
+													border-none
+													ml-5
+													group-hover:block'>
+												{languages.map((language, i) => (
+													<DropdownItem key={i} additionalClassName={"hover:bg-gray-100"}>
 														<ActiveLink
 															href={`/${language.locale}/${router.pathname}`}
 															locale={language.locale}
 														>
-															<a className='block w-full hover:text-blue py-1 px-3 cursor-pointer'>
+															<a className='block w-full py-1 px-3 cursor-pointer font-bold'>
 																{language.title}
 															</a>
 														</ActiveLink>
-													</li>
+												</DropdownItem>
 												))}
 											</ul>
 										</span>

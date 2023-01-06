@@ -8,9 +8,9 @@ function SideBar() {
 
 	const { t } = useTranslation()
 	return (
-		<div className='pt-24 lg:pt-0 relative flex flex-col justify-around md:flex-row'>
+		<div className='container mx-auto pt-24 lg:pt-0 relative flex flex-col justify-around md:flex-row'>
 			<div className="lg:mt-0">
-				<div className='container mx-auto lg:pt-40'>
+				<div className='lg:pt-40'>
 					<Fade top>
 						<h1 className='text-3xl md:text-5xl lg:text-6xl text-center lg:text-left font-bold'>
 							{t('home:Play Games')},
@@ -84,7 +84,7 @@ function SideBar() {
 			<Fade right delay={600}>
 				<div className='inline-block relative h-full lg:ml-0 max-w-[1440px] md:pt-12 h-[510px] md:h-[605px] flex justify-center items-center'>
 					<img 
-						src="/images/hyfen-bg.png" 
+						src="/images/home/hyfen-home-img.svg" 
 						alt="image" 
 						className='h-full'
 					/>

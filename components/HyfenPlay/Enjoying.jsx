@@ -80,7 +80,7 @@ function Enjoying() {
                             peopleTestimonials.map((item, i) => (
                                 <div key={i} className='p-3 text-base md:text-lg'>
                                     <Image
-                                        src={`/images/hyfen-play/${item.author}.svg`}
+                                        src={`/images/hyfen-play/${item.author}.png`}
                                         alt='appstore'
                                         layout='responsive'
                                         width={460}

@@ -13,7 +13,7 @@ function CommunityContent() {
                     <div key={i} className={`py-10 md:flex justify-between ${i % 2 != 0 ? "flex-row-reverse" : ""}`}>
                         <Fade right={i % 2 !== 0} left={i % 2 === 0} delay={i * 150}>
                             <img
-                                src={`/images/community/${item.imageUrl}`}
+                                src={`/images/community/${item.code}.png`}
                                 className='block py-2 w-full md:w-1/2'
                                 alt='BaseLogo'
                                 height="100%"
@@ -31,7 +31,7 @@ function CommunityContent() {
                 <div className={`my-10 flex justify-between flex-col-reverse md:flex-row-reverse community-manager-container md:pl-10`}>
                     <Fade right delay={150}>
                         <img
-                            src={`/images/community-img-1.svg`}
+                            src={`/images/community/Interested In.png`}
                             className='block w-full md:w-1/2'
                             alt='BaseLogo'
                             height="100%"

@@ -40,17 +40,14 @@ export const communitySocials = [
 export const communityData = [
     {
         id: 1,
-        imageUrl: "community-img-4.svg",
         code: "Educational Workshops"
     },
     {
         id: 2,
-        imageUrl: "community-img-3.png",
         code: "Offline Gatherings"
     },
     {
         id: 3,
-        imageUrl: "community-img-2.svg",
         code: "Gaming Competitions"
     }
 ];

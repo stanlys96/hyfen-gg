@@ -8,7 +8,7 @@ function HeroHyfenPlay() {
 
 	const { t } = useTranslation()
 	return (
-		<div className='pt-24 pb-24 md:pb-0 lg:pt-0 relative flex flex-col justify-around md:flex-row container mx-auto'>
+		<div className='container mx-auto pt-24 pb-24 md:pb-0 lg:pt-0 relative flex flex-col justify-around md:flex-row'>
 			<div className="lg:mt-0">
 				<div className='lg:pt-40'>
 					<Fade top>

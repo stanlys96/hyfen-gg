@@ -79,7 +79,7 @@ function Header({ fixed = true }) {
 											<React.Fragment>
 												<span className='group hidden md:flex h-full w-full relative'>
 													<a
-														className={`hidden md:flex h-full items-center justify-between w-full hover:text-white py-2 text-white-50 mx-3`}
+														className={`hidden text-sm md:flex h-full items-center justify-between w-full hover:text-white py-2 text-white-50 mx-3`}
 														href='#'
 													> 
 														{t(menu.title)}
@@ -115,11 +115,13 @@ function Header({ fixed = true }) {
 												</span>
 											</React.Fragment>
 										) : (
-											<ActiveLink href={menu.link} activeClassName='active-nav-link' disabled={menu.disable}>
-												<a className='navigation-link cursor-pointer text-white-50'>
-													{t(menu.title)}
-												</a>
-											</ActiveLink>
+											<div className="flex justify-center items-center h-full">
+												<ActiveLink href={menu.link} activeClassName='active-nav-link' disabled={menu.disable}>
+														<a className='navigation-link cursor-pointer text-white-50'>
+															{t(menu.title)}
+														</a>
+												</ActiveLink>
+											</div>
 										)}
 									</li>
 								))}
@@ -128,7 +130,7 @@ function Header({ fixed = true }) {
 										<Collapse
 											trigger={({ show, onClick }) => (
 												<a
-													className='md:hidden flex items-center justify-between w-full hover:text-blue py-2'
+													className='md:hidden text-sm flex items-center justify-between w-full hover:text-blue py-2'
 													href='#'
 													onClick={onClick}
 												>
@@ -173,7 +175,7 @@ function Header({ fixed = true }) {
 															href={router.pathname}
 															locale={language.locale}
 														>
-															<a className='block w-full py-2 px-4 font-bold'>
+															<a className='block w-full py-2 px-4 font-bold text-sm'>
 																{language.title}
 															</a>
 														</ActiveLink>
@@ -195,7 +197,7 @@ function Header({ fixed = true }) {
 													layout='intrinsic'
 													quality={100}
 												/>
-												<span className="inline-block ml-3">{lang === 'id' ? 'ID' : 'ENG'}</span>
+												<span className="inline-block ml-3 text-sm">{lang === 'id' ? 'ID' : 'ENG'}</span>
 
 												<ArrowDown className='fill-current w-4 h-4' />
 											</a>
@@ -222,7 +224,7 @@ function Header({ fixed = true }) {
 															href={`/${language.locale}/${router.pathname}`}
 															locale={language.locale}
 														>
-															<a className='block w-full py-1 px-3 cursor-pointer font-bold'>
+															<a className='block w-full py-1 px-3 cursor-pointer font-bold text-sm'>
 																{language.title}
 															</a>
 														</ActiveLink>

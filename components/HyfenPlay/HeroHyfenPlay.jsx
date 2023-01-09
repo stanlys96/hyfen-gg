@@ -8,7 +8,7 @@ function HeroHyfenPlay() {
 
 	const { t } = useTranslation()
 	return (
-		<div className='container mx-auto pt-24 pb-24 md:pb-0 lg:pt-0 relative grid grid-cols-1 md:grid-cols-2 gap-x-10 justify-around md:flex-row'>
+		<div className='container mx-auto pt-24 md:pb-24 md:pb-0 lg:pt-0 relative grid grid-cols-1 md:grid-cols-2 gap-x-10 justify-around md:flex-row'>
 			<div className="lg:mt-0">
 				<div className='lg:pt-40'>
 					<Fade top>
@@ -24,11 +24,11 @@ function HeroHyfenPlay() {
 						top
 						delay={600}
 					>
-						<div className="mt-7 mb-10 justify-center md:justify-start" style={{
+						<div className="mt-7 md:mb-10 justify-center md:justify-start" style={{
 							display: 'flex',
 							flexDirection: 'row'
 						}}>
-							<div className='mb-4 text-center lg:text-left mr-4'>
+							<div className='md:mb-4 text-center lg:text-left mr-4'>
 								<a
 									href='https://apps.apple.com/us/app/metabase-play/id1624878820'
 									style={{
@@ -45,7 +45,7 @@ function HeroHyfenPlay() {
 									/>
 								</a>
 							</div>
-							<div className='mb-4 text-center lg:text-left'>
+							<div className='md:mb-4 text-center lg:text-left'>
 								<a
 									href='https://apps.apple.com/us/app/metabase-play/id1624878820'
 									style={{

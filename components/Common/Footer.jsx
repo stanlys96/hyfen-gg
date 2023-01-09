@@ -82,7 +82,7 @@ const Footer = ({ bgColor }) => {
 									mediaSocialsData={mediaSocialsData1}
 								/>
 								<Social
-									className="grid grid-cols-3 lg:grid-cols-4 px-10 md:px-0 text-center lg:text-left pt-10"
+									className="grid grid-cols-3 lg:grid-cols-4 px-20 md:px-0 text-center lg:text-left pt-6"
 									width={26}
 									height={21}
 									mediaSocialsData={mediaSocialsData2}

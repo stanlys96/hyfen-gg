@@ -28,7 +28,7 @@ export default function EasiestWay() {
 
     return (
         <div 
-        className='container mx-auto gamefi pt-[93px] pb-[140px]'
+        className='container mx-auto gamefi pt-[40px] md:pt-[93px] pb-[60px] md:pb-[140px]'
     >
         <Fade top>
 			<div className="text-center md:text-left">

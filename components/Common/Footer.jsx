@@ -99,7 +99,7 @@ const Footer = ({ bgColor }) => {
 										className={`inline-flex items-center mb-3 md:mb-0 ${i + 1 !== items.length ? "mr-3.5" : ""} pb-4`}
 									>
 										<Link href={item.link} passHref>
-											<a className='text-xs font-medium text-slate-300 hover:text-blue transition-colors duration-300'>
+											<a className='text-sm font-medium text-slate-300 hover:text-blue transition-colors duration-300'>
 												{t(item.title)}
 											</a>
 										</Link>

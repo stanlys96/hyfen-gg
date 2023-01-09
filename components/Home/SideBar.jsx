@@ -40,7 +40,7 @@ function SideBar() {
 							flexDirection: 'row',
 							justifyContent: 'center'
 						}}>
-							<div className='mb-4 text-center lg:text-left mr-4'>
+							<div className='md:mb-4 text-center lg:text-left mr-4'>
 								<a
 									href='https://apps.apple.com/us/app/metabase-play/id1624878820'
 									style={{
@@ -57,7 +57,7 @@ function SideBar() {
 									/>
 								</a>
 							</div>
-							<div className='mb-4 text-center lg:text-left'>
+							<div className='md:mb-4 text-center lg:text-left'>
 								<a
 									href='https://apps.apple.com/us/app/metabase-play/id1624878820'
 									style={{

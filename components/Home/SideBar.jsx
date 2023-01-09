@@ -79,7 +79,7 @@ function SideBar() {
 				</div>
 			</div>
 			<Fade right delay={600}>
-				<div className='inline-block relative h-full lg:ml-0 max-w-[1440px] md:pt-12 h-[510px] md:h-[605px] flex justify-center items-center'>
+				<div className='inline-block relative h-full lg:ml-0 max-w-[1440px] py-6 md:pt-24 h-[510px] md:h-[605px] flex justify-center items-center'>
 					<img 
 						src="/images/home/hyfen-home-img.svg" 
 						alt="image" 

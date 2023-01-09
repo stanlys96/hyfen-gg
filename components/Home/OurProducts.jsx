@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import useTranslation from 'next-translate/useTranslation'
 import Fade from 'react-reveal/Fade';
 
@@ -16,6 +16,17 @@ export default function OurProducts() {
             description2: t('home:hyfen_tools_desc2')
 		}
 	]
+
+    const [windowWidth, setWindowWidth] = useState(0);
+	let resizeWindow = () => {
+	  setWindowWidth(window.innerWidth);
+	};
+  
+	useEffect(() => {
+	  resizeWindow();
+	  window.addEventListener("resize", resizeWindow);
+	  return () => window.removeEventListener("resize", resizeWindow);
+	}, []);
 
     return (
         <div 
@@ -36,22 +47,23 @@ export default function OurProducts() {
                         top
                         delay={i !== 0 ? i * 200 : 0}
                     >
-                        <div className="group relative products-container">
+                        <div className="group relative products-container overflow-hidden">
                             <div className={`bg-product-${i + 1} group-hover:w-5/6 transition-all duration-500 py-8 md:py-14 px-2 md:px-12 relative`}>
                                 <div className="container flex justify-around items-center mx-auto relative z-50 gap-12">
                                     <div className="relative grid grid-rows-2">
-                                        <p className="text-xl md:text-4xl font-bold mb-4">{item.title}</p>
-                                        <p className="text-base md:text-xl text-ellipsis">{item.description1} {item.description2 && item.description2}</p>
+                                        <p className="text-xl lg:text-4xl font-bold mb-4">{item.title}</p>
+                                        <p className="text-base lg:text-xl text-ellipsis">{item.description1} {item.description2 && item.description2}</p>
                                     </div>
                                     <img
                                         src={`/images/home/arrow-right.svg`}
                                         className="h-fit"
+                                        width="15%"
                                     />
                                 </div>
                             </div>
-                            <div className="absolute top-0 right-[-25%] w-4/5 -z-10 h-full z-minus-5">
+                            <div className="absolute top-0 -z-10 z-minus-5 product-img-container right-0">
                                     <img
-                                        src={`/images/home/product-${(i + 1)}.png`}
+                                        src={`/images/home/product-${(i + 1) + (windowWidth > 1024 ? "" : '-mobile-screen')}.png`}
                                         className="h-full w-full z-minus-5"
                                     />
                                 </div>

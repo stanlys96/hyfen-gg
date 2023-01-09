@@ -56,9 +56,9 @@ const SilderFeature = ({
       <div className='container mx-auto'>
         <div className='grid grid-cols-12 items-center xl:items-start'>
           <div className='col-span-12 md:col-span-5 text-center md:text-left'>
-            <div className='text-center md:text-left'>
+            <div className='text-center'>
               <Fade bottom>
-                <h4 className={`text-[28px] md:text-[48px] font-bold leading-[60px] md:w-[400px] ${titleGradient && 'slider-title-gradient'}`}>{title}</h4>
+                <h4 className={`text-3xl md:text-5xl md:text-left font-bold leading-[60px] md:w-[400px] ${titleGradient && 'slider-title-gradient'}`}>{title}</h4>
               </Fade>
               {
                 button &&

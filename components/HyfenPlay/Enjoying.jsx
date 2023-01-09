@@ -71,7 +71,7 @@ function Enjoying() {
 	return (
 		<div className='container mx-auto mb-[40] enjoying-wrap pb-[180px]'>
 			<Fade left>
-				<p className='text-3xl md:text-5xl md:text-40 text-center md:text-left font-bold'>{t('See How Other Players are')} {t('Enjoying')} {t('Blockchain Games')}</p>
+				<p className='text-3xl md:text-5xl text-center md:text-left font-bold'>{t('See How Other Players are')} {t('Enjoying')} {t('Blockchain Games')}</p>
 			</Fade>
 			<div className='mt-[20px] md:mt-[50px]'>
 				<Fade bottom>

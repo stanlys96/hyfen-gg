@@ -58,7 +58,7 @@ const SilderFeature = ({
           <div className='col-span-12 md:col-span-5 text-center md:text-left'>
             <div className='text-center'>
               <Fade bottom>
-                <h4 className={`text-3xl md:text-5xl md:text-left font-bold leading-[60px] md:w-[400px] ${titleGradient && 'slider-title-gradient'}`}>{title}</h4>
+                <h4 className={`text-xl md:text-[40px] md:text-left font-bold leading-[60px] md:w-[400px] ${titleGradient && 'slider-title-gradient'}`}>{title}</h4>
               </Fade>
               {
                 button &&

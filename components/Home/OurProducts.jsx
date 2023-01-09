@@ -48,21 +48,23 @@ export default function OurProducts() {
                         delay={i !== 0 ? i * 200 : 0}
                     >
                         <div className="relative products-container">
-                            <div className={`bg-product-${i + 1} py-8 md:py-14 px-2 md:px-12 relative grid grid-cols-3`}>
-                                <div className="container mx-auto col-span-2">
-                                    <p className="text-xl md:text-4xl mb-3 font-bold">{item.title}</p>
-                                    <p className="text-base md:text-xl">{item.description1} {item.description2 && item.description2}</p>
+                            <div className={`bg-product-${i + 1} py-8 md:py-14 px-2 md:px-12 relative`}>
+                                <div className="container flex justify-around items-center mx-auto relative z-50 gap-12">
+                                    <div className="relative flex flex-col gap-4">
+                                        <p className="text-xl md:text-4xl mb-3 font-bold">{item.title}</p>
+                                        <p className="text-base md:text-xl">{item.description1} {item.description2 && item.description2}</p>
+                                    </div>
+                                    <img
+                                        src={`/images/home/arrow-right.svg`}
+                                        className="h-fit"
+                                    />
                                 </div>
-                                <img
-                                    src={`/images/home/arrow-right.svg`}
-                                    className="md:h-1/3 absolute md:top-1/3 md:right-[-20px] right-[20px] h-1/4 w-1/4 top-1/3"
-                                />
-                            </div>
-                            <div className="absolute top-0 right-0 w-full lg:w-5/12 h-full">
-                                <img
-                                    src={`/images/home/product-${(i + 1) + (windowWidth > 1024 ? "" : "-mobile-screen")}.png`}
-                                    className="h-full w-full"
-                                />
+                                <div className="absolute top-0 right-[-45%] w-full -z-10 md:w-2/3 h-full z-minus-5">
+                                    <img
+                                        src={`/images/home/product-${(i + 1)}.png`}
+                                        className="h-full w-full z-minus-5"
+                                    />
+                                </div>
                             </div>
                         </div>
                     </Fade>

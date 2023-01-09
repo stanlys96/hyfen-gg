@@ -84,6 +84,10 @@ a {
 	background: linear-gradient(180deg, #333B96 0%, #13163A 100%);
 }
 
+.bg-home {
+	height: 100vh;
+}
+
 .bg-hero {
 	background: url('/images/bg.png') no-repeat;
 	background-size: contain;
@@ -123,7 +127,7 @@ a {
 	/* display: flex;
 	flex-direction: column;
 	justify-content: center; */
-	z-index: 10;
+	/* z-index: 99; */
 	border-top-right-radius: 160px 160px;
 	border-bottom-right-radius: 160px 160px;
 	width: 70%;
@@ -1187,6 +1191,10 @@ opacity: 0.3;
 .interested-in-img {
 	border-top-right-radius: 25px;
 	border-bottom-right-radius: 25px;
+}
+
+.z-minus-5 {
+	z-index: -5;
 }
 
 @media (max-width: 767px) {

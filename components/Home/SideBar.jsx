@@ -13,10 +13,7 @@ function SideBar() {
 				<div className='lg:pt-40'>
 					<Fade top>
 						<h1 className='text-3xl md:text-5xl lg:text-6xl text-center lg:text-left font-bold'>
-							{t('home:Play Games')},
-						</h1>
-						<h1 className='text-3xl md:text-5xl lg:text-6xl text-center lg:text-left font-bold'>
-							{t('home:Earn Money')}.
+							{t('home:Play Games')}, {t('home:Earn Money')}.
 						</h1>
 					</Fade>
 

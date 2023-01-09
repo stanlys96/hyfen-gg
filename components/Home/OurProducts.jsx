@@ -17,17 +17,6 @@ export default function OurProducts() {
 		}
 	]
 
-	const [windowWidth, setWindowWidth] = useState(0);
-	let resizeWindow = () => {
-	  setWindowWidth(window.innerWidth);
-	};
-  
-	useEffect(() => {
-	  resizeWindow();
-	  window.addEventListener("resize", resizeWindow);
-	  return () => window.removeEventListener("resize", resizeWindow);
-	}, []);
-
     return (
         <div 
         className='gamefi pt-[93px] pb-[140px]'

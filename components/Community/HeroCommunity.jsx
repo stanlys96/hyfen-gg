@@ -36,7 +36,7 @@ function HeroCommunity() {
                     </div>
                     <div className="community-socials flex justify-center items-center mt-8 md:mt-4">
                         {communitySocials2.map((item, i) => (
-                            <Fade key={i} right delay={i == 0 ? 100 : i * 200}>
+                            <Fade key={i} right delay={i == 0 ? 400 : i * 3 * 200}>
                                 <div className="community-social-container cursor-pointer mx-8">
                                     <a href="#" className="flex justify-center items-center">
                                         <Image

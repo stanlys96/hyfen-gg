@@ -57,11 +57,6 @@ export default function OurProducts() {
                                     src={`/images/home/arrow-right.svg`}
                                     className="md:h-1/3 absolute md:top-1/3 md:right-[-20px] right-[20px] h-1/4 w-1/4 top-1/3"
                                 />
-                                {/* <div className="arrowWrapper hidden md:block">
-                                    <div className="arrowIconContainer">
-                                        <div className="arrowIcon"></div>
-                                    </div>
-                                </div> */}
                             </div>
                             <div className="absolute top-0 right-0 w-full lg:w-5/12 h-full">
                                 <img

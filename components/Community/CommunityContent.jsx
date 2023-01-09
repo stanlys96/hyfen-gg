@@ -7,7 +7,7 @@ import { Fade } from 'react-reveal'
 function CommunityContent() {
     const { t } = useTranslation('community')
     return (
-        <div className="community-content pt-24 sm:pt-60 md:py-12">
+        <div className="community-content pt-24 sm:pt-60 md:py-24">
             <div className="container mx-auto">
                 {communityData.map((item, i) => (
                     <div key={i} className={`py-10 md:flex justify-between ${i % 2 != 0 ? "flex-row-reverse" : ""}`}>

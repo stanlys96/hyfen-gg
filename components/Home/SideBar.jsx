@@ -32,7 +32,7 @@ function SideBar() {
 
 					<Fade top>
 						<div className=''>
-							<div className='mt-3 text-center lg:text-left text-sm md:text-base'>
+							<div className='mt-3 text-center lg:text-left text-base md:text-xl'>
 								{t('home:step_into_the_world')} {windowWidth > 1024 && <br/>} {t('home:step_into_the_world2')}  {t('home:step_into_the_world3')}
 							</div>
 						</div>

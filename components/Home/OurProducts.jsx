@@ -36,25 +36,25 @@ export default function OurProducts() {
                         top
                         delay={i !== 0 ? i * 200 : 0}
                     >
-                        <div className="relative products-container">
-                            <div className={`bg-product-${i + 1} py-8 md:py-14 px-2 md:px-12 relative`}>
+                        <div className="group relative products-container">
+                            <div className={`bg-product-${i + 1} group-hover:w-5/6 transition-all duration-500 py-8 md:py-14 px-2 md:px-12 relative`}>
                                 <div className="container flex justify-around items-center mx-auto relative z-50 gap-12">
-                                    <div className="relative flex flex-col gap-4">
-                                        <p className="text-xl md:text-4xl mb-3 font-bold">{item.title}</p>
-                                        <p className="text-base md:text-xl">{item.description1} {item.description2 && item.description2}</p>
+                                    <div className="relative grid grid-rows-2">
+                                        <p className="text-xl md:text-4xl font-bold mb-4">{item.title}</p>
+                                        <p className="text-base md:text-xl text-ellipsis">{item.description1} {item.description2 && item.description2}</p>
                                     </div>
                                     <img
                                         src={`/images/home/arrow-right.svg`}
                                         className="h-fit"
                                     />
                                 </div>
-                                <div className="absolute top-0 right-[-45%] w-full -z-10 md:w-2/3 h-full z-minus-5">
+                            </div>
+                            <div className="absolute top-0 right-[-25%] w-4/5 -z-10 h-full z-minus-5">
                                     <img
                                         src={`/images/home/product-${(i + 1)}.png`}
                                         className="h-full w-full z-minus-5"
                                     />
                                 </div>
-                            </div>
                         </div>
                     </Fade>
                 ))

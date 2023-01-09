@@ -13,17 +13,17 @@ function SideBar() {
 				<div className='lg:pt-40'>
 					<Fade top>
 						<h1 className='text-3xl md:text-5xl lg:text-6xl text-center lg:text-left font-bold'>
-							{t('home:Play Games')}, {t('home:Earn Money')}.
+							{t('home:Play Games')},
+						</h1>
+						<h1 className='text-3xl md:text-5xl lg:text-6xl text-center lg:text-left font-bold'>
+							{t('home:Earn Money')}.
 						</h1>
 					</Fade>
 
 					<Fade top>
 						<div className=''>
 							<div className='mt-3 text-center lg:text-left text-sm md:text-base'>
-								{t('home:step_into_the_world')}
-							</div>
-							<div className='text-center lg:text-left text-sm md:text-base'>
-								{t('home:step_into_the_world2')} {t('home:step_into_the_world3')}
+								{t('home:step_into_the_world')} {t('home:step_into_the_world2')} {t('home:step_into_the_world3')}
 							</div>
 						</div>
 					</Fade>

@@ -7,7 +7,7 @@ import { Fade } from 'react-reveal'
 function ContactContent() {
     const { t } = useTranslation('contact')
     return (
-        <div className="about-content py-24">
+        <div className="about-content py-12">
             <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-y-10 md:gap-x-10">
                 {
                     contactSupportData.map((item, i) => (

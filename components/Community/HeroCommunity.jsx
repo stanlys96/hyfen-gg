@@ -17,16 +17,18 @@ function HeroCommunity() {
                 <div className="community-socials grid grid-cols-3 gap-y-8 md:flex md:justify-center">
                     {communitySocials.map((item, i) => (
                         <Fade key={i} right delay={i == 0 ? 100 : i * 200}>
-                            <div className="community-social-container cursor-pointer md:mx-6">
-                                <Image
-                                    src={`/images/social/${item.imageUrl}`}
-                                    className='py-2'
-                                    width={30}
-                                    height={30}
-                                    alt='BaseLogo'
-                                    layout='intrinsic'
-                                    quality={100}
-                                />
+                            <div className="community-social-container cursor-pointer mx-8">
+                                <a href="#" className="flex justify-center items-center">
+                                    <Image
+                                        src={`/images/social/${item.imageUrl}`}
+                                        className='py-2'
+                                        width={30}
+                                        height={30}
+                                        alt='BaseLogo'
+                                        layout='intrinsic'
+                                        quality={100}
+                                    />
+                                </a>
                             </div>
                         </Fade>
                     ))}

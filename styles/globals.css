@@ -1034,7 +1034,6 @@ footer .copyright {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	justify-self: center;
 	position: relative;
 	border-radius: 50%;
 	border: 1px solid #fff;

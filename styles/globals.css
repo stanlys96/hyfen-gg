@@ -60,7 +60,7 @@ a {
 /* Navigation  */
 
 .navigation-link {
-	@apply inline-block w-full h-full hover:text-white py-2 px-6 text-sm font-bold relative transition-all duration-300 ease-in-out;
+	@apply inline-block w-full h-full hover:text-white py-2 px-3 text-sm font-bold relative transition-all duration-300 ease-in-out;
 }
 /* .navigation-link::after {
 	content: "";
@@ -82,10 +82,6 @@ a {
 .bg-hyfen-play,
 .bg-hyfen-tools {
 	background: linear-gradient(180deg, #333B96 0%, #13163A 100%);
-}
-
-.bg-home {
-	height: 100vh;
 }
 
 .bg-hero {

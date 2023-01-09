@@ -52,7 +52,6 @@ export default function OurProducts() {
                                 <div className="container mx-auto col-span-2">
                                     <p className="text-xl md:text-4xl mb-3 font-bold">{item.title}</p>
                                     <p className="text-base md:text-xl">{item.description1} {item.description2 && item.description2}</p>
-                                    {/* {item.description2 && <p className="text-xs md:text-base">{item.description2}</p>} */}
                                 </div>
                                 <img
                                     src={`/images/home/arrow-right.svg`}
@@ -64,7 +63,7 @@ export default function OurProducts() {
                                     </div>
                                 </div>
                             </div>
-                            <div className="absolute top-0 right-0 w-6/12 lg:w-5/12 h-full">
+                            <div className="absolute top-0 right-0 w-full lg:w-5/12 h-full">
                                 <img
                                     src={`/images/home/product-${(i + 1) + (windowWidth > 1024 ? "" : "-mobile-screen")}.png`}
                                     className="h-full w-full"

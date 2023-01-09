@@ -55,7 +55,7 @@ export default function OurProducts() {
                                 </div>
                                 <img
                                     src={`/images/home/arrow-right.svg`}
-                                    className="md:h-2/4 md:w-1/4 absolute md:top-1/4 right-[20px] h-1/3 w-1/3 top-1/3"
+                                    className="md:h-1/3 absolute md:top-1/3 md:right-[-20px] right-[20px] h-1/4 w-1/4 top-1/3"
                                 />
                                 {/* <div className="arrowWrapper hidden md:block">
                                     <div className="arrowIconContainer">

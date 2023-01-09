@@ -4,7 +4,7 @@ import ContactContent from './ContactContent'
 
 export default function Contact() {
 	return (
-        <div>
+        <div className="overflow-hidden">
             <HeroContact />
             <ContactContent />
         </div>

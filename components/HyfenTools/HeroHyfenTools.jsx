@@ -8,7 +8,7 @@ function HeroHyfenTools() {
 
 	const { t } = useTranslation('hyfen-tools')
 	return (
-		<div className='pt-24 md:pb-24 md:pb-0 lg:pt-0 relative flex flex-col justify-around md:flex-row container mx-auto'>
+		<div className='pt-24 md:pb-24 md:pb-0 lg:pt-0 relative flex flex-col justify-around md:flex-row container mx-auto overflow-hidden'>
 			<div className="lg:mt-0">
 				<div className='lg:pt-40'>
 					<Fade top>

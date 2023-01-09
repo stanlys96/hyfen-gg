@@ -9,7 +9,7 @@ import Enjoying from './Enjoying';
 export default function HyfenPlay() {
     const { t } = useTranslation('hyfen-play') 
 	return (
-        <div>
+        <div className="overflow-hidden">
             <div className='bg-hyfen-play'>
                 <HeroHyfenPlay />
             </div>

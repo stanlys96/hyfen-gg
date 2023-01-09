@@ -7,7 +7,7 @@ import JoinCommunity from './JoinCommunity'
 
 export default function Home() {
 	return (
-		<div className='bgBlack'>
+		<div className='bgBlack overflow-hidden'>
 			<div>
 				<div className='bg-home'>
 					<SideBar />

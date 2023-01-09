@@ -8,7 +8,7 @@ import useTranslation from 'next-translate/useTranslation'
 export default function HyfenTools() {
     const { t } = useTranslation('hyfen-tools') 
 	return (
-        <div>
+        <div className="overflow-hidden">
             <div className='bg-hyfen-play'>
                 <HeroHyfenTools />
             </div>

@@ -4,7 +4,7 @@ import CommunityContent from './CommunityContent'
 
 export default function Community() {
 	return (
-        <div>
+        <div className="overflow-hidden">
             <HeroCommunity />
             <CommunityContent />
         </div>

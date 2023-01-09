@@ -1,7 +1,7 @@
 import React from 'react'
 import useTranslation from 'next-translate/useTranslation'
 import Image from 'next/image'
-import { communitySocials } from '../../mock/community'
+import { communitySocials1, communitySocials2 } from '../../mock/community'
 import { Fade } from 'react-reveal'
 
 function HeroCommunity() {
@@ -14,24 +14,45 @@ function HeroCommunity() {
                 <Fade top>
                     <p className="text-3xl md:text-5xl font-bold text-center mb-6">{t('Home Gamers')}</p>
                 </Fade>
-                <div className="community-socials grid grid-cols-3 gap-y-8 md:flex md:justify-center">
-                    {communitySocials.map((item, i) => (
-                        <Fade key={i} right delay={i == 0 ? 100 : i * 200}>
-                            <div className="community-social-container cursor-pointer mx-8">
-                                <a href="#" className="flex justify-center items-center">
-                                    <Image
-                                        src={`/images/social/${item.imageUrl}`}
-                                        className='py-2'
-                                        width={30}
-                                        height={30}
-                                        alt='BaseLogo'
-                                        layout='intrinsic'
-                                        quality={100}
-                                    />
-                                </a>
-                            </div>
-                        </Fade>
-                    ))}
+                <div className="flex items-center justify-center md:flex-row flex-col">
+                    <div className="community-socials flex justify-center items-center md:mt-4">
+                        {communitySocials1.map((item, i) => (
+                            <Fade key={i} right delay={i == 0 ? 100 : i * 200}>
+                                <div className="community-social-container cursor-pointer mx-8">
+                                    <a href="#" className="flex justify-center items-center">
+                                        <Image
+                                            src={`/images/social/${item.imageUrl}`}
+                                            className='py-2'
+                                            width={30}
+                                            height={30}
+                                            alt='BaseLogo'
+                                            layout='intrinsic'
+                                            quality={100}
+                                        />
+                                    </a>
+                                </div>
+                            </Fade>
+                        ))}
+                    </div>
+                    <div className="community-socials flex justify-center items-center mt-8 md:mt-4">
+                        {communitySocials2.map((item, i) => (
+                            <Fade key={i} right delay={i == 0 ? 100 : i * 200}>
+                                <div className="community-social-container cursor-pointer mx-8">
+                                    <a href="#" className="flex justify-center items-center">
+                                        <Image
+                                            src={`/images/social/${item.imageUrl}`}
+                                            className='py-2'
+                                            width={30}
+                                            height={30}
+                                            alt='BaseLogo'
+                                            layout='intrinsic'
+                                            quality={100}
+                                        />
+                                    </a>
+                                </div>
+                            </Fade>
+                        ))}
+                    </div>
                 </div>
             </div>
         </div>

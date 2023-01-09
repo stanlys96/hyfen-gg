@@ -1050,6 +1050,10 @@ footer .copyright {
 	background-color: #111434;
 }
 
+.hero-community {
+	height: 80vh;
+}
+
 .community-content,
 .about-content {
 	background-color: #111434;

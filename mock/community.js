@@ -1,4 +1,4 @@
-export const communitySocials = [
+export const communitySocials1 = [
     {
         id: 1,
         title: "Telegram",
@@ -16,7 +16,10 @@ export const communitySocials = [
         title: "Twitter",
         link: "/",
         imageUrl: "twitter.svg"
-    },
+    }
+];
+
+export const communitySocials2 = [
     {
         id: 4,
         title: "Facebook",

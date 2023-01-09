@@ -7,7 +7,7 @@ import { Fade } from 'react-reveal'
 function CommunityContent() {
     const { t } = useTranslation('community')
     return (
-        <div className="community-content pb-12 md:py-12">
+        <div className="community-content pt-24 sm:pt-60 md:py-12">
             <div className="container mx-auto">
                 {communityData.map((item, i) => (
                     <div key={i} className={`py-10 md:flex justify-between ${i % 2 != 0 ? "flex-row-reverse" : ""}`}>
@@ -28,34 +28,36 @@ function CommunityContent() {
                         </Fade>
                     </div>
                 ))}
-                <div className={`my-10 flex justify-between flex-col-reverse md:flex-row-reverse community-manager-container md:pl-10`}>
-                    <Fade right delay={150}>
-                        <img
-                            src={`/images/community/Interested In.png`}
-                            className='block w-full md:w-1/2 interested-in-img'
-                            alt='BaseLogo'
-                            height="100%"
-                            quality={100}
-                        />
-                    </Fade>
-                    <Fade left delay={250}>
-                        <div className={`py-5 flex flex-col justify-center items-start w-full md:w-1/2 md:mr-10 pl-10 md:pl-0`}>
-                            <p className="text-xl md:text-2xl">{t('Interested In')}</p>
-                            <p className="text-sm md:text-base mt-6">{t('Gain Experience')}</p>
-                            <a href="#" className='header__download-button text-slate-900 bg-white py-3 px-6 inline-block text-xs md:text-sm font-bold cursor-pointer mt-5 flex items-center'>
-                                <span className="inline-block mr-2">{t('Apply Here')} </span>
-                                <Image
-                                    src={`/images/arrow_right.svg`}
-                                    className='ml-5'
-                                    width={20}
-                                    height={20}
-                                    alt='BaseLogo'
-                                    layout='intrinsic'
-                                    quality={100}
-                                />
-                            </a>
-                        </div>
-                    </Fade>
+                <div className="pb-10 md:pb-0">
+                    <div className={`my-10 flex justify-between flex-col-reverse md:flex-row-reverse community-manager-container md:pl-10`}>
+                        <Fade right delay={150}>
+                            <img
+                                src={`/images/community/Interested In.png`}
+                                className='block w-full md:w-1/2 interested-in-img'
+                                alt='BaseLogo'
+                                height="100%"
+                                quality={100}
+                            />
+                        </Fade>
+                        <Fade left delay={250}>
+                            <div className={`py-5 flex flex-col justify-center items-start w-full md:w-1/2 md:mr-10 pl-10 md:pl-0`}>
+                                <p className="text-xl md:text-2xl">{t('Interested In')}</p>
+                                <p className="text-sm md:text-base mt-6">{t('Gain Experience')}</p>
+                                <a href="#" className='header__download-button text-slate-900 bg-white py-3 px-6 inline-block text-xs md:text-sm font-bold cursor-pointer mt-5 flex items-center'>
+                                    <span className="inline-block mr-2">{t('Apply Here')} </span>
+                                    <Image
+                                        src={`/images/arrow_right.svg`}
+                                        className='ml-5'
+                                        width={20}
+                                        height={20}
+                                        alt='BaseLogo'
+                                        layout='intrinsic'
+                                        quality={100}
+                                    />
+                                </a>
+                            </div>
+                        </Fade>
+                    </div>
                 </div>
             </div>
         </div>

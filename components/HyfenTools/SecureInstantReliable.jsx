@@ -10,7 +10,7 @@ export default function SecureInstantReliable() {
 	return (
 		<Section size="lg">
 			<div className='container mx-auto'>
-				<div className='grid grid-cols-1 lg:grid-cols-3 gap-5 xl:gap-10 grid-ar'>
+				<div className='grid grid-cols-1 lg:grid-cols-3 gap-5 xl:gap-10 gap-y-16 my-12 md:mt-0 grid-ar'>
 					{secureInstantReliable.map((item, index) => (
 						<Fade 
 							key={item}

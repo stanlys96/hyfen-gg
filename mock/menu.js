@@ -15,19 +15,22 @@ export const menus = [
 				id: 1,
 				title: "Hyfen Play",
 				link: "/hyfen-play",
-				active: true
+				active: true,
+				withIcon: false,
 			},
 			{
 				id: 2,
 				title: "Hyfen Tools",
 				link: "/hyfen-tools",
-				active: true
+				active: true,
+				withIcon: false,
 			},
 			{
 				id: 3,
 				title: "Hyfen Payments",
 				link: "#",
-				active: false
+				active: false,
+				withIcon: false,
 			}
 		],
 		disable: false
@@ -41,25 +44,29 @@ export const menus = [
 				id: 1,
 				title: "Guide Book",
 				link: "#",
-				active: true
+				active: true,
+				withIcon: true,
 			},
 			{
 				id: 2,
 				title: "White Paper",
 				link: "#",
-				active: false
+				active: false,
+				withIcon: false,
 			},
 			{
 				id: 3,
 				title: "Tutorial Videos",
 				link: "#",
-				active: false
+				active: false,
+				withIcon: false,
 			},
 			{
 				id: 4,
 				title: "Media Kit",
 				link: "#",
-				active: true
+				active: true,
+				withIcon: true,
 			}
 		],
 		disable: false

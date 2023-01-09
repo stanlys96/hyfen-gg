@@ -108,7 +108,17 @@ function Header({ fixed = true }) {
 													>
 														{menu.submenu.map((submenu, i) => (
 															<DropdownItem key={i} additionalClassName={submenu.active && "hover:bg-gray-100"}>
-																<a href={submenu.link} className={`${submenu.active ? "" : "text-black-50 cursor-default"} font-bold`}>{t(submenu.title)}</a>
+																<a href={submenu.link} className={`${submenu.active ? "" : "text-black-50 cursor-default"} font-bold flex items-center`}>
+																<span className="inline-block mr-2">{t(submenu.title)}</span>
+																	{
+																		submenu.withIcon && <Image 
+																			src="/images/home/guidebook-icon-black.svg"
+																			height={15}
+																			width={15}
+																			alt="icon"
+																		/>
+																	}
+																</a>
 															</DropdownItem>
 														))}
 													</ul>

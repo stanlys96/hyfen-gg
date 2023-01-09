@@ -83,9 +83,16 @@ export default function SideDrawer({ open, handleClose, setOpen }) {
 															<div className="flex items-center">
 																<a onClick={() => {
 																	if (router.pathname === submenu.link) setOpen(false)
-																}} className={`text-left block px-10 py-3 lg:text-lg text-sm ${router.pathname === submenu.link && "text-blue"} ${submenu.active && 'cursor-pointer hover:text-blue'} ${!submenu.active && "text-white-50 cursor-default"}`}>
-																	{/* {t(submenu.title)} */}
-																	{t(submenu.title)}
+																}} className={`text-left block px-10 py-3 lg:text-lg text-sm ${router.pathname === submenu.link && "text-blue"} ${submenu.active && 'cursor-pointer hover:text-blue'} ${!submenu.active && "text-white-50 cursor-default"} flex items-center`}>
+																	<span className="inline-block mr-3">{t(submenu.title)}</span>
+																	{
+																		submenu.withIcon && <Image 
+																			src="/images/home/guidebook-icon.svg"
+																			height={20}
+																			width={20}
+																			alt="icon"
+																		/>
+																	}
 																</a>
 																{!submenu.active && <span className="coming-soon-sign py-1.5 px-3 text-sm">Coming Soon</span>}
 															</div>

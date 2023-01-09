@@ -87,15 +87,16 @@ function SideBar() {
 			</div>
 			<Fade right delay={600}>
 				<div className='inline-block relative h-full lg:ml-0 max-w-[1440px] py-6 md:pt-24 h-[510px] md:h-[605px] flex justify-center items-center'>
-					<img 
-						src="/images/home/hyfen-home-img.svg" 
-						alt="image" 
-						className='h-full'
-					/>
-					
+					<div className="pt-24">
+						<img 
+							src="/images/home/hyfen-home-img.svg" 
+							alt="image" 
+							className='h-full'
+						/>
+					</div>
 				</div>
 			</Fade>
-			<ScrollDown className="justify-center lg:justify-start flex md:hidden" />
+			<ScrollDown className="justify-center lg:justify-start flex md:hidden mt-20" />
 		</div>
 	)
 }

@@ -8,9 +8,9 @@ function HeroHyfenPlay() {
 
 	const { t } = useTranslation()
 	return (
-		<div className='container mx-auto pt-24 md:pb-24 md:pb-0 lg:pt-0 relative grid grid-cols-1 md:grid-cols-2 gap-x-10 justify-around md:flex-row'>
-			<div className="lg:mt-0">
-				<div className='lg:pt-40'>
+		<div className='container mx-auto pt-24 md:pb-24 md:pb-0 lg:pt-0 relative grid grid-cols-1 md:grid-cols-2 gap-x-10 justify-around md:flex-row relative overflow-hidden'>
+			<div className="lg:mt-0 relative">
+				<div className='lg:pt-40 w-full relative'>
 					<Fade top>
 						<h1 className='text-4xl md:text-7xl text-center lg:text-left font-bold hyfen-play-gradient'>
 							{t('hyfen-play:Hyfen Play')}

@@ -7,12 +7,8 @@ export default function TermsAndConditions() {
         > 
             <div className="flex flex-col gap-4 container mx-auto py-24">
             <div>
-                <h1 className='text-2xl font-bold'>Terms and Conditions</h1>
-                <p>These Terms govern.</p>
-                <ul className="list-disc">
-                <li>the use of this Application, and,</li>
-                <li>any other related Agreement or legal relationship with the Owner</li>
-                </ul>
+                <h1 className='text-2xl font-bold'>TERMS OF SERVICE</h1>
+                <p className="text-xl font-bold">Terms of Service Agreement</p>
                 <p>In a legally binding way. Capitalised words are defined in the relevant dedicated section of this document.</p>
                 <p>The User must read this document carefully.</p>
                 <p>Although the entire contractual relationship relating to these Products is entered into solely by the Owner and Users, Users acknowledge and agree that, where this Application has been provided to them via the Apple App Store, Apple may enforce these Terms as a third-party beneficiary. Nothing in these Terms creates any relationship of employment, agency, or partnership between the involved parties.</p>

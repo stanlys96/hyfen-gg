@@ -1203,4 +1203,33 @@ opacity: 0.3;
 		width: 90%;
 		height: 10px;
 	}
+
+	.join-community-bg {
+		background: none;
+		height: 60vh;
+	}
+
+	.hero-about {
+		background: url('/images/about/about-mobile-bg.png') no-repeat;
+		background-size: cover;
+		background-position: center;
+		background-color: #0e102A;
+		height: 100vh;
+	}
+
+	.hero-contact {
+		background: url('/images/contact/get-in-touch-mobile-bg.png') no-repeat;
+		background-size: cover;
+		background-position: center;
+		background-color: #0e102A;
+		height: 100vh;
+	}
+
+	.join-community-bg {
+		background: url('/images/home/join-community-mobile-bg.png') no-repeat center center;
+		background-size: cover;
+		background-position: center;
+		background-color: #0e102A;
+		height: 100vh;
+	}
 }

@@ -107,7 +107,7 @@ const SilderFeature = ({
                 {items.map((item, i) => (
                   <div key={i}>
                     <div
-                      className={`transition-transform h-[300px] md:h-[600px] duration-500 ${i === activeSlide ? "translate-y-0" : "translate-y-10"}`}
+                      className={`transition-transform h-[300px] md:mt-10 md:h-[600px] duration-500 ${i === activeSlide ? "translate-y-0" : "translate-y-10"}`}
                     >
                       <Image
                         src={item.images}
@@ -118,8 +118,8 @@ const SilderFeature = ({
                       />
                     </div>
                     <div className='mt-14 text-center'>
-                      <h5 className='text-lg text-white font-bold mb-2'>{t(item.code)}</h5>
-                      <p className='text-sm text-gray-300'>{t(item.code + "-desc")}</p>
+                      <h5 className='text-lg text-white font-bold mb-2 md:hidden'>{t(item.code)}</h5>
+                      <p className='text-sm text-gray-300 md:hidden'>{t(item.code + "-desc")}</p>
                     </div>
                   </div>
                 ))}

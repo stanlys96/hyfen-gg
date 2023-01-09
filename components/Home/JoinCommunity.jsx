@@ -8,9 +8,10 @@ export default function EasiestWay() {
 
     return (
         <div 
-            className='gamefi join-community-bg'
+            className='gamefi join-community-bg relative'
         >
 			<div className="container mx-auto flex flex-col justify-center items-center h-full">
+
 				<Fade top>
 					<p className="font-bold text-3xl md:text-5xl mb-5 text-center">{t("home:Join Community")}</p>
 				</Fade>
@@ -20,6 +21,18 @@ export default function EasiestWay() {
 					</Link>
 				</Fade>
 			</div>
+			{/* <img
+				className={`absolute top-0 left-0 md:hidden z-50`}
+				width="100%"
+				height="50%"
+				src="/images/home/join-community-2.png"
+				alt="Comic"/>
+			<img
+				className={`absolute top-2/2 left-0 md:hidden`}
+				width="100%"
+				height="50%"
+				src="/images/home/join-community-1.png"
+				alt="Comic"/> */}
         </div>
     )
 }

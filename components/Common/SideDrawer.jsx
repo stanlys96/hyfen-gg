@@ -230,7 +230,7 @@ export default function SideDrawer({ open, handleClose, setOpen }) {
 						</li>
 					</ul>
 				</nav>
-				<div className='pt-8 w-full text-center space-y-7'>
+				<div className='pt-8 w-full text-center space-y-5'>
 					<Social 
 						className="grid grid-cols-4 px-10 md:px-0 text-center lg:text-left" 
 						mediaSocialsData={mediaSocialsData1} 
@@ -238,7 +238,7 @@ export default function SideDrawer({ open, handleClose, setOpen }) {
 						height={20} 
 					/>
 					<Social
-						className="grid grid-cols-3 lg:grid-cols-4 px-10 md:px-0 text-center lg:text-left"
+						className="grid grid-cols-3 lg:grid-cols-4 px-20 md:px-0 text-center lg:text-left"
 						width={20}
 						height={20}
 						mediaSocialsData={mediaSocialsData2}

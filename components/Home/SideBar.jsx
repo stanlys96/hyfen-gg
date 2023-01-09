@@ -26,10 +26,7 @@ function SideBar() {
 								{t('home:step_into_the_world')}
 							</div>
 							<div className='text-center lg:text-left text-sm md:text-base'>
-								{t('home:step_into_the_world2')}
-								<span>
-									{t('home:step_into_the_world3')}
-								</span>
+								{t('home:step_into_the_world2')} {t('home:step_into_the_world3')}
 							</div>
 						</div>
 					</Fade>

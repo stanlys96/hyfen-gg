@@ -18,22 +18,24 @@ function SideBar() {
 	  return () => window.removeEventListener("resize", resizeWindow);
 	}, []);
 	return (
-		<div className='container mx-auto pt-24 lg:pt-0 relative flex flex-col justify-around md:flex-row'>
-			<div className="lg:mt-0">
+		<div className='container mx-auto pt-24 lg:pt-0 relative flex flex-wrap'>
+			{/* Description */}
+			<div className="lg:mt-0 flex flex-1">
 				<div className='lg:pt-40'>
+					{/* Heading */}
 					<Fade top>
-						<h1 className='text-[40px] leading-[51px] md:text-[80px] md:leading-[104px] text-center lg:text-left font-bold'>
+						<h1 className='text-[40px] leading-[51px] md:text-[80px] md:leading-[104px] text-center  lg:text-left font-bold'>
 							{t('home:Play Games')},
 						</h1>
 						<h1 className='text-[40px] leading-[51px] md:text-[80px] md:leading-[104px] text-center lg:text-left font-bold'>
 							{t('home:Earn Money')}.
 						</h1>
 					</Fade>
-
+					{/* Desription */}
 					<Fade top>
 						<div className=''>
-							<div className='mt-3 text-center lg:text-left text-base md:text-xl'>
-								{t('home:step_into_the_world')} {windowWidth > 768 && <br/>} {t('home:step_into_the_world2')}  {t('home:step_into_the_world3')}
+							<div className='mt-3 text-center lg:text-left text-base md:text-[22px] pr-4 leading-8 font-light'>
+								{t('home:step_into_the_world')}  {t('home:step_into_the_world2')}  {t('home:step_into_the_world3')}
 							</div>
 						</div>
 					</Fade>
@@ -42,19 +44,10 @@ function SideBar() {
 						top
 						delay={600}
 					>
-						<div className="mt-7" style={{
-							display: 'flex',
-							flexDirection: 'row',
-							justifyContent: 'start'
-						}}>
-							<div className='md:mb-4 text-center lg:text-left mr-4'>
-								<a
+						<div className="mt-7  flex items-center" >
+						<a
 									href='https://apps.apple.com/us/app/metabase-play/id1624878820'
-									style={{
-										display: 'flex',
-										alignItems: 'center',
-										maxWidth: 325
-									}}
+							
 								>
 									<Image
 										src="/images/App Store.svg"
@@ -63,15 +56,9 @@ function SideBar() {
 										quality={100}
 									/>
 								</a>
-							</div>
-							<div className='md:mb-4 text-center lg:text-left'>
 								<a
 									href='https://apps.apple.com/us/app/metabase-play/id1624878820'
-									style={{
-										display: 'flex',
-										alignItems: 'center',
-										maxWidth: 325
-									}}
+								
 								>
 									<Image
 										src="/images/Google Play.svg"
@@ -79,15 +66,16 @@ function SideBar() {
 										width={225}
 									/>
 								</a>
-							</div>
 						</div>
 						<ScrollDown className="justify-center lg:justify-start hidden md:flex mt-10" />
 					</Fade>
 				</div>
 			</div>
+
+			{/* Image */}
 			<Fade right delay={600}>
-				<div className='inline-block relative h-full lg:ml-0 max-w-[1440px] py-6 md:pt-24 h-[510px] md:h-[605px] flex justify-center items-center'>
-					<div className="pt-24">
+				<div className=' relative lg:ml-0 max-w-[1440px] py-6 md:pt-24 h-[510px] md:h-[605px]  flex justify-center items-center'>
+					<div className="-mt-24 md:mt-24">
 						<img 
 							src="/images/home/home-bg-img.svg" 
 							alt="image" 

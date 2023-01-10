@@ -46,9 +46,9 @@ function Header({ fixed = true }) {
 				 scrollY < 20 ? '' : 'scrolled'
 			}`}>
 			<div className='container mx-auto'>
-				<div className='flex flex-wrap '>
-					<div className='flex items-center justify-between w-full md:w-auto'>
-						<div>
+				<div className='flex w-full justify-between'>
+					<div className='flex flex-1 w-fit items-center justify-between bg-green-500'>
+						{/* Icon App */}
 							<Link href='/' className=''>
 								<a className='flex justify-start items-center '>
 									<Image
@@ -62,7 +62,7 @@ function Header({ fixed = true }) {
 									/>
 								</a>
 							</Link>
-						</div>
+							{/* Button Dropdown */}
 						<button
 							className='flex md:hidden items-center justify-center ml-auto p-3 md:p-4'
 							onClick={() => setOpen((o) => !o)}
@@ -70,8 +70,10 @@ function Header({ fixed = true }) {
 							<Menu />
 						</button>
 					</div>
-					<div className='flex flex-col flex-grow w-full md:w-auto'>
-						<nav className='w-full h-full md:w-auto text-xs font-bold order-1 md:order-2 flex-col md:flex-row hidden md:flex'>
+					{/* Tablet Upper */}
+					<div className='hidden flex-col md:flex md:flex-row md:gap-64 bg-red-600 w-full'>
+						{/* Nav Container */}
+						<nav className='w-full h-full gap-x-24 text-xs font-medium flex-col md:flex-row hidden md:flex'>
 							<ul className='w-full md:flex justify-end py-0 md:py-0'>
 								{menus.map((menu) => (
 									<li key={menu.id}>
@@ -126,9 +128,9 @@ function Header({ fixed = true }) {
 											</React.Fragment>
 										) : (
 											<div className="flex justify-center items-center h-full">
-												<ActiveLink href={menu.link} activeClassName='active-nav-link' disabled={menu.disable}>
-														<a className='navigation-link cursor-pointer text-white-50'>
-															{t(menu.title)}
+												<ActiveLink href={menu.link} activeClassName='bg-app-primary text-white rounded-full' disabled={menu.disable}>
+														<a className='navigation-link cursor-pointer '>
+															{t(menu.title)} 
 														</a>
 												</ActiveLink>
 											</div>

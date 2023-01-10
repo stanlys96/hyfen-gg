@@ -46,6 +46,9 @@ module.exports = {
 				5.5: '1.327rem',
 			},
 			colors: {
+				app: {
+					primary : '#3c45a5'
+				},
 				transparent: 'transparent',
 				current: 'currentColor',
 				hover: '#1dfaff',

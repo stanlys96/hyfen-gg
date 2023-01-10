@@ -13,7 +13,7 @@ export default function EasiestWay() {
 			<div className="container mx-auto flex flex-col justify-center items-center h-full">
 
 				<Fade top>
-					<p className="font-bold text-3xl md:text-5xl mb-5 text-center">{t("home:Join Community")}</p>
+					<p className="font-bold text-4xl md:text-5xl mb-5 text-center">{t("home:Join Community")}</p>
 				</Fade>
 				<Fade top delay={200}>
 					<Link href="/community" passHref>

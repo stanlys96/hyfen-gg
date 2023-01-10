@@ -35,9 +35,9 @@ export default function OurProducts() {
         <div 
         className='gamefi pt-[93px] pb-[140px]'
     >
-        <Fade top>
+        <Fade top> 
             <div className="text-center mb-5">
-                <h2 className='text-3xl md:text-5xl easiest-way-title easiest-way-gradient inline-block mx-auto text-center mb-5'>
+                <h2 className='text-[28px] leading-[36px] md:text-5xl md:leading-[62px] easiest-way-title easiest-way-gradient inline-block mx-auto text-center mb-5'>
                     {t('home:Our Products')}
                 </h2>
             </div>
@@ -51,19 +51,18 @@ export default function OurProducts() {
                         delay={i !== 0 ? i * 200 : 0}
                     >
                         <ActiveLink href={item.link}>
-                            <div className="group relative products-container overflow-hidden cursor-pointer">
-                                <div className={`bg-product-${i + 1} group-hover:w-5/6 transition-all duration-500 py-8 md:py-14 px-2 md:px-12 relative`}>
-                                    <div className="container flex justify-around items-center mx-auto relative z-50 gap-12">
-                                        <div className="relative grid lg:grid-rows-3 relative h-full">
-                                            <p className="text-xl lg:text-4xl font-bold lg:row-span-1 mb-3">{item.title}</p>
-                                            <p className="text-base lg:text-xl text-ellipsis lg:row-span-2">{item.description1} {item.description2 && item.description2}</p>
+                            <div className=" group relative products-container overflow-hidden cursor-pointer">
+                                <div className={`bg-product-${i + 1} flex items-center justify-between group-hover:w-5/6 transition-all duration-500 py-8 md:py-[77px] px-2 md:px-12 relative h-full`}>
+                                    {/* Description */}
+                                        <div className="relative flex flex-col gap-[24px] flex-1 max-w-xl ">
+                                            <h1 className="text-xl lg:text-4xl font-bold mb-3">{item.title}</h1>
+                                            <p className="text-base opacity-80 lg:text-xl font-[400]">{item.description1} {item.description2 && item.description2}</p>
                                         </div>
-                                        <img
+                                        {/* Arrow Icons */}
+                                         <img
                                             src={`/images/home/arrow-right.svg`}
-                                            className="h-fit"
-                                            width="15%"
-                                        />
-                                    </div>
+                                            className="h-24 w-fit"
+                                            />
                                 </div>
                                 <div className="absolute top-0 -z-10 z-minus-5 product-img-container right-0">
                                         <img
@@ -76,7 +75,7 @@ export default function OurProducts() {
                     </Fade>
                 ))
             }
-        </div>
+         </div>
     </div>
     )
 }

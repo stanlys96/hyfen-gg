@@ -22,10 +22,10 @@ function SideBar() {
 			<div className="lg:mt-0">
 				<div className='lg:pt-40'>
 					<Fade top>
-						<h1 className='text-3xl md:text-5xl lg:text-6xl text-center lg:text-left font-bold'>
+						<h1 className='text-[40px] leading-[51px] md:text-[80px] md:leading-[104px] text-center lg:text-left font-bold'>
 							{t('home:Play Games')},
 						</h1>
-						<h1 className='text-3xl md:text-5xl lg:text-6xl text-center lg:text-left font-bold'>
+						<h1 className='text-[40px] leading-[51px] md:text-[80px] md:leading-[104px] text-center lg:text-left font-bold'>
 							{t('home:Earn Money')}.
 						</h1>
 					</Fade>
@@ -33,7 +33,7 @@ function SideBar() {
 					<Fade top>
 						<div className=''>
 							<div className='mt-3 text-center lg:text-left text-base md:text-xl'>
-								{t('home:step_into_the_world')} {windowWidth > 1024 && <br/>} {t('home:step_into_the_world2')}  {t('home:step_into_the_world3')}
+								{t('home:step_into_the_world')} {windowWidth > 768 && <br/>} {t('home:step_into_the_world2')}  {t('home:step_into_the_world3')}
 							</div>
 						</div>
 					</Fade>
@@ -45,7 +45,7 @@ function SideBar() {
 						<div className="mt-7" style={{
 							display: 'flex',
 							flexDirection: 'row',
-							justifyContent: 'center'
+							justifyContent: 'start'
 						}}>
 							<div className='md:mb-4 text-center lg:text-left mr-4'>
 								<a

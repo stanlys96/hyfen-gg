@@ -112,7 +112,7 @@ export default function ExploreGames() {
     >
         <Fade top>
 			<div className="container mx-auto">
-				<h2 className='text-2xl md:text-5xl text-center mb-5 font-bold'>
+				<h2 className='text-[28px] leading-[36px] md:text-5xl md:leading-[62px] text-center mb-5 font-bold'>
 					{t('home:Explore New Games')}
 				</h2>
 				<h2 className='text-base md:text-xl text-center'>

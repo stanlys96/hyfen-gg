@@ -1195,7 +1195,7 @@ opacity: 0.3;
 
 .product-img-container {
 	width: 604px;
-	height: 277px;
+	height: 100%;
 }
 
 @media (max-width: 767px) {

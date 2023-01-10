@@ -54,9 +54,9 @@ export default function OurProducts() {
                             <div className="group relative products-container overflow-hidden cursor-pointer">
                                 <div className={`bg-product-${i + 1} group-hover:w-5/6 transition-all duration-500 py-8 md:py-14 px-2 md:px-12 relative`}>
                                     <div className="container flex justify-around items-center mx-auto relative z-50 gap-12">
-                                        <div className="relative grid grid-rows-2">
-                                            <p className="text-xl lg:text-4xl font-bold mb-4">{item.title}</p>
-                                            <p className="text-base lg:text-xl text-ellipsis">{item.description1} {item.description2 && item.description2}</p>
+                                        <div className="relative grid lg:grid-rows-3 relative h-full">
+                                            <p className="text-xl lg:text-4xl font-bold lg:row-span-1 mb-3">{item.title}</p>
+                                            <p className="text-base lg:text-xl text-ellipsis lg:row-span-2">{item.description1} {item.description2 && item.description2}</p>
                                         </div>
                                         <img
                                             src={`/images/home/arrow-right.svg`}

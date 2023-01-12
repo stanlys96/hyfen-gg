@@ -20,17 +20,6 @@ export default function OurProducts() {
 		},
 	]
 
-	// const [windowWidth, setWindowWidth] = useState(0)
-	// let resizeWindow = () => {
-	// 	setWindowWidth(window.innerWidth)
-	// }
-
-	// useEffect(() => {
-	// 	resizeWindow()
-	// 	window.addEventListener('resize', resizeWindow)
-	// 	return () => window.removeEventListener('resize', resizeWindow)
-	// }, [])
-
 	return (
 		<div className='gamefi pt-[93px] pb-[140px]'>
 			<Fade top>
@@ -49,28 +38,27 @@ export default function OurProducts() {
 								{/* Section Background */}
 								<div
 									className={[
-										'relative z-10 flex justify-between items-center p-4 md:p-14 w-2/3 group-hover:w-5/6 transition-all duration-300',
+										'relative z-10 flex justify-between items-center px-4 py-8 md:p-14 w-2/3 group-hover:w-5/6 transition-all duration-300 gap-6',
 										`bg-product-${i + 1}`,
 									].join(' ')}
 								>
 									{/* Container Heading and Description */}
 									<div className='relative '>
-										<div className='relative flex flex-shrink-0 flex-col gap-4 md:gap-6 w-fit'>
-											<h1 className='text-[20px] md:text-[36px] leading-[26px] font-[700] md:leading-[32px] pr-12 md:pr-0 w-fit transition-all duration-300'>
+										<div className='relative flex flex-col gap-4 md:gap-6 w-fit'>
+											<h1 className='text-[20px] md:text-[36px] leading-[26px] font-[700] md:leading-[32px] pr-14 md:pr-0 w-fit transition-all duration-300'>
 												{item.title}
 											</h1>
-											<p className='text-[16px] md:text-[20px] text-white/80 font-[400] md:w-[450px] transition-all duration-300'>
+											<p className='text-[16px] md:text-[20px] text-white/80 font-[400] w-[180px] md:w-[450px] tracking-wide transition-all duration-300'>
 												{item.description1}
 											</p>
 										</div>
 									</div>
 									{/* Arrow Icons */}
-									<div className='relative h-24 w-32 md:w-fit flex justify-center items-center md:h-24'>
+									<div className='relative h-14 w-14 md:w-24 flex justify-center items-center md:h-16'>
 										<Image
 											src={`/images/home/arrow-right.svg`}
 											alt={item.title}
-											width={'100%'}
-											height={'100%'}
+											layout='fill'
 										/>
 									</div>
 								</div>
@@ -84,9 +72,7 @@ export default function OurProducts() {
 								>
 									<Image
 										src={`/images/home/product-${i + 1}.png`}
-										height='100%'
-										width={'100%'}
-										className='object-contain  transition-all duration-300 object-right translate-x-40 md:translate-x-0  md:w-full'
+										className='object-contain  transition-all duration-300 object-right translate-x-44 md:translate-x-0  md:w-full'
 										// objectFit='contain'
 										layout='fill'
 										alt={item.title}

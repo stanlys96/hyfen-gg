@@ -1,6 +1,6 @@
-import { useState } from 'react'
 import useTranslation from 'next-translate/useTranslation'
-import DropdownItem from './DropdownItem'
+import Link from 'next/link'
+import { useState } from 'react'
 
 function DownloadAppButton() {
 	const { t } = useTranslation()
@@ -35,57 +35,36 @@ function DownloadAppButton() {
 							/>
 						</svg>
 					</button>
+					{/* Section Dropdown */}
 					<ul
-						className={`
-            md:hidden
-            group-hover:block
-          dropdown-menu
-          absolute
-          bg-white
-          text-base
-          z-50
-          right-0
-          py-2
-          list-none
-          text-left
-          rounded-lg
-          shadow-lg
-          mt-1
-          m-0
-          bg-clip-padding
-          border-none
-          flex
-          justify-center
-          items-center
-        `}
+						className={[
+							` transition-all duration-300 dropdown-menu absolute bg-white text-base z-50 right-0 py-2 rounded-lg shadow-lg mt-1 m-0 bg-clip-padding border-none`,
+							showDropdown ? 'block' : 'hidden',
+						].join(' ')}
 						aria-labelledby='dropdownMenuButton2'
 					>
-						<DropdownItem
-							additionalClassName='grid grid-cols-3'
+						<Link
+							passHref
 							href='https://apps.apple.com/us/app/metabase-play/id1624878820'
 						>
-							<div
-								className='hover:bg-gray-100'
-								style={{ marginRight: '15px' }}
-							>
+							<div className='hover:bg-gray-100 relative flex py-2 gap-4 px-4 items-center'>
 								<AppleIcon />
+								<p className='col-span-2 text-sm font-semibold text-gray-800'>
+									{t('common:For IOS')}
+								</p>
 							</div>
-							<p className='col-span-2 font-semibold'>{t('common:For IOS')}</p>
-						</DropdownItem>
-						<DropdownItem
-							additionalClassName='grid grid-cols-3'
+						</Link>
+						<Link
+							passHref
 							href='https://play.google.com/store/apps/details?id=com.metabase.gg'
 						>
-							<div
-								className='hover:bg-gray-100'
-								style={{ marginRight: '15px' }}
-							>
+							<div className='hover:bg-gray-100 relative flex py-2 gap-4 px-4 items-center'>
 								<AndroidLogo />
+								<p className='col-span-2 text-sm font-semibold text-gray-800'>
+									{t('common:For Android')}
+								</p>
 							</div>
-							<p className='col-span-2 font-semibold'>
-								{t('common:For Android')}
-							</p>
-						</DropdownItem>
+						</Link>
 					</ul>
 				</div>
 			</div>

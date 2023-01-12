@@ -17,8 +17,8 @@ export default function SideDrawer({ open, handleClose, setOpen }) {
 
 	return (
 		open && (
-			<div className='sidebar fixed w-screen h-screen bg-black-100 top-0 left-0 z-50 text-lg'>
-				<div className='sidebar-header flex justify-between py-2 pl-[20px] pr-[30px]'>
+			<div className='sidebar fixed w-screen h-screen bg-[#13163A] top-0 left-0 z-50 text-lg'>
+				<div className='sidebar-header flex justify-between py-2 pl-[20px] pr-[30px] border-b border-white/30'>
 					<div className='flex items-center justify-center'>
 						<Link href='/' passHref>
 							<div className='flex justify-center items-center relative w-[145px] h-[44px]'>
@@ -50,22 +50,21 @@ export default function SideDrawer({ open, handleClose, setOpen }) {
 						</div>
 					</div>
 				</div>
-				<hr />
+				{/* Section Menu */}
 				<nav>
-					<ul className=''>
+					<ul className='relative w-full mt-2 grid gap-3 divide-y divide-white/30 border-b border-white/20 pb-2 '>
 						{menuDrawer.map((menu) => (
 							<li
 								key={menu.id}
-								className='text-center leading-[26.04px] text-lg font-bold'
+								className='text-center leading-[26.04px] text-lg'
 							>
 								{menu.submenu?.length ? (
 									<React.Fragment>
 										<Collapse
 											trigger={({ show, onClick }) => (
 												<div>
-													<a
-														className='hover:text-blue flex items-center justify-between flex-row-reverse py-5 px-10 lg:text-lg text-sm'
-														href='#'
+													<button
+														className='hover:text-blue flex w-full items-center justify-between flex-row-reverse font-[700] tracking-wide py-5 px-10 lg:text-lg text-sm'
 														onClick={onClick}
 													>
 														<ArrowDown
@@ -74,12 +73,11 @@ export default function SideDrawer({ open, handleClose, setOpen }) {
 															}`}
 														/>
 														{t(menu.title)}
-													</a>
-													<hr className={`${show && 'hidden'}`} />
+													</button>
 												</div>
 											)}
 										>
-											<ul className='md:hidden'>
+											<ul className='md:hidden pb-2'>
 												{menu.submenu.map((submenu) => (
 													<li key={submenu.id}>
 														<ActiveLink href={submenu.link}>
@@ -122,13 +120,8 @@ export default function SideDrawer({ open, handleClose, setOpen }) {
 													</li>
 												))}
 											</ul>
-											<hr className='mt-5' />
 										</Collapse>
 										<span className=''>
-											{/* <a className={``} href='#'>
-												{t(menu.title)}
-												<ArrowDown className='' />
-											</a> */}
 											<ul className=''>
 												{menu.submenu.map((submenu) => (
 													<li key={submenu.id}>
@@ -150,122 +143,109 @@ export default function SideDrawer({ open, handleClose, setOpen }) {
 										passHref
 										activeClassName='flex items-start'
 									>
-										<div>
-											<a
+										<div className='w-full py-4 px-10 relative flex items-center'>
+											<button
 												onClick={() => {
 													if (router.pathname === menu.link) setOpen(false)
 												}}
-												className={`block py-5 text-left px-10 lg:text-lg text-sm cursor-pointer ${
+												className={`block text-left lg:text-lg text-sm cursor-pointer font-[700] tracking-wide ${
 													router.pathname === menu.link && 'text-blue'
 												} hover:text-blue`}
 											>
 												{t(menu.title)}
-											</a>
-											<hr />
+											</button>
 										</div>
 									</ActiveLink>
 								)}
 							</li>
 						))}
-						<li>
-							<ul className='flex justify-center mt-6'>
-								<li className='mr-6'>
-									<a href='#'>
-										<Image
-											src='/images/Google Play.svg'
-											className='block py-2'
-											alt='BaseLogo'
-											width={150}
-											height={40}
-											layout='fixed'
-											quality={100}
-										/>
-									</a>
-								</li>
-								<li>
-									<a href='#'>
-										<Image
-											src='/images/App Store.svg'
-											className='block py-2'
-											alt='BaseLogo'
-											width={150}
-											height={40}
-											layout='fixed'
-											quality={100}
-										/>
-									</a>
-								</li>
-							</ul>
-						</li>
-						<li>
-							<>
-								<Collapse
-									trigger={({ show, onClick }) => (
-										<div>
-											<a
-												className='md:hidden flex items-center justify-center w-full hover:text-blue py-2 text-lg font-bold'
-												href='#'
-												onClick={onClick}
-											>
-												<Image
-													src='/images/globe.svg'
-													className='block py-2 pr-3'
-													alt='BaseLogo'
-													width={20}
-													height={20}
-													layout='fixed'
-												/>
-												<span className='block pl-2'>
-													{lang === 'id' ? 'ID' : 'ENG'}
-												</span>
-												<ArrowDown
-													className={`fill-current transition-transform w-5 h-5 ${
-														show && 'transform rotate-180'
-													}`}
-												/>
-											</a>
-										</div>
-									)}
-								>
-									<ul className='border-l-2 border-blue md:hidden ml-4'>
-										{languages.map((language) => (
-											<li
-												key={language.locale}
-												className='text-center font-bold'
-											>
-												<ActiveLink href='/' locale={language.locale}>
-													<a className='block w-full hover:text-blue py-2 px-4 cursor-pointer text-sm'>
-														{language.title}
-													</a>
-												</ActiveLink>
-											</li>
-										))}
-									</ul>
-								</Collapse>
-								<span className='group hidden md:flex h-full w-full relative'>
-									<a
-										className={`hidden md:flex h-full items-center justify-between w-full hover:text-blue py-2`}
-										href='#'
-									>
-										{lang === 'id' ? 'ID' : 'ENG'}
-										<ArrowDown className='fill-current w-4 h-4' />
-									</a>
-									<ul className='soft-shadow hidden min-w-full absolute top-full group-hover:block py-2'>
-										{languages.map((language) => (
-											<li key={language.locale}>
-												<ActiveLink href='/' locale={language.locale}>
-													<a className='block w-full hover:text-blue py-1 px-3 cursor-pointer'>
-														{language.title}
-													</a>
-												</ActiveLink>
-											</li>
-										))}
-									</ul>
-								</span>
-							</>
-						</li>
 					</ul>
 				</nav>
+
+				{/* Section Button Download App */}
+				<div className='relative mt-10 px-6 flex justify-start items-center'>
+					<a href='https://apps.apple.com/us/app/metabase-play/id1624878820'>
+						<Image
+							src='/images/App Store.svg'
+							height={50}
+							width={200}
+							quality={100}
+							alt='apple-store'
+						/>
+					</a>
+					<a href='https://apps.apple.com/us/app/metabase-play/id1624878820'>
+						<Image
+							src='/images/Google Play.svg'
+							height={50}
+							width={200}
+							alt='android'
+						/>
+					</a>
+				</div>
+
+				{/* Section Button Language */}
+				<div className='relative mt-5'>
+					<Collapse
+						trigger={({ show, onClick }) => (
+							<>
+								<button
+									className='md:hidden flex items-center justify-center w-full hover:text-blue py-2 text-lg font-[400]'
+									onClick={onClick}
+								>
+									<Image
+										src='/images/globe.svg'
+										className='block py-2 pr-3'
+										alt='BaseLogo'
+										width={20}
+										height={20}
+										layout='fixed'
+									/>
+									<span className='block pl-2'>
+										{lang === 'id' ? 'ID' : 'ENG'}
+									</span>
+									<ArrowDown
+										className={`fill-current transition-transform w-5 h-5 ${
+											show && 'transform rotate-180'
+										}`}
+									/>
+								</button>
+							</>
+						)}
+					>
+						<ul className='relative md:hidden ml-4'>
+							{languages.map((language) => (
+								<li key={language.locale} className='text-center font-[400]'>
+									<ActiveLink href='/' locale={language.locale}>
+										<p className='block w-full hover:text-blue py-2 px-4 cursor-pointer text-sm'>
+											{language.title}
+										</p>
+									</ActiveLink>
+								</li>
+							))}
+						</ul>
+					</Collapse>
+					<div className='group hidden md:flex h-full w-full relative'>
+						<button
+							className={`hidden md:flex h-full items-center justify-between w-full hover:text-blue py-2`}
+						>
+							{lang === 'id' ? 'ID' : 'ENG'}
+							<ArrowDown className='fill-current w-4 h-4' />
+						</button>
+						<ul className='soft-shadow hidden min-w-full absolute top-full group-hover:block py-2'>
+							{languages.map((language) => (
+								<li key={language.locale}>
+									<ActiveLink href='/' locale={language.locale}>
+										<p className='block w-full hover:text-blue py-1 px-3 cursor-pointer'>
+											{language.title}
+										</p>
+									</ActiveLink>
+								</li>
+							))}
+						</ul>
+					</div>
+				</div>
+
+				{/* Section Soscial Media */}
 				<div className='pt-8 w-full text-center space-y-5'>
 					<Social
 						className='grid grid-cols-4 px-10 md:px-0 text-center lg:text-left'

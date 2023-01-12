@@ -5,7 +5,6 @@ import { languages } from '../../mock'
 import ArrowDown from '../Icons/ArrowDown'
 import Menu from '../Icons/Menu'
 import ActiveLink from './ActiveLink'
-// import Collapse from './Collapse'
 import useTranslation from 'next-translate/useTranslation'
 import { useRouter } from 'next/router'
 import { Fade } from 'react-reveal'
@@ -75,7 +74,12 @@ function Header({ fixed = true }) {
 
 	const ListSubMenu = ({ submenu }) => {
 		return (
-			<DropdownItem additionalClassName={submenu.active && 'hover:bg-gray-100'}>
+			<li
+				className={[
+					' dropdown-item text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700',
+					submenu.active && 'hover:bg-gray-100',
+				].join(' ')}
+			>
 				<a
 					href={submenu.link}
 					className={`${
@@ -92,7 +96,7 @@ function Header({ fixed = true }) {
 						/>
 					)}
 				</a>
-			</DropdownItem>
+			</li>
 		)
 	}
 
@@ -105,7 +109,6 @@ function Header({ fixed = true }) {
 					>
 						<Image
 							src={`/images/globe.svg`}
-							// className='ml-5'
 							width={20}
 							height={20}
 							alt='BaseLogo'
@@ -118,35 +121,18 @@ function Header({ fixed = true }) {
 
 						<ArrowDown className='fill-current w-4 h-4' />
 					</div>
-					<ul
-						className='hidden
-					dropdown-menu
-					absolute
-					bg-white
-					text-base
-					z-50
-					py-2
-					list-none
-					text-left
-					rounded-lg
-					shadow-lg
-					top-full
-					m-0
-					bg-clip-padding
-					border-none
-					ml-5
-					group-hover:block'
-					>
+					<ul className='hidden dropdown-menu absolute bg-white text-base z-50 py-2 list-none text-left rounded-lg shadow-lg top-full m-0 bg-clip-padding border-none ml-5 group-hover:block'>
 						{languages.map((language, i) => (
 							<DropdownItem key={i} additionalClassName={'hover:bg-gray-100'}>
-								<ActiveLink
+								<Link
+									passHref
 									href={`/${language.locale}/${router.pathname}`}
 									locale={language.locale}
 								>
-									<a className='block w-full py-1 px-3 cursor-pointer font-bold text-sm'>
+									<p className='block w-full py-1 px-3 cursor-pointer font-bold text-sm'>
 										{language.title}
-									</a>
-								</ActiveLink>
+									</p>
+								</Link>
 							</DropdownItem>
 						))}
 					</ul>
@@ -170,8 +156,8 @@ function Header({ fixed = true }) {
 						{/* Container Menu  */}
 						<div className='relative flex justify-between items-center'>
 							{/* Icon App */}
-							<Link href='/' className=''>
-								<a className='flex justify-start items-center '>
+							<Link passHref href='/' className=''>
+								<div className='flex justify-start items-center '>
 									<Image
 										src='/images/hyfen-logo.svg'
 										className='block py-2'
@@ -181,7 +167,7 @@ function Header({ fixed = true }) {
 										layout='fixed'
 										quality={100}
 									/>
-								</a>
+								</div>
 							</Link>
 							{/* Mobile Button Menu */}
 							<div className='relative md:hidden'>

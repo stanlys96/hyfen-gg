@@ -27,7 +27,7 @@ export const menus = [
 			},
 			{
 				id: 3,
-				title: "Hyfen Payments",
+				title: "Hyfen Pay",
 				link: "#",
 				active: false,
 				withIcon: false,

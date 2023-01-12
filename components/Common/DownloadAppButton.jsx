@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { useState } from 'react'
 
 function DownloadAppButton() {
-	const { t } = useTranslation()
+	const { t } = useTranslation('common')
 	const [showDropdown, setShowDropdown] = useState(false)
 
 	return (
@@ -20,7 +20,7 @@ function DownloadAppButton() {
 						data-bs-toggle='dropdown'
 						aria-expanded='false'
 					>
-						Download App
+						{t('Download App')}
 						<svg
 							className='-mr-1 ml-1 h-5 w-5'
 							xmlns='http://www.w3.org/2000/svg'

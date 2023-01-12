@@ -173,7 +173,7 @@ export default function SideDrawer({ open, handleClose, setOpen }) {
 							alt='apple-store'
 						/>
 					</a>
-					<a href='https://apps.apple.com/us/app/metabase-play/id1624878820'>
+					<a href='https://play.google.com/store/apps/details?id=com.metabase.gg'>
 						<Image
 							src='/images/Google Play.svg'
 							height={50}

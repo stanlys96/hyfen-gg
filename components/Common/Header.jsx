@@ -55,8 +55,8 @@ function Header({ fixed = true }) {
 	const SubMenu = ({ menu }) => {
 		return (
 			<div className='group hidden md:flex h-full w-full relative'>
-				<span className='relative flex items-center text-white-50 hover:text-white transition-all duration-300'>
-					{menu.title}
+				<span className='relative flex items-center text-white-50 hover:text-white transition-all duration-300 overflow-auto'>
+					{t(menu.title).replace(/ /g, "\u00A0")}
 					<ArrowDown className='fill-current h-4 ' />
 				</span>
 				<ul

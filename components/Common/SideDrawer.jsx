@@ -26,7 +26,7 @@ export default function SideDrawer({ open, handleClose, setOpen }) {
 									src='/images/hyfenlogo.svg'
 									className='block py-2'
 									alt='BaseLogo'
-									width={130}
+									width={115}
 									height={28}
 									layout='fixed'
 									quality={100}

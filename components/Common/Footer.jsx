@@ -48,7 +48,7 @@ const Footer = ({ bgColor }) => {
 									src='/images/hyfenlogo.svg'
 									className='block'
 									alt='BaseLogo'
-									width={155}
+									width={115}
 									height={28}
 									layout='fixed'
 									quality={100}

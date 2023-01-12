@@ -12,7 +12,7 @@ function ContactContent() {
                 <div className="grid grid-rows-1 gap-y-6 md:gap-y-0 md:grid-cols-2 w-full gap-x-12">
                     {
                         textInputData.map((data, i) => (
-                            <Fade left={i % 2 == 0} right={i % 2 != 0}>
+                            <Fade key={i} left={i % 2 == 0} right={i % 2 != 0}>
                                 <InputTextWithIcon imageUrl={data.imageUrl} title={t(data.code)} placeholder="" key={i} />
                             </Fade>
                         ))

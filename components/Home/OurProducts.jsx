@@ -21,7 +21,7 @@ export default function OurProducts() {
 	]
 
 	return (
-		<div className='gamefi pt-[93px] pb-[140px]'>
+		<div className='gamefi relative mt-24'>
 			<Fade top>
 				<div className='text-center mb-5'>
 					<h2 className='text-[28px] leading-[36px] md:text-5xl md:leading-[62px] easiest-way-title easiest-way-gradient inline-block mx-auto text-center mb-5'>

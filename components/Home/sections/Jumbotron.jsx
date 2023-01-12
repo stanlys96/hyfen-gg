@@ -1,28 +1,33 @@
-import React from 'react'
+import ScrollDown from 'components/Common/ScrollDown'
 import useTranslation from 'next-translate/useTranslation'
-import Fade from 'react-reveal/Fade'
-import ScrollDown from '../Common/ScrollDown'
 import Image from 'next/image'
 import Link from 'next/link'
+import React from 'react'
+import { Fade } from 'react-reveal'
 
-function HeroHyfenPlay() {
+export default function Jumbotron() {
 	const { t } = useTranslation()
+
 	return (
-		<div className='relative container mx-auto max-w-7xl pt-28 md:pt-32'>
+		<div className='relative container mx-auto max-w-7xl pt-28 md:pt-20'>
 			{/* Container Content */}
 			<div className='relative grid place-items-center grid-cols-1 gap-4 lg:grid-cols-2'>
 				{/* Heading, Description, and Button Download */}
 				<div className='relative grid place-items-center justify-items-center md:place-items-start'>
 					{/* Heading */}
 					<Fade top>
-						<h1 className='text-[40px] leading-[51px] md:text-[80px] md:leading-[104px] text-center  lg:text-left font-bold hyfen-play-gradient'>
-							{t('hyfen-play:Hyfen Play')}
+						<h1 className='text-[40px] leading-[51px] md:text-[80px] md:leading-[104px] text-center  lg:text-left font-bold'>
+							{t('home:Play Games')},
 						</h1>
+						<h4 className='text-[40px] leading-[51px] md:text-[80px] md:leading-[104px] text-center lg:text-left font-bold'>
+							{t('home:Earn Money')}.
+						</h4>
 					</Fade>
 					{/* Desription */}
 					<Fade top>
-						<p className='mt-4 text-center font-[400] lg:text-left text-[22px] md:text-[36px] md:pr-24 md:leading-[46px] tracking-wide'>
-							{t('hyfen-play:Earn Money')}
+						<p className='mt-4 text-center font-[400] lg:text-left text-[16px] md:text-[20px] md:pr-24 leading-8 tracking-wide'>
+							{t('home:step_into_the_world')} {t('home:step_into_the_world2')}{' '}
+							{t('home:step_into_the_world3')}
 						</p>
 					</Fade>
 					{/* Button Download */}
@@ -64,10 +69,10 @@ function HeroHyfenPlay() {
 				<Fade right delay={400}>
 					{/* Image */}
 
-					<div className='relative mt-4 md:mt-0 h-[300px] md:h-[500px] w-[1440px] '>
+					<div className='relative h-[500px] md:h-[800px] w-[1440px] '>
 						<Image
 							priority
-							src='/images/hyfen-play/jumbotron_play.png'
+							src='/images/home/home-bg-img.png'
 							alt='image-home'
 							layout='fill'
 							objectFit='contain'
@@ -81,5 +86,3 @@ function HeroHyfenPlay() {
 		</div>
 	)
 }
-
-export default HeroHyfenPlay

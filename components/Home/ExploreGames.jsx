@@ -138,7 +138,7 @@ export default function ExploreGames() {
 						className += windowWidth > 768 ? ' width-38' : ' width-75'
 
 						return (
-							<a
+							<button
 								key={i}
 								onClick={() => {
 									setIndex(i)
@@ -155,7 +155,7 @@ export default function ExploreGames() {
 										alt='Comic'
 									/>
 								</div>
-							</a>
+							</button>
 						)
 					})}
 				</div>

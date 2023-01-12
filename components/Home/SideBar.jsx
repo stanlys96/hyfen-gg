@@ -15,9 +15,9 @@ function SideBar() {
 						<h1 className='text-[40px] leading-[51px] md:text-[80px] md:leading-[104px] text-center  lg:text-left font-bold'>
 							{t('home:Play Games')},
 						</h1>
-						<h1 className='text-[40px] leading-[51px] md:text-[80px] md:leading-[104px] text-center lg:text-left font-bold'>
+						<h4 className='text-[40px] leading-[51px] md:text-[80px] md:leading-[104px] text-center lg:text-left font-bold'>
 							{t('home:Earn Money')}.
-						</h1>
+						</h4>
 					</Fade>
 					{/* Desription */}
 					<Fade top>

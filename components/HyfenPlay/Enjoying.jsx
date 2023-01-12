@@ -2,11 +2,11 @@ import React from 'react'
 import Slider from 'react-slick'
 import Image from 'next/image'
 import useTranslation from 'next-translate/useTranslation'
-import Fade from 'react-reveal/Fade';
-import { peopleTestimonials } from '../../mock/hyfen-play';
+import Fade from 'react-reveal/Fade'
+import { peopleTestimonials } from '../../mock/hyfen-play'
 
 function Enjoying() {
-	const { t } = useTranslation('hyfen-play') 
+	const { t } = useTranslation('hyfen-play')
 
 	function SampleNextArrow(props) {
 		const { className, onClick } = props
@@ -71,34 +71,37 @@ function Enjoying() {
 	return (
 		<div className='container mx-auto mb-[40] enjoying-wrap pb-[180px]'>
 			<Fade left>
-				<p className='text-3xl md:text-5xl text-center md:text-left font-bold'>{t('See How Other Players are')} {t('Enjoying')} {t('Blockchain Games')}</p>
+				<p className='text-[28px] md:text-[48px] text-center md:text-left font-bold'>
+					{t('See How Other Players are')} {t('Enjoying')}{' '}
+					{t('Blockchain Games')}
+				</p>
 			</Fade>
 			<div className='mt-[20px] md:mt-[50px]'>
 				<Fade bottom>
 					<Slider {...settings}>
-                        {
-                            peopleTestimonials.map((item, i) => (
-                                <div key={i} className='p-3 text-base md:text-lg'>
-                                    <Image
-                                        src={`/images/hyfen-play/${item.author}.png`}
-                                        alt='appstore'
-                                        layout='responsive'
-                                        width={460}
-                                        height={256}
-                                        className='rounded-[30px]'
-                                    />
-                                    <p className='mt-7 md:text-xl text-base'>
-                                        “{t(item.author)}“
-                                    </p>
-                                    <div className='flex text-blue text-sm md:text-base mt-3'>
-                                        <p className='mr-3'>-</p>
-                                        <span>
-                                            <a className='color-blue text-sm md:text-base'>{item.author} </a>
-                                        </span>
-                                    </div>
-                                </div>
-                            ))
-                        }
+						{peopleTestimonials.map((item, i) => (
+							<div key={i} className='p-3 text-base md:text-lg'>
+								<Image
+									src={`/images/hyfen-play/${item.author}.png`}
+									alt='appstore'
+									layout='responsive'
+									width={460}
+									height={256}
+									className='rounded-[30px]'
+								/>
+								<p className='mt-7 md:text-[20px] text-[16px]'>
+									“{t(item.author)}“
+								</p>
+								<div className='flex text-white md:text-[16px] text-[14px] mt-3'>
+									<p className='mr-3'>-</p>
+									<span>
+										<a className='text-white md:text-[16px] text-[14px]'>
+											{item.author}{' '}
+										</a>
+									</span>
+								</div>
+							</div>
+						))}
 					</Slider>
 				</Fade>
 			</div>

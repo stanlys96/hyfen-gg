@@ -1271,6 +1271,14 @@ footer .copyright {
 	height: 100%;
 }
 
+.select-contact option {
+	color: black;
+}
+
+.border-contact-select {
+	border: 1px solid #43466D;
+}
+
 @media (max-width: 767px) {
 	.interested-in-img {
 		border-top-right-radius: 0;

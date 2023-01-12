@@ -10,3 +10,16 @@ export const contactSupportData = [
         imageUrl: "Sales Inquiry.svg"
     }
 ]
+
+export const textInputData = [
+    {
+        id: 1,
+        code: "Your Name",
+        imageUrl: "/images/contact/name-icon.svg"
+    },
+    {
+        id: 1,
+        code: "Email Address",
+        imageUrl: "/images/contact/email-icon.svg"
+    },
+]

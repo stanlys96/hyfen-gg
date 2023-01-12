@@ -7,8 +7,8 @@ export default function EasiestWay() {
 	const { t } = useTranslation('home')
 
 	return (
-		<div className='join-community-bg my-24 md:-mt-24 md:-mb-32 relative'>
-			<div className='container mx-auto flex flex-col justify-center items-center h-full'>
+		<div className='join-community-bg  relative my-14 container mx-auto max-w-6xl'>
+			<div className=' md:h-[400px] h-full flex flex-col justify-center items-center'>
 				<Fade top>
 					<p className='font-bold text-[28px] md:text-[48px] mb-5 text-center'>
 						{t('home:Join Community')}

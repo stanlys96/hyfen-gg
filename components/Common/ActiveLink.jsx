@@ -22,34 +22,34 @@ const ActiveLink = ({
 		return props.disabled
 	}, [props.disabled])
 
-  const animate = React.useCallback(() => {
+	const animate = React.useCallback(() => {
 		if (disabledLink === false) return
-    if (textHoverRef && textHoverRef.current) {
-      let distX = mouseX - ballX
-      let distY = mouseY - ballY
-      ballX = ballX + distX * speed
-      ballY = ballY + distY * speed
-      textHoverRef.current.style.left = ballX + "px"
-      textHoverRef.current.style.top = ballY + "px"
-    }
+		if (textHoverRef && textHoverRef.current) {
+			let distX = mouseX - ballX
+			let distY = mouseY - ballY
+			ballX = ballX + distX * speed
+			ballY = ballY + distY * speed
+			textHoverRef.current.style.left = ballX + 'px'
+			textHoverRef.current.style.top = ballY + 'px'
+		}
 
-    requestAnimationFrame(animate)
-  }, [textHoverRef, mouseX, mouseY, ballX, ballY, disabledLink])
+		requestAnimationFrame(animate)
+	}, [textHoverRef, mouseX, mouseY, ballX, ballY, disabledLink])
 
-  React.useEffect(() => {
+	React.useEffect(() => {
 		if (disabledLink === false) return
-		
-    const onMouseMove = event => {
-      mouseX = event.pageX
-      mouseY = event.pageY
-    }
 
-    document.addEventListener("mousemove", onMouseMove)
+		const onMouseMove = (event) => {
+			mouseX = event.pageX
+			mouseY = event.pageY
+		}
 
-    animate()
+		document.addEventListener('mousemove', onMouseMove)
 
-    return () => document.removeEventListener("mousemove", onMouseMove)
-  }, [disabledLink])  
+		animate()
+
+		return () => document.removeEventListener('mousemove', onMouseMove)
+	}, [disabledLink])
 
 	const child = Children.only(children)
 	const childClassName = child.props.className || ''
@@ -60,9 +60,15 @@ const ActiveLink = ({
 		: `${childClassName} ${inActiveClassName}`
 
 	return (
-		<Link {...props} href={disabledLink ? "#" : props.href}>
-			<div className={`hover-link-wrapper ${disabledLink === true ? '' : "hidden-text"}`}>
-				<div ref={textHoverRef} className={`text-link`}>Coming soon</div>
+		<Link passHref {...props} href={disabledLink ? '#' : props.href}>
+			<div
+				className={`hover-link-wrapper ${
+					disabledLink === true ? '' : 'hidden-text'
+				}`}
+			>
+				<div ref={textHoverRef} className={`text-link`}>
+					Coming soon
+				</div>
 				{React.cloneElement(child, {
 					className: className || null,
 				})}

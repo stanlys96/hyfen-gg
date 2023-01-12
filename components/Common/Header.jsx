@@ -12,6 +12,7 @@ import { menus } from '../../mock'
 import DownloadAppButton from './DownloadAppButton'
 import DropdownItem from './DropdownItem'
 import SideDrawer from './SideDrawer'
+import Collapse from './Collapse'
 
 function Header({ fixed = true }) {
 	const router = useRouter()
@@ -56,7 +57,7 @@ function Header({ fixed = true }) {
 		return (
 			<div className='group hidden md:flex h-full w-full relative'>
 				<span className='relative flex items-center text-white-50 hover:text-white transition-all duration-300 overflow-auto'>
-					{t(menu.title).replace(/ /g, "\u00A0")}
+					{t(menu.title).replace(/ /g, '\u00A0')}
 					<ArrowDown className='fill-current h-4 ' />
 				</span>
 				<ul
@@ -102,42 +103,26 @@ function Header({ fixed = true }) {
 
 	const ButtonLanguage = () => {
 		return (
-			<>
-				<div className='group hidden md:flex h-full w-full relative'>
-					<div
-						className={`hidden md:flex h-full items-center justify-between w-full hover:text-white text-white-50 bgre`}
-					>
-						<Image
-							src={`/images/globe.svg`}
-							width={20}
-							height={20}
-							alt='BaseLogo'
-							layout='intrinsic'
-							quality={100}
-						/>
-						<span className='inline-block ml-3 text-sm'>
-							{lang === 'id' ? 'ID' : 'ENG'}
-						</span>
-
+			<div className='relative text-sm'>
+				<div className='group flex h-full w-full relative'>
+					<div className='relative flex gap-2 items-center text-white/50'>
+						<Image src='/images/globe.svg' width={20} height={20} alt='globe' />
+						{lang === 'id' ? 'ID' : 'ENG'}
 						<ArrowDown className='fill-current w-4 h-4' />
 					</div>
-					<ul className='hidden dropdown-menu absolute bg-white text-base z-50 py-2 list-none text-left rounded-lg shadow-lg top-full m-0 bg-clip-padding border-none ml-5 group-hover:block'>
-						{languages.map((language, i) => (
-							<DropdownItem key={i} additionalClassName={'hover:bg-gray-100'}>
-								<Link
-									passHref
-									href={`/${language.locale}/${router.pathname}`}
-									locale={language.locale}
-								>
-									<p className='block w-full py-1 px-3 cursor-pointer font-bold text-sm'>
+					<ul className='bg-white mt-1 p-4 rounded-lg text-black-100 soft-shadow hidden min-w-full absolute top-full group-hover:block py-2'>
+						{languages.map((language) => (
+							<li key={language.locale}>
+								<ActiveLink href='/' locale={language.locale}>
+									<p className='block font-[700] w-full hover:text-blue py-1 px-3 cursor-pointer'>
 										{language.title}
 									</p>
-								</Link>
-							</DropdownItem>
+								</ActiveLink>
+							</li>
 						))}
 					</ul>
 				</div>
-			</>
+			</div>
 		)
 	}
 
@@ -157,7 +142,7 @@ function Header({ fixed = true }) {
 						<div className='relative flex justify-between items-center'>
 							{/* Icon App */}
 							<Link passHref href='/' className=''>
-								<div className='flex justify-start items-center '>
+								<a className='flex justify-start items-center '>
 									<Image
 										src='/images/hyfen-logo.svg'
 										className='block py-2'
@@ -167,7 +152,7 @@ function Header({ fixed = true }) {
 										layout='fixed'
 										quality={100}
 									/>
-								</div>
+								</a>
 							</Link>
 							{/* Mobile Button Menu */}
 							<div className='relative md:hidden'>

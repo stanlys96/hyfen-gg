@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
 import useTranslation from 'next-translate/useTranslation'
-import Fade from 'react-reveal/Fade';
+import Fade from 'react-reveal/Fade'
 import ScrollDown from '../Common/ScrollDown'
 
 function SideBar() {
@@ -34,30 +34,14 @@ function SideBar() {
 							</Fade>
 
 							<div className='text-center md:text-left'>
-								{/* <Image
-								src='/images/AppStore.png'
-								alt='appstore'
-								layout='fixed'
-								width={141}
-								height={41}
-							/>
-							<span className='ml-6'>
-								<Image
-									src='/images/GooglePlay.png'
-									alt='googleplay'
-									layout='fixed'
-									width={141}
-									height={42}
-								/>
-							</span> */}
-								<Fade
-									bottom
-									delay={600}
-								>
-									<div className="mt-7 mb-10" style={{
-										display: 'flex',
-										flexDirection: 'column'
-									}}>
+								<Fade bottom delay={600}>
+									<div
+										className='mt-7 mb-10'
+										style={{
+											display: 'flex',
+											flexDirection: 'column',
+										}}
+									>
 										<div className='mb-4 text-center lg:text-left'>
 											<a
 												href='https://apps.apple.com/us/app/metabase-play/id1624878820'
@@ -65,11 +49,12 @@ function SideBar() {
 												style={{
 													display: 'flex',
 													alignItems: 'center',
-													maxWidth: 325
+													maxWidth: 325,
 												}}
 											>
 												<Image
-													src="/images/apple.svg"
+													alt='img'
+													src='/images/apple.svg'
 													height={25}
 													width={20}
 												/>
@@ -85,12 +70,13 @@ function SideBar() {
 												style={{
 													display: 'flex',
 													alignItems: 'center',
-													maxWidth: 325
+													maxWidth: 325,
 												}}
 											>
 												<Image
-													src="/images/android.svg"
+													src='/images/android.svg'
 													height={27}
+													alt='android'
 													width={23}
 												/>
 												<p style={{ marginLeft: 15 }}>
@@ -99,27 +85,19 @@ function SideBar() {
 											</a>
 										</div>
 									</div>
-									<ScrollDown className="justify-center md:justify-start" />
+									<ScrollDown className='justify-center md:justify-start' />
 								</Fade>
-
 							</div>
 						</div>
 					</div>
 					<div className='flex w-full col-span-12 md:col-span-5 justify-center md:justify-center'>
 						<div className='pl-0 w-full md:pl-10 relative'>
 							<div className='w-full h-auto relative'>
-								{/* <img 
-									src="/images/iphoneMockup.png"  
-									className='ml-auto w-full'
-								/> */}
-								<Fade
-									right
-									delay={600}
-								>
+								<Fade right delay={600}>
 									<Image
 										src='/images/phone-hd.png'
 										alt='googleplay'
-										layout="responsive"
+										layout='responsive'
 										quality={100}
 										width='100%'
 										height='140'

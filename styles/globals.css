@@ -1092,7 +1092,7 @@ footer .copyright {
 
 .join-community-bg {
 	background: url('/images/community-bg.png') no-repeat center center;
-	height: 60vh;
+	height: 100%;
 }
 
 .coming-soon-sign {
@@ -1276,7 +1276,7 @@ footer .copyright {
 }
 
 .border-contact-select {
-	border: 1px solid #43466D;
+	border: 1px solid #43466d;
 }
 
 @media (max-width: 767px) {

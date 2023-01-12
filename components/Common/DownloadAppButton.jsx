@@ -47,23 +47,23 @@ function DownloadAppButton() {
 							passHref
 							href='https://apps.apple.com/us/app/metabase-play/id1624878820'
 						>
-							<div className='hover:bg-gray-100 relative flex py-2 gap-4 px-4 items-center cursor-pointer'>
+							<a className='hover:bg-gray-100 relative flex py-2 gap-4 px-4 items-center cursor-pointer'>
 								<AppleIcon />
 								<p className='col-span-2 text-sm font-semibold text-gray-800'>
 									{t('common:For IOS')}
 								</p>
-							</div>
+							</a>
 						</Link>
 						<Link
 							passHref
 							href='https://play.google.com/store/apps/details?id=com.metabase.gg'
 						>
-							<div className='hover:bg-gray-100 relative flex py-2 gap-4 px-4 items-center cursor-pointer'>
+							<a className='hover:bg-gray-100 relative flex py-2 gap-4 px-4 items-center cursor-pointer'>
 								<AndroidLogo />
 								<p className='col-span-2 text-sm font-semibold text-gray-800'>
 									{t('common:For Android')}
 								</p>
-							</div>
+							</a>
 						</Link>
 					</ul>
 				</div>

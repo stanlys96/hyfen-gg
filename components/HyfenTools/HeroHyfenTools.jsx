@@ -12,10 +12,10 @@ function HeroHyfenTools() {
 			<div className="lg:mt-0">
 				<div className='lg:pt-40'>
 					<Fade top>
-						<h1 className='md:text-5xl lg:text-[96px] text-center lg:text-left font-bold hyfen-play-gradient mb-5'>
+						<h1 className='md:text-5xl lg:text-[96px] lg:leading-[1] text-center lg:text-left font-bold hyfen-play-gradient mb-5 z-50'>
 							{t('Hyfen Tools')}
 						</h1>
-						<h1 className='text-xl lg:text-4xl lg:text-4xl text-center lg:text-left font-bold'>
+						<h1 className='text-xl lg:text-4xl text-center lg:text-left font-bold'>
 							{t('Manage Guild')}
 						</h1>
 					</Fade>

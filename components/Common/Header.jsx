@@ -10,9 +10,7 @@ import { useRouter } from 'next/router'
 import { Fade } from 'react-reveal'
 import { menus } from '../../mock'
 import DownloadAppButton from './DownloadAppButton'
-import DropdownItem from './DropdownItem'
 import SideDrawer from './SideDrawer'
-import Collapse from './Collapse'
 
 function Header({ fixed = true }) {
 	const router = useRouter()

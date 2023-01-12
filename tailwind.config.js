@@ -5,27 +5,31 @@ module.exports = {
 	],
 	theme: {
 		screens: {
-      'sm': '576px',
-	'md': '768px',
-      'lg': '1024px',
-      'xl': '1280px',
-      '2xl': '1536px'
-    },
+			sm: '576px',
+			md: '768px',
+			lg: '1024px',
+			xl: '1280px',
+			'2xl': '1536px',
+		},
 		container: {
 			screens: {
-				DEFAULT: '1200px'
+				DEFAULT: '1200px',
 			},
 			padding: {
 				DEFAULT: '20px',
-        md: '40px',
-        xl: '20px'
-      },
+				md: '40px',
+				xl: '20px',
+			},
 		},
 		extend: {
 			fontFamily: {
 				sans: "'DM Sans', sans-serif",
 			},
 			fontSize: {
+				heading1: ['28px', '48px'],
+				heading2: ['20px', '24px'],
+				heading3: ['16px', '14px'],
+				desc1: ['16px', '20px'],
 				xxs: ['10px', '13px'],
 				xs: ['12px', '16px'],
 				sm: ['14px', '18px'],
@@ -47,7 +51,10 @@ module.exports = {
 			},
 			colors: {
 				app: {
-					primary : '#3c45a5'
+					primary: '#3c45a5',
+					blue: '#26DFF8',
+					purple: '#BB42F8',
+					cyan: '#17AFF0',
 				},
 				transparent: 'transparent',
 				current: 'currentColor',
@@ -56,12 +63,12 @@ module.exports = {
 					100: '#000',
 					200: '#0C111C',
 					300: '#111827',
-					400: '#0a0b1f'
+					400: '#0a0b1f',
 				},
 				white: '#fff',
 				gray: {
 					DEFAULT: '#969696',
-					200: "#A0A3A9"
+					200: '#A0A3A9',
 				},
 				blue: {
 					DEFAULT: '#0ED5DA',

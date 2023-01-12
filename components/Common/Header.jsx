@@ -1,19 +1,18 @@
-import ArrowDown from '../Icons/ArrowDown'
-import Menu from '../Icons/Menu'
-import { languages } from '../../mock'
 import Image from 'next/image'
 import Link from 'next/link'
-import React from 'react'
-import { useState } from 'react'
+import React, { useState } from 'react'
+import { languages } from '../../mock'
+import ArrowDown from '../Icons/ArrowDown'
+import Menu from '../Icons/Menu'
 import ActiveLink from './ActiveLink'
 // import Collapse from './Collapse'
-import SideDrawer from './SideDrawer'
-import { menus } from '../../mock'
-import { useRouter } from 'next/router'
 import useTranslation from 'next-translate/useTranslation'
+import { useRouter } from 'next/router'
 import { Fade } from 'react-reveal'
+import { menus } from '../../mock'
 import DownloadAppButton from './DownloadAppButton'
 import DropdownItem from './DropdownItem'
+import SideDrawer from './SideDrawer'
 
 function Header({ fixed = true }) {
 	const router = useRouter()
@@ -99,28 +98,28 @@ function Header({ fixed = true }) {
 
 	const ButtonLanguage = () => {
 		return (
-			<span className='group hidden md:flex h-full w-full relative'>
-				<a
-					className={`hidden md:flex h-full items-center justify-between w-full hover:text-white text-white-50 bgre`}
-					href='#'
-				>
-					<Image
-						src={`/images/globe.svg`}
-						// className='ml-5'
-						width={20}
-						height={20}
-						alt='BaseLogo'
-						layout='intrinsic'
-						quality={100}
-					/>
-					<span className='inline-block ml-3 text-sm'>
-						{lang === 'id' ? 'ID' : 'ENG'}
-					</span>
+			<>
+				<div className='group hidden md:flex h-full w-full relative'>
+					<div
+						className={`hidden md:flex h-full items-center justify-between w-full hover:text-white text-white-50 bgre`}
+					>
+						<Image
+							src={`/images/globe.svg`}
+							// className='ml-5'
+							width={20}
+							height={20}
+							alt='BaseLogo'
+							layout='intrinsic'
+							quality={100}
+						/>
+						<span className='inline-block ml-3 text-sm'>
+							{lang === 'id' ? 'ID' : 'ENG'}
+						</span>
 
-					<ArrowDown className='fill-current w-4 h-4' />
-				</a>
-				<ul
-					className='hidden
+						<ArrowDown className='fill-current w-4 h-4' />
+					</div>
+					<ul
+						className='hidden
 					dropdown-menu
 					absolute
 					bg-white
@@ -137,21 +136,22 @@ function Header({ fixed = true }) {
 					border-none
 					ml-5
 					group-hover:block'
-				>
-					{languages.map((language, i) => (
-						<DropdownItem key={i} additionalClassName={'hover:bg-gray-100'}>
-							<ActiveLink
-								href={`/${language.locale}/${router.pathname}`}
-								locale={language.locale}
-							>
-								<a className='block w-full py-1 px-3 cursor-pointer font-bold text-sm'>
-									{language.title}
-								</a>
-							</ActiveLink>
-						</DropdownItem>
-					))}
-				</ul>
-			</span>
+					>
+						{languages.map((language, i) => (
+							<DropdownItem key={i} additionalClassName={'hover:bg-gray-100'}>
+								<ActiveLink
+									href={`/${language.locale}/${router.pathname}`}
+									locale={language.locale}
+								>
+									<a className='block w-full py-1 px-3 cursor-pointer font-bold text-sm'>
+										{language.title}
+									</a>
+								</ActiveLink>
+							</DropdownItem>
+						))}
+					</ul>
+				</div>
+			</>
 		)
 	}
 

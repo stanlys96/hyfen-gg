@@ -11,10 +11,9 @@ import { mediaSocialsData1, mediaSocialsData2 } from '../../mock/socials'
 import { useRouter } from 'next/router'
 
 export default function SideDrawer({ open, handleClose, setOpen }) {
-	const router = useRouter();
+	const router = useRouter()
 	const menuDrawer = [...menus]
 	const { t, lang } = useTranslation('common')
-	console.log(router.pathname, "<<<");
 
 	return (
 		open && (
@@ -22,22 +21,23 @@ export default function SideDrawer({ open, handleClose, setOpen }) {
 				<div className='sidebar-header flex justify-between py-2 pl-[20px] pr-[30px]'>
 					<div className='flex items-center justify-center'>
 						<Link href='/' passHref>
-							<div
-								className='flex justify-center items-center relative w-[145px] h-[44px]'
-							>
-							<Image
-								src='/images/hyfenlogo.svg'
-								className='block py-2'
-								alt='BaseLogo'
-								width={130}
-								height={28}
-								layout='fixed'
-								quality={100}
-							/>
+							<div className='flex justify-center items-center relative w-[145px] h-[44px]'>
+								<Image
+									src='/images/hyfenlogo.svg'
+									className='block py-2'
+									alt='BaseLogo'
+									width={130}
+									height={28}
+									layout='fixed'
+									quality={100}
+								/>
 							</div>
 						</Link>
 					</div>
-					<div className="flex justify-center items-center" onClick={handleClose}>
+					<div
+						className='flex justify-center items-center'
+						onClick={handleClose}
+					>
 						<div className='pr-3'>
 							<Image
 								src='/images/handleClose.png'
@@ -50,11 +50,14 @@ export default function SideDrawer({ open, handleClose, setOpen }) {
 						</div>
 					</div>
 				</div>
-				<hr/>
+				<hr />
 				<nav>
 					<ul className=''>
 						{menuDrawer.map((menu) => (
-							<li key={menu.id} className='text-center leading-[26.04px] text-lg font-bold'>
+							<li
+								key={menu.id}
+								className='text-center leading-[26.04px] text-lg font-bold'
+							>
 								{menu.submenu?.length ? (
 									<React.Fragment>
 										<Collapse
@@ -80,27 +83,46 @@ export default function SideDrawer({ open, handleClose, setOpen }) {
 												{menu.submenu.map((submenu) => (
 													<li key={submenu.id}>
 														<ActiveLink href={submenu.link}>
-															<div className="flex items-center">
-																<a onClick={() => {
-																	if (router.pathname === submenu.link) setOpen(false)
-																}} className={`text-left block px-10 py-3 lg:text-lg text-sm ${router.pathname === submenu.link && "text-blue"} ${submenu.active && 'cursor-pointer hover:text-blue'} ${!submenu.active && "text-white-50 cursor-default"} flex items-center`}>
-																	<span className="inline-block mr-3">{t(submenu.title)}</span>
-																	{
-																		submenu.withIcon && <Image 
-																			src="/images/home/guidebook-icon.svg"
+															<div className='flex items-center'>
+																<a
+																	onClick={() => {
+																		if (router.pathname === submenu.link)
+																			setOpen(false)
+																	}}
+																	className={`text-left block px-10 py-3 lg:text-lg text-sm ${
+																		router.pathname === submenu.link &&
+																		'text-blue'
+																	} ${
+																		submenu.active &&
+																		'cursor-pointer hover:text-blue'
+																	} ${
+																		!submenu.active &&
+																		'text-white-50 cursor-default'
+																	} flex items-center`}
+																>
+																	<span className='inline-block mr-3'>
+																		{t(submenu.title)}
+																	</span>
+																	{submenu.withIcon && (
+																		<Image
+																			src='/images/home/guidebook-icon.svg'
 																			height={20}
 																			width={20}
-																			alt="icon"
+																			alt='icon'
 																		/>
-																	}
+																	)}
 																</a>
-																{!submenu.active && <span className="coming-soon-sign py-1.5 px-3 text-sm">Coming Soon</span>}
+																{!submenu.active && (
+																	<span className='coming-soon-sign py-1.5 px-3 text-sm'>
+																		Coming Soon
+																	</span>
+																)}
 															</div>
 														</ActiveLink>
 													</li>
 												))}
 											</ul>
-											<hr className="mt-5" />
+											<hr className='mt-5' />
 										</Collapse>
 										<span className=''>
 											{/* <a className={``} href='#'>
@@ -122,11 +144,23 @@ export default function SideDrawer({ open, handleClose, setOpen }) {
 										</span>
 									</React.Fragment>
 								) : (
-									<ActiveLink href={menu.link} disabled={menu.disable} passHref activeClassName='flex items-start'>
+									<ActiveLink
+										href={menu.link}
+										disabled={menu.disable}
+										passHref
+										activeClassName='flex items-start'
+									>
 										<div>
-											<a onClick={() => {
-												if (router.pathname === menu.link) setOpen(false)
-											}} className={`block py-5 text-left px-10 lg:text-lg text-sm cursor-pointer ${router.pathname === menu.link && "text-blue"} hover:text-blue`}>{t(menu.title)}</a>
+											<a
+												onClick={() => {
+													if (router.pathname === menu.link) setOpen(false)
+												}}
+												className={`block py-5 text-left px-10 lg:text-lg text-sm cursor-pointer ${
+													router.pathname === menu.link && 'text-blue'
+												} hover:text-blue`}
+											>
+												{t(menu.title)}
+											</a>
 											<hr />
 										</div>
 									</ActiveLink>
@@ -134,9 +168,9 @@ export default function SideDrawer({ open, handleClose, setOpen }) {
 							</li>
 						))}
 						<li>
-							<ul className="flex justify-center mt-6">
-								<li className="mr-6">
-									<a href="#">
+							<ul className='flex justify-center mt-6'>
+								<li className='mr-6'>
+									<a href='#'>
 										<Image
 											src='/images/Google Play.svg'
 											className='block py-2'
@@ -149,7 +183,7 @@ export default function SideDrawer({ open, handleClose, setOpen }) {
 									</a>
 								</li>
 								<li>
-									<a href="#">
+									<a href='#'>
 										<Image
 											src='/images/App Store.svg'
 											className='block py-2'
@@ -181,7 +215,9 @@ export default function SideDrawer({ open, handleClose, setOpen }) {
 													height={20}
 													layout='fixed'
 												/>
-												<span className="block pl-2">{lang === 'id' ? 'ID' : 'ENG'}</span>
+												<span className='block pl-2'>
+													{lang === 'id' ? 'ID' : 'ENG'}
+												</span>
 												<ArrowDown
 													className={`fill-current transition-transform w-5 h-5 ${
 														show && 'transform rotate-180'
@@ -231,14 +267,14 @@ export default function SideDrawer({ open, handleClose, setOpen }) {
 					</ul>
 				</nav>
 				<div className='pt-8 w-full text-center space-y-5'>
-					<Social 
-						className="grid grid-cols-4 px-10 md:px-0 text-center lg:text-left" 
-						mediaSocialsData={mediaSocialsData1} 
-						width={20} 
-						height={20} 
+					<Social
+						className='grid grid-cols-4 px-10 md:px-0 text-center lg:text-left'
+						mediaSocialsData={mediaSocialsData1}
+						width={20}
+						height={20}
 					/>
 					<Social
-						className="grid grid-cols-3 lg:grid-cols-4 px-20 md:px-0 text-center lg:text-left"
+						className='grid grid-cols-3 lg:grid-cols-4 px-20 md:px-0 text-center lg:text-left'
 						width={20}
 						height={20}
 						mediaSocialsData={mediaSocialsData2}

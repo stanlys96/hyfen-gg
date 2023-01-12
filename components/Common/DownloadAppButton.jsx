@@ -70,7 +70,7 @@ function DownloadAppButton() {
 							>
 								<AppleIcon />
 							</div>
-							<p className='col-span-2'>{t('common:For IOS')}</p>
+							<p className='col-span-2 font-semibold'>{t('common:For IOS')}</p>
 						</DropdownItem>
 						<DropdownItem
 							additionalClassName='grid grid-cols-3'
@@ -82,7 +82,9 @@ function DownloadAppButton() {
 							>
 								<AndroidLogo />
 							</div>
-							<p className='col-span-2'>{t('common:For Android')}</p>
+							<p className='col-span-2 font-semibold'>
+								{t('common:For Android')}
+							</p>
 						</DropdownItem>
 					</ul>
 				</div>

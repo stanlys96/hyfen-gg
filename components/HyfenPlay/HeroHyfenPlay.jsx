@@ -1,15 +1,14 @@
 import React from 'react'
 import useTranslation from 'next-translate/useTranslation'
-import Fade from 'react-reveal/Fade';
+import Fade from 'react-reveal/Fade'
 import ScrollDown from '../Common/ScrollDown'
 import Image from 'next/image'
 
 function HeroHyfenPlay() {
-
 	const { t } = useTranslation()
 	return (
-		<div className='container mx-auto pt-24 md:pb-24 md:pb-0 lg:pt-0 relative grid grid-cols-1 md:grid-cols-2 gap-x-10 justify-around md:flex-row relative overflow-hidden'>
-			<div className="lg:mt-0 relative">
+		<div className='container mx-auto pt-24 md:pb-0 lg:pt-0 relative grid grid-cols-1 md:grid-cols-2 gap-x-10 justify-around md:flex-row  overflow-hidden'>
+			<div className='lg:mt-0 relative'>
 				<div className='lg:pt-40 w-full relative'>
 					<Fade top>
 						<h1 className='text-4xl md:text-7xl text-center lg:text-left font-bold hyfen-play-gradient'>
@@ -20,28 +19,29 @@ function HeroHyfenPlay() {
 						</h1>
 					</Fade>
 
-					<Fade
-						top
-						delay={600}
-					>
-						<div className="mt-7 md:mb-10 justify-center md:justify-start" style={{
-							display: 'flex',
-							flexDirection: 'row'
-						}}>
+					<Fade top delay={600}>
+						<div
+							className='mt-7 md:mb-10 justify-center md:justify-start'
+							style={{
+								display: 'flex',
+								flexDirection: 'row',
+							}}
+						>
 							<div className='md:mb-4 text-center lg:text-left mr-4'>
 								<a
 									href='https://apps.apple.com/us/app/metabase-play/id1624878820'
 									style={{
 										display: 'flex',
 										alignItems: 'center',
-										maxWidth: 325
+										maxWidth: 325,
 									}}
 								>
 									<Image
-										src="/images/App Store.svg"
+										src='/images/App Store.svg'
 										height={60}
 										width={225}
 										quality={100}
+										alt='app_store'
 									/>
 								</a>
 							</div>
@@ -51,31 +51,32 @@ function HeroHyfenPlay() {
 									style={{
 										display: 'flex',
 										alignItems: 'center',
-										maxWidth: 325
+										maxWidth: 325,
 									}}
 								>
 									<Image
-										src="/images/Google Play.svg"
+										src='/images/Google Play.svg'
 										height={60}
 										width={225}
+										alt='playstore'
 									/>
 								</a>
 							</div>
 						</div>
-						<ScrollDown className="justify-center lg:justify-start hidden md:flex" />
+						<ScrollDown className='justify-center lg:justify-start hidden md:flex' />
 					</Fade>
 				</div>
 			</div>
 			<Fade right delay={600}>
-				<div className='inline-block relative h-full lg:ml-0 max-w-[1440px] md:pt-12 h-[510px] md:h-[605px] flex justify-center items-center'>
-					<img 
-						src={`/images/hyfen-play/hyfen-play-img.svg`} 
-						alt="image" 
+				<div className=' relative lg:ml-0 max-w-[1440px] md:pt-12 h-[510px] md:h-[605px] flex justify-center items-center'>
+					<img
+						src={`/images/hyfen-play/hyfen-play-img.svg`}
+						alt='image'
 						className='h-full w-full'
 					/>
 				</div>
 			</Fade>
-			<ScrollDown className="justify-center lg:justify-start flex md:hidden" />
+			<ScrollDown className='justify-center lg:justify-start flex md:hidden' />
 		</div>
 	)
 }

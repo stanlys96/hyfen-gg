@@ -30,20 +30,25 @@ function SideBar() {
 					</Fade>
 
 					<Fade top delay={600}>
-						<div className='mt-7  flex items-center'>
+						<div className='mt-7 gap-4 flex items-center'>
 							<a href='https://apps.apple.com/us/app/metabase-play/id1624878820'>
 								<Image
 									src='/images/App Store.svg'
 									height={60}
-									width={225}
+									width={200}
 									quality={100}
+									alt='apple-store'
 								/>
 							</a>
 							<a href='https://apps.apple.com/us/app/metabase-play/id1624878820'>
-								<Image src='/images/Google Play.svg' height={60} width={225} />
+								<Image
+									src='/images/Google Play.svg'
+									height={60}
+									width={200}
+									alt='android'
+								/>
 							</a>
 						</div>
-						<ScrollDown className='justify-center lg:justify-start hidden md:flex mt-10' />
 					</Fade>
 				</div>
 			</div>
@@ -54,13 +59,16 @@ function SideBar() {
 					<div className='-mt-24 md:mt-24'>
 						<img
 							src='/images/home/home-bg-img.svg'
-							alt='image'
+							alt='image-home'
 							className='h-full'
 						/>
 					</div>
 				</div>
 			</Fade>
-			<ScrollDown className='justify-center lg:justify-start flex md:hidden mt-20' />
+
+			<div className='relative flex justify-center md:justify-start items-center z-0 w-full -mt-32 md:-mt-12'>
+				<ScrollDown className='relative' />
+			</div>
 		</div>
 	)
 }

@@ -12,9 +12,11 @@ export default function PrivacyPolicy() {
                 <div className="flex flex-col gap-4">
                     <div>
                         <h1 className='text-2xl font-bold'>{t('PrivacyPolicy')}</h1>
-                        <p className="text-xl font-bold">{t('InformationWeProcess')}</p>
+                        <br/>
+                        <br/>
+                        <p className="text-xl font-bold py-3">{t('InformationWeProcess')}</p>
                         <p>{t('InformationWeProcess_desc1')}</p>
-                        <p className="text-xl font-bold">{t('InformationHyfenReceived')}</p>
+                        <p className="text-xl font-bold py-3">{t('InformationHyfenReceived')}</p>
                         <p>{t('ThisIncludes')}</p>
                         <ul className="list-disc">
                             <li>{t('ThisIncludes_1')}</li>
@@ -27,8 +29,8 @@ export default function PrivacyPolicy() {
                             <li>{t('ThisIncludes_8')}</li>
                             <li>{t('ThisIncludes_9')}</li>
                         </ul>
-                        <p className="text-2xl font-bold">{t('UseOfPersonalInformation')}</p>
-                        <p className="text-xl font-bold">{t('ProvidedForService')}</p>
+                        <p className="text-2xl font-bold pt-3">{t('UseOfPersonalInformation')}</p>
+                        <p className="text-xl font-bold py-3">{t('ProvidedForService')}</p>
                         <p>{t('WeWillUse')}</p>
                         <ul className="list-disc">
                             <li>{t('WeWillUse_1')}</li>
@@ -36,17 +38,17 @@ export default function PrivacyPolicy() {
                             <li>{t('WeWillUse_3')}</li>
                             <li>{t('WeWillUse_4')}</li>
                         </ul>
-                        <p className="text-xl font-bold">{t('ProvidedToComply')}</p>
+                        <p className="text-xl font-bold py-3">{t('ProvidedToComply')}</p>
                         <p>{t('ProvidedToComply_desc1')}</p>
-                        <p className="text-xl font-bold">{t('ProvidedToCommunicate')}</p>
+                        <p className="text-xl font-bold py-3">{t('ProvidedToCommunicate')}</p>
                         <p>{t('ProvidedToCommunicate_desc1')}</p>
-                        <p className="text-xl font-bold">{t('ProvidedForUser')}</p>
+                        <p className="text-xl font-bold py-3">{t('ProvidedForUser')}</p>
                         <p>{t('ProvidedForUser_desc1')}</p>
-                        <p className="text-xl font-bold">{t('ProvidedForCompliance')}</p>
+                        <p className="text-xl font-bold py-3">{t('ProvidedForCompliance')}</p>
                         <p>{t('ProvidedForCompliance_desc1')}</p>
-                        <p className="text-xl font-bold">{t('ProvidedToComply')}</p>
+                        <p className="text-xl font-bold py-3">{t('ProvidedToComply')}</p>
                         <p>{t('ProvidedToComply_desc1')}</p>
-                        <p className="text-xl font-bold">{t('SharingPersonalInformation')}</p>
+                        <p className="text-xl font-bold py-3">{t('SharingPersonalInformation')}</p>
                         <p>{t('WeWillNotShare')}</p>
                         <ul className="list-disc">
                             <li>{t('WeWillNotShare_1')}</li>
@@ -55,9 +57,9 @@ export default function PrivacyPolicy() {
                             <li>{t('WeWillNotShare_4')}</li>
                             <li>{t('WeWillNotShare_5')}</li>
                         </ul>
-                        <p className="text-xl font-bold">{t('PrivacyPolicyUpdates')}</p>
+                        <p className="text-xl font-bold py-3">{t('PrivacyPolicyUpdates')}</p>
                         <p>{t('PrivacyPolicyUpdates_desc1')}</p>
-                        <p className="text-2xl font-bold">{t('ContactUs')}</p>
+                        <p className="text-2xl font-bold py-3">{t('ContactUs')}</p>
                         <p>{t('WeWelcome')}</p>
                         <p>{t('Email')}</p>
                         <p>{t('Address')}</p>

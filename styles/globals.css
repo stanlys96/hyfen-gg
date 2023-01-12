@@ -1121,7 +1121,10 @@ footer .copyright {
 }
 
 .hero-community {
-	height: 80vh;
+	background: url('/images/community/community-bg.png') no-repeat center center;
+	background-color: #111434;
+	height: 100vh;
+	width: 100vw;
 }
 
 .community-content,
@@ -1318,5 +1321,12 @@ footer .copyright {
 	.product-img-container {
 		width: 100%;
 		height: 291px;
+	}
+
+	.hero-community {
+		background: none;
+		background-color: #111434;
+		height: 100vh;
+		width: 100vw;
 	}
 }

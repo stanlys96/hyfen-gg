@@ -8,8 +8,8 @@ function HeroCommunity() {
     const { t } = useTranslation('community')
     return (
         <div className="flex flex-col md:flex-row relative justify-center hero-community">
-            <img src="/images/community-1.png" className="w-full md:w-1/2" height="100%" />
-            <img src="/images/community-2.png" className="w-full md:w-1/2" height="100%" />
+            <img src="/images/community-1.png" className="w-full h-1/2 md:hidden" height="100%" />
+            <img src="/images/community-2.png" className="w-full h-1/2 md:hidden" height="100%" />
             <div className="absolute top-1/3 container mx-auto">
                 <Fade top>
                     <p className="text-3xl md:text-5xl font-bold text-center mb-6">{t('Home Gamers')}</p>

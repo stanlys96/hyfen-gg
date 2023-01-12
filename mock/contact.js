@@ -15,11 +15,13 @@ export const textInputData = [
     {
         id: 1,
         code: "Your Name",
-        imageUrl: "/images/contact/name-icon.svg"
+        imageUrl: "/images/contact/name-icon.svg",
+        type: "name"
     },
     {
         id: 1,
         code: "Email Address",
-        imageUrl: "/images/contact/email-icon.svg"
+        imageUrl: "/images/contact/email-icon.svg",
+        type: "email"
     },
 ]

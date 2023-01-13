@@ -31,7 +31,7 @@ export default function Jumbotron() {
 						</p>
 					</Fade>
 					{/* Button Download */}
-					<Fade top delay={600}>
+					<Fade top delay={200}>
 						<div className='mt-7 gap-4 flex items-center'>
 							<Link
 								passHref
@@ -59,16 +59,15 @@ export default function Jumbotron() {
 						</div>
 					</Fade>
 
-					{/*End Container*/}
+					{/*Animation Scroll when dekstop*/}
 					<div className='hidden relative md:block mt-10'>
 						<ScrollDown className='relative' />
 					</div>
 				</div>
 
 				{/* Image Content */}
-				<Fade right delay={400}>
+				<Fade right delay={100}>
 					{/* Image */}
-
 					<div className='relative h-[500px] md:h-[800px] w-[1440px] '>
 						<Image
 							priority
@@ -78,6 +77,8 @@ export default function Jumbotron() {
 							objectFit='contain'
 						/>
 					</div>
+
+					{/*Animation Scroll when mobile*/}
 					<div className='relative block mt-4 md:hidden'>
 						<ScrollDown className='relative' />
 					</div>

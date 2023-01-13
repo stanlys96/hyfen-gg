@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import useTranslation from 'next-translate/useTranslation'
 import Fade from 'react-reveal/Fade'
+import Image from 'next/image'
 
 export default function ExploreGames() {
 	const { t } = useTranslation('home')
@@ -145,14 +146,15 @@ export default function ExploreGames() {
 									clearTimeout(timeoutId)
 								}}
 							>
-								<div>
-									<img
-										key={item.id}
-										className={`${className} carousel-phone-bg`}
-										width='100%'
-										height='100%'
+								<div
+									className={`${className} h-56 w-full relative `}
+									key={item.id}
+								>
+									<Image
 										src={i === index ? item.imagePhone : item.image}
-										alt='Comic'
+										alt={item.id}
+										layout='fill'
+										objectFit='contain'
 									/>
 								</div>
 							</button>

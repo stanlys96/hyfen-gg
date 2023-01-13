@@ -1,15 +1,13 @@
+import useTranslation from 'next-translate/useTranslation'
 import Image from 'next/image'
 import Link from 'next/link'
-import React, { useState } from 'react'
-import { languages } from '../../mock'
-import ArrowDown from '../Icons/ArrowDown'
-import Menu from '../Icons/Menu'
-import ActiveLink from './ActiveLink'
-import useTranslation from 'next-translate/useTranslation'
 import { useRouter } from 'next/router'
+import React, { useState } from 'react'
 import { Fade } from 'react-reveal'
-import { menus } from '../../mock'
+import { languages, menus } from '../../mock'
+import Menu from '../Icons/Menu'
 import DownloadAppButton from './DownloadAppButton'
+import { ButtonLanguage, ListMenu, SubMenu } from './modules'
 import SideDrawer from './SideDrawer'
 
 function Header({ fixed = true }) {
@@ -18,6 +16,7 @@ function Header({ fixed = true }) {
 	const [domLoaded, setDomLoaded] = useState(false)
 	const [scrollY, setScrollY] = useState(0)
 	const { t, lang } = useTranslation('common')
+
 	React.useEffect(() => {
 		if (open) {
 			setOpen(!open)
@@ -37,92 +36,6 @@ function Header({ fixed = true }) {
 	React.useEffect(() => {
 		setDomLoaded(true)
 	}, [])
-
-	const ListMenu = ({ menu }) => {
-		return (
-			<ActiveLink
-				href={menu.link}
-				inActiveClassName='text-white-50 p-0 hover:text-white transition-all duration-300'
-				activeClassName='bg-app-primary text-white rounded-full px-[20px] py-[8px]'
-				disabled={menu.disable}
-			>
-				<p className='cursor-pointer'>{t(menu.title)}</p>
-			</ActiveLink>
-		)
-	}
-
-	const SubMenu = ({ menu }) => {
-		return (
-			<div className='group hidden md:flex h-full w-full relative'>
-				<span className='relative flex items-center text-white-50 hover:text-white transition-all duration-300 overflow-auto'>
-					{t(menu.title).replace(/ /g, '\u00A0')}
-					<ArrowDown className='fill-current h-4 ' />
-				</span>
-				<ul
-					className={`
-			hidden dropdown-menu absolute bg-white text-base z-50 py-2 list-none text-left rounded-lg shadow-lg top-full m-0 bg-clip-padding border-none group-hover:block`}
-					aria-labelledby='dropdownMenuButton2'
-				>
-					{menu.submenu.map((submenu) => (
-						<ListSubMenu submenu={submenu} key={submenu.id} />
-					))}
-				</ul>
-			</div>
-		)
-	}
-
-	const ListSubMenu = ({ submenu }) => {
-		return (
-			<li
-				className={[
-					' dropdown-item text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700',
-					submenu.active && 'hover:bg-gray-100',
-				].join(' ')}
-			>
-				<a
-					href={submenu.link}
-					className={`${
-						submenu.active ? '' : 'text-black-50 cursor-default'
-					} font-bold flex items-center`}
-				>
-					<span className='inline-block mr-2'>{t(submenu.title)}</span>
-					{submenu.withIcon && (
-						<Image
-							src='/images/home/guidebook-icon-black.svg'
-							height={15}
-							width={15}
-							alt='icon'
-						/>
-					)}
-				</a>
-			</li>
-		)
-	}
-
-	const ButtonLanguage = () => {
-		return (
-			<div className='relative text-sm'>
-				<div className='group flex h-full w-full relative'>
-					<div className='relative flex gap-2 items-center text-white/50'>
-						<Image src='/images/globe.svg' width={20} height={20} alt='globe' />
-						{lang === 'id' ? 'ID' : 'ENG'}
-						<ArrowDown className='fill-current w-4 h-4' />
-					</div>
-					<ul className='bg-white mt-1 p-4 rounded-lg text-black-100 soft-shadow hidden min-w-full absolute top-full group-hover:block py-2'>
-						{languages.map((language) => (
-							<li key={language.locale}>
-								<ActiveLink href='/' locale={language.locale}>
-									<p className='block font-[700] w-full hover:text-blue py-1 px-3 cursor-pointer'>
-										{language.title}
-									</p>
-								</ActiveLink>
-							</li>
-						))}
-					</ul>
-				</div>
-			</div>
-		)
-	}
 
 	return (
 		domLoaded && (
@@ -169,14 +82,14 @@ function Header({ fixed = true }) {
 									{menus.map((item) =>
 										item.submenu?.length > 0 ? (
 											// Section Menu Have child
-											<SubMenu menu={item} key={item.id} />
+											<SubMenu t={t} menu={item} key={item.id} />
 										) : (
 											// Menu doesnt have child
-											<ListMenu menu={item} key={item?.id} />
+											<ListMenu t={t} menu={item} key={item?.id} />
 										)
 									)}
 								</nav>
-								<ButtonLanguage />
+								<ButtonLanguage lang={lang} languages={languages} />
 								<DownloadAppButton />
 							</div>
 						</div>

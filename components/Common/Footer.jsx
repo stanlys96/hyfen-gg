@@ -1,14 +1,13 @@
-import Image from 'next/image'
-import React from 'react'
-import { Fade } from 'react-reveal'
-import { Social } from './Social'
-import Link from 'next/link'
 import useTranslation from 'next-translate/useTranslation'
-import { mediaSocialsData1, mediaSocialsData2 } from '../../mock/socials'
+import Image from 'next/image'
+import Link from 'next/link'
+import { useRouter } from 'next/router'
+import { Fade } from 'react-reveal'
+import { SocialMedia } from './modules'
 
 const Footer = ({ bgColor }) => {
-	'Home', 'Player', 'Guild', 'Terms and Conditions', 'Privacy Policy', 'Contact'
-	const items = [
+	// 'Home', 'Player', 'Guild', 'Terms and Conditions', 'Privacy Policy', 'Contact'
+	const listMenu = [
 		{
 			title: 'Home',
 			link: '/',
@@ -35,6 +34,7 @@ const Footer = ({ bgColor }) => {
 		},
 	]
 	const { t } = useTranslation('common')
+	const router = useRouter()
 
 	return (
 		<footer className={`border-t border-slate-500 pt-10 pb-12 ${bgColor}`}>
@@ -57,12 +57,12 @@ const Footer = ({ bgColor }) => {
 						</div>
 
 						{/* Address */}
-						<div className='col-span-4 lg:col-span-1 row-span-1 lg:row-span-3 order-3 lg:order-2'>
-							<div>
-								<p className='text-white-700 text-lg font-bold mb-9 text-center lg:text-left'>
+						<div className='col-span-4 lg:col-span-1 row-span-1 lg:row-span-3 order-3 lg:order-2 mb-8'>
+							<div className='relative'>
+								<h4 className='text-white-700 text-[14px] font-bold mb-5 text-center lg:text-left'>
 									Address
-								</p>
-								<p className='text-white-700 text-sm font-light mb-9 text-center lg:text-left'>
+								</h4>
+								<p className='text-white px-4 lg:px-0 text-[14px] font-light leading-[18px] tracking-wide text-center lg:text-left'>
 									Office 8, Lantai 18 Unit A, Jl Jend Sudirman Kav. 52-53 SCBD
 									Lot. 28, Jakarta Selatan 12190
 									<br />
@@ -77,41 +77,33 @@ const Footer = ({ bgColor }) => {
 							<p className='text-white-700 text-lg font-bold mb-9 text-center lg:text-left'>
 								Follow Us
 							</p>
-							<div className='mx-auto'>
-								<Social
-									className='grid grid-cols-4 px-10 md:px-0 text-center lg:text-left'
-									width={26}
-									height={21}
-									mediaSocialsData={mediaSocialsData1}
-								/>
-								<Social
-									className='grid grid-cols-3 lg:grid-cols-4 px-20 md:px-0 text-center lg:text-left pt-6'
-									width={26}
-									height={21}
-									mediaSocialsData={mediaSocialsData2}
-								/>
+							<div className='relative mx-12 lg:mx-auto'>
+								<SocialMedia />
 							</div>
 						</div>
 
 						{/* Links */}
-						<div className='col-span-4 lg:col-span-2 order-2 lg:order-4'>
-							<div className='flex flex-wrap md:flex-row items-center justify-center lg:justify-start'>
-								{items.map((item, i) => (
-									<div
-										key={i}
-										className={`inline-flex items-center mb-3 md:mb-0 ${
-											i + 1 !== items.length ? 'mr-3.5' : ''
-										} pb-4`}
-									>
-										<Link href={item.link} passHref>
-											<p className='text-sm font-medium text-slate-300 hover:text-blue transition-colors duration-300'>
-												{t(item.title)}
-											</p>
-										</Link>
-										{i + 1 !== items.length && (
-											<span className='inline-block w-px h-2 bg-slate-300 ml-3.5' />
-										)}
-									</div>
+						<div className='relative col-span-4 lg:col-span-2 order-2 lg:order-4 mb-8'>
+							<div className='relative flex justify-center lg:justify-start flex-wrap lg:pr-32'>
+								{listMenu.map((item, index) => (
+									<Link href={item.link} key={item.link}>
+										<a
+											className={[
+												'relative w-fit flex justify-between items-center gap-3 pl-2 last:gap-0 text-[14px] text-center tracking-wide py-2.5 lg:py-1.5 first:pl-0 last:pr-0',
+												index === listMenu.length - 2 && 'lg:pl-0',
+												router.pathname === item.link
+													? 'text-white font-[700]'
+													: 'text-white/50 font-[400]',
+											].join(' ')}
+										>
+											{t(item.title)}
+											{item.link !== '/contact' && (
+												<p className='text-[12px] text-white/50 font-extralight'>
+													|
+												</p>
+											)}
+										</a>
+									</Link>
 								))}
 							</div>
 						</div>

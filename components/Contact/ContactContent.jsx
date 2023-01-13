@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { useRef, useState, useEffect } from 'react'
 import useTranslation from 'next-translate/useTranslation'
 import Image from 'next/image'
 import { textInputData } from '../../mock/contact'
@@ -6,6 +6,7 @@ import { Fade } from 'react-reveal'
 import emailjs from '@emailjs/browser';
 import { Circles } from 'react-loader-spinner'
 import Swal from 'sweetalert2'
+import ReCAPTCHA from 'react-google-recaptcha'
 
 const Toast = Swal.mixin({
     toast: true,
@@ -14,39 +15,104 @@ const Toast = Swal.mixin({
     timer: 3000,
     timerProgressBar: true,
     didOpen: (toast) => {
-      toast.addEventListener('mouseenter', Swal.stopTimer)
-      toast.addEventListener('mouseleave', Swal.resumeTimer)
+      toast.addEventListener('mouseenter', Swal.close)
     }
   })
   
 function ContactContent() {
+    const regEmail = /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/;
+
     const { t } = useTranslation('contact');
     const form = useRef();
+    const captchaRef = useRef(null)
     const [isLoading, setIsLoading] = useState(false);
     const [userName, setUserName] = useState("");
     const [userEmail, setUserEmail] = useState("");
     const [question, setQuestion] = useState("General Inquiry");
     const [textArea, setTextArea] = useState("");
+    const [emailError, setEmailError] = useState(false);
+    const [nameError, setNameError] = useState(false);
+    const [textAreaError, setTextAreaError] = useState(false);
+    const [captcha, setCaptcha] = useState(false);
+    const [captchaError, setCaptchaError] = useState(false);
+    const [emailErrorMessage, setEmailErrorMessage] = useState("");
+    const [nameErrorMessage, setNameErrorMessage] = useState("");
+    const [textAreaErrorMessage, setTextAreaErrorMessage] = useState("");
+    const [captchaErrorMessage, setCaptchaErrorMessage] = useState("");
 
     const sendEmail = (e) => {
         if (isLoading) return;
+        let foundError = false;
+        let foundEmailError = false;
+        if (!captcha) {
+            setCaptchaError(true);
+            setCaptchaErrorMessage("Please tick the box.")
+            setTimeout(() => {
+                setCaptchaError(false);
+                setCaptchaErrorMessage("");
+            }, 3000);
+            foundError = true;
+        }
+        if (userName === "") {
+            setNameError(true);
+            setNameErrorMessage("Field cannot be empty.")
+            setTimeout(() => {
+                setNameError(false);
+                setNameErrorMessage("");
+            }, 3000);
+            foundError = true;
+        }
+        if (userEmail === "") {
+            setEmailError(true);
+            setEmailErrorMessage("Field cannot be empty.")
+            setTimeout(() => {
+                setEmailError(false);
+                setEmailErrorMessage("");
+            }, 3000);
+            foundError = true;
+            foundEmailError = true;
+        }
+        if (!regEmail.test(userEmail) && !foundEmailError) {
+            setEmailError(true);
+            setEmailErrorMessage("Email format is wrong. Please try again.")
+            setTimeout(() => {
+                setEmailError(false);
+                setEmailErrorMessage("");
+            }, 3000);
+            foundError = true;
+        }
+        if (textArea === "") {
+            setTextAreaError(true);
+            setTextAreaErrorMessage("Field cannot be empty.")
+            setTimeout(() => {
+                setTextAreaError(false);
+                setTextAreaErrorMessage("");
+            }, 3000);
+            foundError = true;
+        }
+        if (foundError) {
+            return;
+        }
         setIsLoading(true);
         e.preventDefault();
         emailjs
             .sendForm(
-                "service_f2o95c7",
-                "template_rzm6t7h",
+                process.env.NEXT_PUBLIC_SERVICE_ID,
+                process.env.NEXT_PUBLIC_TEMPLATE_ID,
                 form.current,
-                "BBI56d2ubUH09TKqM"
+                process.env.NEXT_PUBLIC_PUBLIC_KEY
             )
             .then(
             (result) => {
                 console.log(result.text);
+                captchaRef.current.reset();
                 setIsLoading(false);
                 setUserName("");
                 setUserEmail("");
                 setQuestion("General Inquiry");
                 setTextArea("");
+                setCaptcha(false);
+                setCaptchaError(false);
                 Toast.fire({
                     icon: 'success',
                     title: 'Successfully sent email!'
@@ -70,7 +136,9 @@ function ContactContent() {
                         {
                             textInputData.map((data, i) => (
                                 <Fade key={i} left={i % 2 == 0} right={i % 2 != 0}>
-                                    <InputTextWithIcon setUserEmail={setUserEmail} setUserName={setUserName} userEmail={userEmail} userName={userName} imageUrl={data.imageUrl} title={t(data.code)} placeholder="" key={i} thisType={data.type} />
+                                    <InputTextWithIcon setUserEmail={setUserEmail} setUserName={setUserName} userEmail={userEmail} userName={userName} imageUrl={data.imageUrl} title={t(data.code)} placeholder="" key={i} thisType={data.type}
+                                    emailError={emailError} emailErrorMessage={emailErrorMessage} nameError={nameError}
+                                    nameErrorMessage={nameErrorMessage} />
                                 </Fade>
                             ))
                         }
@@ -81,10 +149,28 @@ function ContactContent() {
                         </Fade>
                     </div>
                     <div className="flex flex-col items-start">
-                        <InputTextArea setTextArea={setTextArea} textArea={textArea} title={t('Message')} />
+                        <InputTextArea 
+                            setTextArea={setTextArea} 
+                            textArea={textArea} 
+                            title={t('Message')} 
+                            textAreaError={textAreaError} 
+                            textAreaErrorMessage={textAreaErrorMessage} 
+                        />
+                        <Fade left>
+                            <div>
+                                <ReCAPTCHA
+                                    ref={captchaRef} 
+                                    value={captcha} 
+                                    sitekey={process.env.NEXT_PUBLIC_SITE_KEY} onChange={(e) => {
+                                        setCaptcha(!captcha);
+                                    }} 
+                                />
+                                {captchaError && <p className="mt-3 text-red-500">{captchaErrorMessage}</p>}
+                            </div>
+                        </Fade>
                         <Fade left>
                             <div className="w-full flex justify-center md:w-fit">
-                                    <a onClick={sendEmail} href="#" className='mx-auto header__download-button text-slate-900 bg-white py-3 px-6 text-xs md:text-sm font-bold cursor-pointer mt-5 flex items-center justify-start'>
+                                    <a onClick={sendEmail} className='mx-auto header__download-button text-slate-900 bg-white py-3 px-6 text-xs md:text-sm font-bold cursor-pointer mt-5 flex items-center justify-start'>
                                         {
                                             isLoading ? 
                                             <Circles
@@ -119,7 +205,20 @@ function ContactContent() {
     )
 }
 
-function InputTextWithIcon({imageUrl, placeholder, title, thisType, userEmail, userName, setUserName, setUserEmail}) {
+function InputTextWithIcon({
+        imageUrl, 
+        placeholder, 
+        title, 
+        thisType, 
+        userEmail, 
+        userName, 
+        setUserName, 
+        setUserEmail,
+        emailError, 
+        nameError, 
+        emailErrorMessage,
+        nameErrorMessage
+    }) {
     return <div>
                 <p className="mb-3">{title}</p>
                 <div className="relative flex items-center">
@@ -150,12 +249,14 @@ function InputTextWithIcon({imageUrl, placeholder, title, thisType, userEmail, u
                         pl-10
                     " />
                 </div>
+                {thisType === "email" && emailError && <p className="mt-3 text-red-500">{emailErrorMessage}</p>}
+                {thisType !== "email" && nameError && <p className="mt-3 text-red-500">{nameErrorMessage}</p>}
             </div>
 }
 
 function InputDropdown({title, question, setQuestion}) {
     const { t } = useTranslation('contact')
-    return <div className="my-6 md:my-10">
+    return <div className="my-6 md:my-7">
             <p className="mb-3">{title}</p>
             <div className="relative flex items-center">
                 <select value={question} onChange={(e) => {
@@ -180,22 +281,25 @@ function InputDropdown({title, question, setQuestion}) {
         </div>
 }
 
-function InputTextArea({title, textArea, setTextArea}) {
+function InputTextArea({title, textArea, setTextArea, textAreaError, textAreaErrorMessage}) {
     return <div className="mb-5 w-full">
             <Fade left>
-                <p className="mb-3">{title}</p>
-                <div className="relative flex items-center">
-                    <textarea onChange={(e) => {
-                        setTextArea(e.target.value);
-                    }} value={textArea} name="message" rows="6" className="
-                        block
-                        w-full
-                        rounded-md
-                        border-contact-select
-                        shadow-sm
-                        focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50
-                        bg-transparent
-                    " />
+                <div>
+                    <p className="mb-3">{title}</p>
+                    <div className="relative flex items-center">
+                        <textarea onChange={(e) => {
+                            setTextArea(e.target.value);
+                        }} value={textArea} name="message" rows="6" className="
+                            block
+                            w-full
+                            rounded-md
+                            border-contact-select
+                            shadow-sm
+                            focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50
+                            bg-transparent
+                        " />
+                    </div>
+                    {textAreaError && <p className="mt-3 text-red-500">{textAreaErrorMessage}</p>}
                 </div>
             </Fade>
         </div>

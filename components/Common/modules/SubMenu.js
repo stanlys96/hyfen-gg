@@ -1,4 +1,4 @@
-import { ArrowDown } from 'components/Icons'
+import { ArrowDown } from '../../Icons'
 import React from 'react'
 import ListSubMenu from './ListSubMenu'
 

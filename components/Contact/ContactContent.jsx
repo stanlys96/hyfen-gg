@@ -161,7 +161,7 @@ function ContactContent() {
                                 <ReCAPTCHA
                                     ref={captchaRef} 
                                     value={captcha} 
-                                    sitekey={process.env.NEXT_PUBLIC_SITE_KEY} onChange={(e) => {
+                                    sitekey={process.env.NEXT_PUBLIC_SITE_KEY} onChange={() => {
                                         setCaptcha(!captcha);
                                     }} 
                                 />

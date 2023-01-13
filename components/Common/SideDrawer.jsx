@@ -1,14 +1,12 @@
-import { menus, languages } from '../../mock'
-import Image from 'next/image'
-import React from 'react'
-import ActiveLink from './ActiveLink'
-import ArrowDown from '../Icons/ArrowDown'
-import Collapse from './Collapse'
-import Link from 'next/link'
-import { Social } from './Social'
 import useTranslation from 'next-translate/useTranslation'
-import { mediaSocialsData1, mediaSocialsData2 } from '../../mock/socials'
+import Image from 'next/image'
+import Link from 'next/link'
 import { useRouter } from 'next/router'
+import { languages, menus } from '../../mock'
+import ArrowDown from '../Icons/ArrowDown'
+import ActiveLink from './ActiveLink'
+import Collapse from './Collapse'
+import { SocialMedia } from './modules'
 
 export default function SideDrawer({ open, handleClose, setOpen }) {
 	const router = useRouter()
@@ -19,10 +17,10 @@ export default function SideDrawer({ open, handleClose, setOpen }) {
 		<div
 			className={[
 				open ? 'w-screen  z-50 translate-x-0' : 'translate-x-full w-0 -z-10',
-				'sidebar fixed h-screen bg-app-bg_app top-0 right-0  text-lg transition-all duration-300 overflow-hidden',
+				'sidebar fixed h-screen overflow-scroll bg-app-bg_app top-0 right-0  text-lg transition-all duration-300 ',
 			].join(' ')}
 		>
-			<div className='sidebar-header flex justify-between py-4 pl-3 pr-5 border-b border-white/30'>
+			<div className='sidebar-header overflow-y-scroll flex justify-between py-4 pl-3 pr-5 border-b border-white/30'>
 				<div className='flex items-center justify-center'>
 					<Link href='/' passHref>
 						<a className='flex justify-center items-center relative w-[145px] h-[44px]'>
@@ -229,20 +227,8 @@ export default function SideDrawer({ open, handleClose, setOpen }) {
 			</div>
 
 			{/* Section Soscial Media */}
-			<div className='pt-8 w-full text-center space-y-5'>
-				<Social
-					className='grid grid-cols-4 px-10 md:px-0 text-center lg:text-left'
-					mediaSocialsData={mediaSocialsData1}
-					width={20}
-					height={20}
-				/>
-				<Social
-					className='grid grid-cols-3 lg:grid-cols-4 px-20 md:px-0 text-center lg:text-left'
-					width={20}
-					height={20}
-					mediaSocialsData={mediaSocialsData2}
-				/>
-				{/* <AppStore /> */}
+			<div className='relative my-12 mx-16'>
+				<SocialMedia />
 			</div>
 		</div>
 	)

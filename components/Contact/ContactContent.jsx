@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from 'react'
+import React, { useRef, useState } from 'react'
 import useTranslation from 'next-translate/useTranslation'
 import Image from 'next/image'
 import { textInputData } from '../../mock/contact'

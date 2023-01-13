@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import useTranslation from 'next-translate/useTranslation'
 import Fade from 'react-reveal/Fade'
-import Image from 'next/image'
 
 export default function ExploreGames() {
 	const { t } = useTranslation('home')

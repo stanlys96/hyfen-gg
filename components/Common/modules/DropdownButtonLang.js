@@ -1,4 +1,4 @@
-import { ArrowDown } from 'components/Icons'
+import { ArrowDown } from '../../Icons'
 import Image from 'next/image'
 import React from 'react'
 import ActiveLink from '../ActiveLink'

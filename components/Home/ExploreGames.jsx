@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from 'react'
 import useTranslation from 'next-translate/useTranslation'
+import { useEffect, useState } from 'react'
 import Fade from 'react-reveal/Fade'
-import Image from 'next/image'
+import Carousel from './sections/Carousel'
 
 export default function ExploreGames() {
 	const { t } = useTranslation('home')
-
 	const [index, setIndex] = useState(0)
 	const [timeoutId, setTimeoutId] = useState(0)
+	const [windowWidth, setWindowWidth] = useState(0)
 
 	const mod = (n, m) => {
 		let result = n % m
@@ -89,7 +89,6 @@ export default function ExploreGames() {
 		},
 	]
 
-	const [windowWidth, setWindowWidth] = useState(0)
 	let resizeWindow = () => {
 		setWindowWidth(window.innerWidth)
 	}
@@ -139,25 +138,15 @@ export default function ExploreGames() {
 						className += windowWidth > 768 ? ' width-38' : ' width-75'
 
 						return (
-							<button
-								key={i}
-								onClick={() => {
-									setIndex(i)
-									clearTimeout(timeoutId)
-								}}
-							>
-								<div
-									className={`${className} h-56 w-full relative `}
-									key={item.id}
-								>
-									<Image
-										src={i === index ? item.imagePhone : item.image}
-										alt={item.id}
-										layout='fill'
-										objectFit='contain'
-									/>
-								</div>
-							</button>
+							<Carousel
+								className={className}
+								key={item.id}
+								item={item}
+								index={index}
+								setIndex={setIndex}
+								timeoutId={timeoutId}
+								i={i}
+							/>
 						)
 					})}
 				</div>

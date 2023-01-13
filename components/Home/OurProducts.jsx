@@ -56,6 +56,7 @@ export default function OurProducts() {
 									{/* Arrow Icons */}
 									<div className='relative h-14 w-14 md:w-24 flex justify-center items-center md:h-16'>
 										<Image
+											priority
 											src={`/images/home/arrow-right.svg`}
 											alt={item.title}
 											layout='fill'
@@ -71,9 +72,9 @@ export default function OurProducts() {
 									].join(' ')}
 								>
 									<Image
+										priority
 										src={`/images/home/product-${i + 1}.png`}
 										className='object-contain  transition-all duration-300 object-right translate-x-44 md:translate-x-0  md:w-full'
-										// objectFit='contain'
 										layout='fill'
 										alt={item.title}
 									/>

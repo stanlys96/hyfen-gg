@@ -18,6 +18,8 @@ function Header({ fixed = true }) {
 	const { t, lang } = useTranslation('common')
 
 	React.useEffect(() => {
+		setDomLoaded(true)
+
 		if (open) {
 			setOpen(!open)
 		}
@@ -33,9 +35,7 @@ function Header({ fixed = true }) {
 		}
 	}, [router.asPath])
 
-	React.useEffect(() => {
-		setDomLoaded(true)
-	}, [])
+	// React.useEffect(() => {}, [])
 
 	return (
 		domLoaded && (
@@ -52,7 +52,7 @@ function Header({ fixed = true }) {
 						{/* Container Menu  */}
 						<div className='relative flex justify-between items-center'>
 							{/* Icon App */}
-							<Link passHref href='/' className=''>
+							<Link passHref href='/'>
 								<a className='flex justify-start items-center '>
 									<Image
 										src='/images/hyfen-logo.svg'

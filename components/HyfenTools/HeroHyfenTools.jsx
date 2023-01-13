@@ -21,10 +21,7 @@ function HeroHyfenTools() {
 
 					<Fade top delay={600}>
 						<div className='flex justify-center lg:block'>
-							<a
-								href='#'
-								className='w-fit header__download-button text-slate-900 bg-white py-3 px-6 inline-block text-xs md:text-sm font-bold cursor-pointer mt-5 flex items-center'
-							>
+							<div className='w-fit header__download-button text-slate-900 bg-white py-3 px-6  text-xs md:text-sm font-bold cursor-pointer mt-5 flex items-center'>
 								<span className='inline-block mr-2'>
 									{t('Onboard Your Guild')}{' '}
 								</span>
@@ -37,13 +34,13 @@ function HeroHyfenTools() {
 									layout='intrinsic'
 									quality={100}
 								/>
-							</a>
+							</div>
 						</div>
 						<ScrollDown className='justify-center lg:justify-start hidden md:flex mt-10' />
 					</Fade>
 				</div>
 			</div>
-			<Fade right delay={600}>
+			<Fade right delay={400}>
 				<div className='relative lg:ml-0 max-w-[1440px] md:pt-12 h-[510px] md:h-[605px] flex justify-center items-center'>
 					<img
 						src='/images/hyfen-tools/hyfen-tools-img.svg'

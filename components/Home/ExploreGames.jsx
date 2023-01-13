@@ -146,15 +146,14 @@ export default function ExploreGames() {
 									clearTimeout(timeoutId)
 								}}
 							>
-								<div
-									className={`${className} h-56 w-full relative `}
-									key={item.id}
-								>
-									<Image
+								<div>
+									<img
+										key={item.id}
+										className={`${className} carousel-phone-bg`}
+										width='100%'
+										height='100%'
 										src={i === index ? item.imagePhone : item.image}
-										alt={item.id}
-										layout='fill'
-										objectFit='contain'
+										alt='Comic'
 									/>
 								</div>
 							</button>

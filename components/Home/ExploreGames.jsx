@@ -1,10 +1,7 @@
 import useTranslation from 'next-translate/useTranslation'
 import { useEffect, useState } from 'react'
 import Fade from 'react-reveal/Fade'
-<<<<<<< HEAD
 import Carousel from './sections/Carousel'
-=======
->>>>>>> main
 
 export default function ExploreGames() {
 	const { t } = useTranslation('home')
@@ -141,7 +138,6 @@ export default function ExploreGames() {
 						className += windowWidth > 768 ? ' width-38' : ' width-75'
 
 						return (
-<<<<<<< HEAD
 							<Carousel
 								className={className}
 								key={item.id}
@@ -151,26 +147,6 @@ export default function ExploreGames() {
 								timeoutId={timeoutId}
 								i={i}
 							/>
-=======
-							<button
-								key={i}
-								onClick={() => {
-									setIndex(i)
-									clearTimeout(timeoutId)
-								}}
-							>
-								<div>
-									<img
-										key={item.id}
-										className={`${className} carousel-phone-bg`}
-										width='100%'
-										height='100%'
-										src={i === index ? item.imagePhone : item.image}
-										alt='Comic'
-									/>
-								</div>
-							</button>
->>>>>>> main
 						)
 					})}
 				</div>

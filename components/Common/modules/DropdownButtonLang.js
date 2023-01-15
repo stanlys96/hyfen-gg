@@ -2,8 +2,11 @@ import { ArrowDown } from '../../Icons'
 import Image from 'next/image'
 import React from 'react'
 import ActiveLink from '../ActiveLink'
+import { useRouter } from 'next/router'
 
 export default function ButtonLanguage({ lang, languages }) {
+	const router = useRouter()
+
 	return (
 		<div className='relative text-sm'>
 			<div className='group flex h-full w-full relative'>
@@ -12,10 +15,13 @@ export default function ButtonLanguage({ lang, languages }) {
 					{lang === 'id' ? 'ID' : 'ENG'}
 					<ArrowDown className='fill-current w-4 h-4' />
 				</div>
-				<ul className='bg-white mt-1 p-4 rounded-lg text-black-100 soft-shadow hidden min-w-full absolute top-full group-hover:block py-2'>
+				<ul className='bg-white p-4 rounded-lg text-black-100 soft-shadow hidden min-w-full absolute top-full group-hover:block py-2'>
 					{languages.map((language) => (
 						<li key={language.locale}>
-							<ActiveLink href='/' locale={language.locale}>
+							<ActiveLink
+								href={`${language.locale}${router.pathname}`}
+								locale={language.locale}
+							>
 								<p className='block font-[700] w-full hover:text-blue py-1 px-3 cursor-pointer'>
 									{language.title}
 								</p>

@@ -3,23 +3,25 @@ import useTranslation from 'next-translate/useTranslation'
 import Fade from 'react-reveal/Fade'
 import ScrollDown from '../Common/ScrollDown'
 import Image from 'next/image'
+import { Heading1 } from 'components/modules/atoms'
 
 function HeroHyfenTools() {
 	const { t } = useTranslation('hyfen-tools')
 	return (
-		<div className='pt-24 md:pb-0 lg:pt-0 relative flex flex-col justify-around md:flex-row container mx-auto overflow-hidden'>
-			<div className='lg:mt-0'>
-				<div className='lg:pt-40'>
-					<Fade top>
-						<h1 className='md:text-5xl lg:text-[96px] lg:leading-[1] text-center lg:text-left font-bold hyfen-play-gradient mb-5 z-50'>
-							{t('Hyfen Tools')}
-						</h1>
-						<h1 className='text-xl lg:text-4xl text-center lg:text-left font-bold'>
-							{t('Manage Guild')}
-						</h1>
-					</Fade>
+		<div className='relative container mx-auto max-w-6xl pt-24 md:pt-10 px-0'>
+			<div className='relative overflow-hidden flex flex-col md:flex-row md:items-center'>
+				{/* Description */}
+				<div className='relative m-0 p-0'>
+					<div className='relative'>
+						<Fade top>
+							<Heading1 text={'Hyfen Tools'} addClass='hyfen-play-gradient' />
+							<h2 className='mt-3 text-[22px] lg:text-[36px] leading-[28px] lg:leading-[46px] lg:w-2/3 tracking-wide text-center lg:text-left font-bold'>
+								{t('Manage Guild')}
+							</h2>
+						</Fade>
+					</div>
 
-					<Fade top delay={600}>
+					<Fade top delay={200}>
 						<div className='flex justify-center lg:block'>
 							<div className='w-fit header__download-button text-slate-900 bg-white py-3 px-6  text-xs md:text-sm font-bold cursor-pointer mt-5 flex items-center'>
 								<span className='inline-block mr-2'>
@@ -39,17 +41,20 @@ function HeroHyfenTools() {
 						<ScrollDown className='justify-center lg:justify-start hidden md:flex mt-10' />
 					</Fade>
 				</div>
+				{/* Image */}
+				<Fade right delay={200}>
+					<div className='relative mt-10 md:mt-0 lg:w-1/2 max-w-[1440px] h-56 md:h-[600px] flex flex-col'>
+						<div className='relative h-full w-full'>
+							<Image
+								src='/images/hyfen-tools/hyfen-tools-img.svg'
+								alt='image'
+								layout='fill'
+							/>
+						</div>
+					</div>
+					<ScrollDown className='justify-center lg:justify-start flex md:hidden mt-5' />
+				</Fade>
 			</div>
-			<Fade right delay={400}>
-				<div className='relative lg:ml-0 max-w-[1440px] md:pt-12 h-[510px] md:h-[605px] flex justify-center items-center'>
-					<img
-						src='/images/hyfen-tools/hyfen-tools-img.svg'
-						alt='image'
-						className='h-full w-full md:py-0 py-16'
-					/>
-				</div>
-			</Fade>
-			<ScrollDown className='justify-center lg:justify-start flex md:hidden' />
 		</div>
 	)
 }

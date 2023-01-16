@@ -4,11 +4,11 @@ import AboutContent from './AboutContent'
 
 export default function About() {
 	return (
-        <div>
-            <div className="hero-about">
-                <HeroAbout />
-            </div>
-            <AboutContent />
-        </div>
+		<div className='relative w-full h-full overflow-hidden'>
+			<div className='hero-about'>
+				<HeroAbout />
+			</div>
+			<AboutContent />
+		</div>
 	)
 }

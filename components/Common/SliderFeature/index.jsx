@@ -4,6 +4,8 @@ import SliderFeatureTabItem from './SliderFeatureTabItem'
 import Image from 'next/image'
 import Fade from 'react-reveal/Fade'
 import useTranslation from 'next-translate/useTranslation'
+import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 const SilderFeature = ({
 	items,
@@ -16,6 +18,7 @@ const SilderFeature = ({
 	const sliderElement = useRef()
 	const [activeSlide, setActiveSlide] = useState(0)
 	const [lineInit, setLineInit] = useState(false)
+	const router = useRouter()
 
 	const settings = {
 		arrows: false,
@@ -58,22 +61,23 @@ const SilderFeature = ({
 					<div className='col-span-12 md:col-span-5 text-center md:text-left'>
 						<div className='text-center'>
 							<Fade bottom>
-								<h4
-									className={`text-[28px] md:text-[48px] md:text-left font-bold md:leading-[62px] ${
+								<h1
+									className={`text-[28px] md:text-[48px] leading-[36px] px-12 md:px-0 md:text-left font-bold md:leading-[62px] ${
 										titleGradient && 'slider-title-gradient'
 									}`}
 								>
 									{title}
-								</h4>
+								</h1>
 							</Fade>
 							{button && (
 								<Fade bottom>
-									<a
+									<Link
+										passHref
 										href={button.link}
 										className='mt-7 btn bg-blue hover:bg-hover px-8 py-4 text-xs md:text-base text-black-100 inline-block'
 									>
 										{button.title}
-									</a>
+									</Link>
 								</Fade>
 							)}
 						</div>
@@ -108,15 +112,22 @@ const SilderFeature = ({
 							</div>
 						</div>
 					</div>
-					<div className='col-span-12 mt-6 md:mt-0 md:col-span-7'>
+					<div
+						className={[
+							'relative col-span-12 mt-6 md:mt-0 md:col-span-7',
+							router.pathname === '/hyfen-play' && 'mt-12',
+							router.pathname === '/hyfen-tools' && 'mt-4',
+						].join(' ')}
+					>
 						<Fade right>
 							<Slider ref={sliderElement} {...settings}>
 								{items.map((item, i) => (
 									<div key={item?.code}>
 										<div
-											className={`relative transition-transform h-[300px] md:mt-10 md:h-[600px] duration-500 ${
-												i === activeSlide ? 'translate-y-0' : 'translate-y-10'
-											}`}
+											className={[
+												'relative transition-transform h-[300px] md:mt-10 md:h-[600px] duration-500',
+												i === activeSlide ? 'translate-y-0' : 'translate-y-10',
+											].join(' ')}
 										>
 											<Image
 												src={item?.images}
@@ -127,7 +138,13 @@ const SilderFeature = ({
 												priority
 											/>
 										</div>
-										<div className='mt-14 text-center'>
+										<div
+											className={[
+												'text-center relative',
+												router.pathname === '/hyfen-play' && 'mt-10',
+												router.pathname === '/hyfen-tools' && 'mt-5',
+											].join(' ')}
+										>
 											<h5 className='text-[24px] text-white font-bold mb-2 md:hidden'>
 												{t(item.code)}
 											</h5>

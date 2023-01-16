@@ -109,7 +109,7 @@ export default function ExploreGames() {
 	}, [index])
 
 	return (
-		<div className='gamefi pt-[93px] md:pb-24 overflow-hidden'>
+		<div className='gamefi pt-[93px] md:pb-20 overflow-hidden'>
 			<Fade top>
 				<div className='container mx-auto'>
 					<h2 className='text-[28px] font-[700] leading-[36px] md:text-[48px] md:leading-[62px] text-center mb-5'>
@@ -122,7 +122,7 @@ export default function ExploreGames() {
 			</Fade>
 
 			<Fade top>
-				<div className='custom-carousel mt-[130px] md:mt-64 mb-44 container mx-auto max-w-7xl'>
+				<div className='custom-carousel mt-[130px] md:mt-52 mb-36 container mx-auto max-w-7xl'>
 					{cards?.map((item, i) => {
 						const indexLeft = mod(index - 1, cards?.length)
 						const indexRight = mod(index + 1, cards?.length)
@@ -137,7 +137,7 @@ export default function ExploreGames() {
 							className = 'carousel-card carousel-card-left'
 						} else className = 'carousel-card'
 
-						className += windowWidth > 768 ? ' w-[65%]' : ' w-[90%]'
+						className += windowWidth > 768 ? ' w-[45%]' : ' w-[90%]'
 
 						return (
 							<Carousel

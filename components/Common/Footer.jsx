@@ -59,7 +59,7 @@ const Footer = ({ bgColor }) => {
 						{/* Address */}
 						<div className='col-span-4 lg:col-span-1 row-span-1 lg:row-span-3 order-3 lg:order-2 mb-8'>
 							<div className='relative'>
-								<h4 className='text-white-700 text-[14px] font-bold mb-5 text-center lg:text-left'>
+								<h4 className='text-white-700 text-[20px] font-bold mb-5 text-center lg:text-left'>
 									Address
 								</h4>
 								<p className='text-white px-4 lg:px-0 text-[14px] font-light leading-[18px] tracking-wide text-center lg:text-left'>

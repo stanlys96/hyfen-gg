@@ -9,8 +9,8 @@ function HeroCommunity() {
 	return (
 		<div className='relative'>
 			{/* Image Background */}
-			<div className='relative grid lg:grid-cols-2 pt-0 z-0'>
-				<div className='relative h-[40vh] lg:h-[50vh] w-full transition-all duration-300'>
+			<div className='relative grid md:grid-cols-2 pt-0 z-0'>
+				<div className='relative h-[50vh] md:h-[100vh] w-full transition-all duration-300'>
 					<Image
 						src={'/images/community-1.png'}
 						alt='image'
@@ -19,7 +19,7 @@ function HeroCommunity() {
 						quality={50}
 					/>
 				</div>
-				<div className='relative h-[40vh] lg:h-[50vh] w-full transition-all duration-300'>
+				<div className='relative h-[50vh] md:h-[100vh] w-full transition-all duration-300'>
 					<Image
 						priority
 						src={'/images/community-2.png'}
@@ -31,7 +31,7 @@ function HeroCommunity() {
 			</div>
 
 			{/* Description and Icon Sosmed Section */}
-			<div className='absolute top-[200px] lg:top-[35%] flex flex-col justify-center items-center w-full h-fit'>
+			<div className='absolute top-[200px] md:top-[40%] flex flex-col justify-center items-center w-full h-fit'>
 				{/* <Fade top> */}
 				<h1 className='text-[32px] md:text-[48px] font-bold text-center w-[280px] leading-[41px] md:leading-relaxed md:w-fit'>
 					{t('Home Gamers')}

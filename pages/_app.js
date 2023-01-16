@@ -2,6 +2,7 @@ import { ToastContainer } from 'react-toastify'
 import BlankLayout from '../components/Layouts/BlankLayout'
 import '../styles/globals.css'
 import Head from 'next/head'
+import Script from 'next/script'
 
 function MyApp({ Component, pageProps }) {
 	const Layout = Component.Layout || BlankLayout
@@ -108,6 +109,25 @@ function MyApp({ Component, pageProps }) {
 
 				<meta name='theme-color' content='#ffffff'></meta>
 			</Head>
+
+			{/* Google Analytics */}
+			<Script
+				strategy='afterInteractive'
+				src='https://www.googletagmanager.com/gtag/js?id=G-5X8GZ4NKFN'
+			/>
+			<Script
+				id='google-analytics'
+				strategy='afterInteractive'
+				dangerouslySetInnerHTML={{
+					__html: `
+					window.dataLayer = window.dataLayer || [];
+					function gtag(){dataLayer.push(arguments);}
+					gtag('js', new Date());
+					gtag('config', 'G-5X8GZ4NKFN', {
+					page_path: window.location.pathname,
+					});`,
+				}}
+			/>
 			<Layout>
 				<Component {...pageProps} />
 				<ToastContainer />

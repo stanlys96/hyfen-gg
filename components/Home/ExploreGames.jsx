@@ -109,7 +109,7 @@ export default function ExploreGames() {
 	}, [index])
 
 	return (
-		<div className='gamefi pt-[93px] md:pb-20 overflow-hidden'>
+		<div className='relative mx-auto container max-w-7xl gamefi pt-[93px] md:pb-20 overflow-hidden'>
 			<Fade top>
 				<div className='container mx-auto'>
 					<h2 className='text-[28px] font-[700] leading-[36px] md:text-[48px] md:leading-[62px] text-center mb-5'>

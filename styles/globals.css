@@ -1092,6 +1092,8 @@ footer .copyright {
 
 .join-community-bg {
 	background: url('/images/community-bg.png') no-repeat center center;
+	border-radius: 2rem;
+	background-size: contain;
 	height: 100%;
 }
 

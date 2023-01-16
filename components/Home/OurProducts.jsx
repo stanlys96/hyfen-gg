@@ -21,7 +21,7 @@ export default function OurProducts() {
 	]
 
 	return (
-		<div className='gamefi relative mt-24'>
+		<div className='gamefi relative mt-24 mx-auto container max-w-7xl px-0'>
 			<Fade top>
 				<div className='text-center mb-5'>
 					<h2 className='text-[28px] leading-[36px] md:text-5xl md:leading-[62px] easiest-way-title easiest-way-gradient inline-block mx-auto text-center mb-5'>
@@ -29,7 +29,7 @@ export default function OurProducts() {
 					</h2>
 				</div>
 			</Fade>
-			<div className='relative xl:mx-auto xl:container'>
+			<div className='relative '>
 				{items.map((item, i) => (
 					<Fade key={i} top delay={i !== 0 ? i * 200 : 0}>
 						<Link passHref href={item.link}>

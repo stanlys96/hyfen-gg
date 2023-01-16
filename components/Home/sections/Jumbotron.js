@@ -68,18 +68,18 @@ export default function Jumbotron() {
 				{/* Image Content */}
 				<Fade right delay={100}>
 					{/* Image */}
-					<div className='relative max-h-fit max-w-full h-[500px] md:h-[823px] w-full'>
+					<div className='relative max-h-fit md:mt-4 h-[450px] md:h-[800px] w-full'>
 						<Image
 							priority
 							src='/images/home/home-bg-img.png'
 							alt='image-home'
 							layout='fill'
-							objectFit='contain'
+							objectFit='cover'
 						/>
 					</div>
 
 					{/*Animation Scroll when mobile*/}
-					<div className='relative block mt-4 md:hidden'>
+					<div className='relative block -mt-10 md:hidden'>
 						<ScrollDown className='relative' />
 					</div>
 				</Fade>

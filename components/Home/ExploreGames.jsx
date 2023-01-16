@@ -105,11 +105,11 @@ export default function ExploreGames() {
 				setIndex((index + 1) % cards?.length)
 			}, 3000)
 		)
-		 // eslint-disable-next-line react-hooks/exhaustive-deps
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [index])
 
 	return (
-		<div className='gamefi pt-[93px] pb-[200px] overflow-hidden'>
+		<div className='gamefi pt-[93px] md:pb-24 overflow-hidden'>
 			<Fade top>
 				<div className='container mx-auto'>
 					<h2 className='text-[28px] font-[700] leading-[36px] md:text-[48px] md:leading-[62px] text-center mb-5'>
@@ -120,8 +120,9 @@ export default function ExploreGames() {
 					</h2>
 				</div>
 			</Fade>
+
 			<Fade top>
-				<div className='custom-carousel mt-[130px] md:mt-44 container mx-auto max-w-6xl'>
+				<div className='custom-carousel mt-[130px] md:mt-64 mb-44 container mx-auto max-w-7xl'>
 					{cards?.map((item, i) => {
 						const indexLeft = mod(index - 1, cards?.length)
 						const indexRight = mod(index + 1, cards?.length)
@@ -136,7 +137,7 @@ export default function ExploreGames() {
 							className = 'carousel-card carousel-card-left'
 						} else className = 'carousel-card'
 
-						className += windowWidth > 768 ? ' width-38' : ' width-75'
+						className += windowWidth > 768 ? ' w-[65%]' : ' w-[90%]'
 
 						return (
 							<Carousel

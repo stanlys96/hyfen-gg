@@ -7,7 +7,7 @@ export default function EasiestWay() {
 	const { t } = useTranslation('home')
 
 	return (
-		<div className='join-community-bg  relative my-14 container mx-auto max-w-6xl'>
+		<div className='join-community-bg  relative my-14 2xl:container 2xl:mx-auto 2xl:max-w-6xl transition-all duration-300'>
 			<div className=' md:h-[400px] h-full flex flex-col justify-center items-center'>
 				<Fade top>
 					<p className='font-bold text-[28px] md:text-[48px] mb-5 text-center'>

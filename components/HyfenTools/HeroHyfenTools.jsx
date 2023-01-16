@@ -52,7 +52,7 @@ function HeroHyfenTools() {
 							/>
 						</div>
 					</div>
-					<ScrollDown className='justify-center lg:justify-start flex md:hidden mt-5' />
+					<ScrollDown className='justify-center lg:justify-start flex md:hidden mt-[36px]' />
 				</Fade>
 			</div>
 		</div>

@@ -9,11 +9,11 @@ export default function Jumbotron() {
 	const { t } = useTranslation()
 
 	return (
-		<div className='relative container mx-auto max-w-7xl pt-28 md:pt-20'>
+		<div className='relative container mx-auto max-w-7xl pt-28 md:-mt-24'>
 			{/* Container Content */}
 			<div className='relative grid place-items-center grid-cols-1 gap-4 lg:grid-cols-2'>
 				{/* Heading, Description, and Button Download */}
-				<div className='relative grid place-items-center justify-items-center md:place-items-start'>
+				<div className='relative grid place-items-center justify-items-center md:place-items-start lg:-mt-4'>
 					{/* Heading */}
 					<Fade top>
 						<h1 className='text-[40px] leading-[51px] md:text-[80px] md:leading-[104px] text-center  lg:text-left font-bold'>
@@ -68,7 +68,7 @@ export default function Jumbotron() {
 				{/* Image Content */}
 				<Fade right delay={100}>
 					{/* Image */}
-					<div className='relative h-[500px] md:h-[800px] w-[1440px] '>
+					<div className='relative max-h-fit max-w-full h-[500px] md:h-[823px] w-full'>
 						<Image
 							priority
 							src='/images/home/home-bg-img.png'

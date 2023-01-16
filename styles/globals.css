@@ -1234,16 +1234,18 @@ footer .copyright {
 }
 
 .carousel-card-left {
-	transform: translateX(-90%) scale(0.8);
+	transform: translateX(-85%) scale(0.8);
 	transition: 500ms;
 	opacity: 0.3;
+	border-radius: 25px;
 	/* width: 38.3%; */
 }
 
 .carousel-card-right {
-	transform: translateX(90%) scale(0.8);
+	transform: translateX(85%) scale(0.8);
 	transition: 500ms;
 	opacity: 0.3;
+	border-radius: 25px;
 	/* width: 38.3%; */
 }
 

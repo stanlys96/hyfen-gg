@@ -40,6 +40,7 @@ export default function OurProducts() {
 									className={[
 										'relative z-10 flex justify-between items-center px-4 py-8 md:p-14 w-2/3 group-hover:w-5/6 transition-all duration-300 gap-6',
 										`bg-product-${i + 1}`,
+										i === 0 ? 'lg:rounded-tl-3xl' : 'lg:rounded-bl-3xl',
 									].join(' ')}
 								>
 									{/* Container Heading and Description */}
@@ -74,7 +75,10 @@ export default function OurProducts() {
 									<Image
 										priority
 										src={`/images/home/product-${i + 1}.png`}
-										className='object-contain  transition-all duration-300 object-right translate-x-44 md:translate-x-0  md:w-full'
+										className={[
+											'object-contain  transition-all duration-300 object-right translate-x-44 md:translate-x-0  md:w-full',
+											i === 0 ? 'lg:rounded-tr-3xl' : 'lg:rounded-br-3xl',
+										].join(' ')}
 										layout='fill'
 										alt={item.title}
 									/>

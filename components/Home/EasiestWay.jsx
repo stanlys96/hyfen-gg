@@ -27,7 +27,7 @@ export default function EasiestWay() {
 	]
 
 	return (
-		<div className='container mx-auto gamefi pt-[80px] pb-[60px] md:pb-[140px]'>
+		<div className='container mx-auto gamefi pt-[80px] md:pt-4 pb-[60px] md:pb-[140px]'>
 			<Fade top>
 				<div className='text-center md:text-left'>
 					<h2 className='text-[32px] leading-[41px] md:text-[64px] md:leading-[83px] easiest-way-title easiest-way-gradient inline-block mx-auto'>

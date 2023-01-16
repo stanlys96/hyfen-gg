@@ -17,7 +17,7 @@ export default function Carousel({
 				clearTimeout(timeoutId)
 			}}
 		>
-			<div className={`${className} h-56 w-full relative `} key={item.id}>
+			<div className={`${className} h-96 w-full relative `} key={item.id}>
 				<Image
 					src={i === index ? item.imagePhone : item.image}
 					alt={item.id}

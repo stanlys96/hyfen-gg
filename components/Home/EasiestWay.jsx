@@ -2,7 +2,6 @@ import React from 'react'
 import useTranslation from 'next-translate/useTranslation'
 import Fade from 'react-reveal/Fade'
 import Image from 'next/image'
-import { Heading1 } from 'components/modules/atoms'
 
 export default function EasiestWay() {
 	const { t } = useTranslation('home')

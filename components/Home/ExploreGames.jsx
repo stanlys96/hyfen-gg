@@ -102,9 +102,10 @@ export default function ExploreGames() {
 	useEffect(() => {
 		setTimeoutId(
 			setTimeout(() => {
-				setIndex((index + 1) % cards.length)
+				setIndex((index + 1) % cards?.length)
 			}, 3000)
 		)
+		 // eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [index])
 
 	return (
@@ -120,10 +121,10 @@ export default function ExploreGames() {
 				</div>
 			</Fade>
 			<Fade top>
-				<div className='custom-carousel mt-[130px] md:mt-44 container mx-auto max-w-7xl'>
-					{cards.map((item, i) => {
-						const indexLeft = mod(index - 1, cards.length)
-						const indexRight = mod(index + 1, cards.length)
+				<div className='custom-carousel mt-[130px] md:mt-44 container mx-auto max-w-6xl'>
+					{cards?.map((item, i) => {
+						const indexLeft = mod(index - 1, cards?.length)
+						const indexRight = mod(index + 1, cards?.length)
 
 						let className = 'carousel-card'
 

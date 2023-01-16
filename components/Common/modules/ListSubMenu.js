@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
 
 export default function ListSubMenu({ submenu, t }) {
@@ -9,12 +10,17 @@ export default function ListSubMenu({ submenu, t }) {
 				submenu.active && 'hover:bg-gray-100',
 			].join(' ')}
 		>
-			<a
+			<Link
+				passHref
 				href={submenu.link}
+				
+			>
+				<div
 				className={`${
 					submenu.active ? '' : 'text-black-50 cursor-default'
 				} font-bold flex items-center`}
-			>
+				>
+
 				<span className='inline-block mr-2'>{t(submenu.title)}</span>
 				{submenu.withIcon && (
 					<Image
@@ -24,7 +30,8 @@ export default function ListSubMenu({ submenu, t }) {
 						alt='icon'
 					/>
 				)}
-			</a>
+				</div>
+			</Link>
 		</li>
 	)
 }

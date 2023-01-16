@@ -1,5 +1,3 @@
-import useTranslation from 'next-translate/useTranslation'
-import React from 'react'
 import { Fade } from 'react-reveal'
 import {
 	DescHeading,
@@ -10,11 +8,9 @@ import {
 import SectionDownloadApp from './SectionDownloadApp'
 
 export default function Jumbotron({ heading, desc, image, children = null }) {
-	const { t } = useTranslation()
-
 	// looping when heading more than one
 	const headingText = heading?.map((item) => {
-		return <Heading1 key={item} text={t(item)} />
+		return <Heading1 key={item} text={item} />
 	})
 
 	return (

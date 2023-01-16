@@ -9,7 +9,7 @@ export default function SectionDownloadApp() {
 				passHref
 				href='https://apps.apple.com/us/app/metabase-play/id1624878820'
 			>
-				<a>
+				<a className='hover:scale-105 transition-all duration-300'>
 					<Image
 						src='/images/App Store.svg'
 						height={60}
@@ -23,7 +23,7 @@ export default function SectionDownloadApp() {
 				passHref
 				href='https://apps.apple.com/us/app/metabase-play/id1624878820'
 			>
-				<a>
+				<a className='hover:scale-105 transition-all duration-300'>
 					<Image
 						src='/images/Google Play.svg'
 						height={60}

@@ -112,15 +112,15 @@ const SilderFeature = ({
 						<Fade right>
 							<Slider ref={sliderElement} {...settings}>
 								{items.map((item, i) => (
-									<div key={i}>
+									<div key={item?.code}>
 										<div
-											className={`transition-transform h-[300px] md:mt-10 md:h-[600px] duration-500 ${
+											className={`relative transition-transform h-[300px] md:mt-10 md:h-[600px] duration-500 ${
 												i === activeSlide ? 'translate-y-0' : 'translate-y-10'
 											}`}
 										>
 											<Image
-												src={item.images}
-												alt={item.title}
+												src={item?.images}
+												alt={item?.code}
 												layout='fill'
 												quality={100}
 												objectFit='contain'

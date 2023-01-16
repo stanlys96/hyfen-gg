@@ -22,7 +22,7 @@ const SliderFeatureTabItem = ({
 					active ? 'text-white' : 'text-white/80'
 				}`}
 			>
-				{t(title)}asdas
+				{t(title)}
 			</h2>
 			<Collapse isOpen={active}>
 				<p className=' text-[14px] lg:text-[20px] text-white/60'>

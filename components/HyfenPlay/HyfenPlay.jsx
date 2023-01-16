@@ -1,4 +1,4 @@
-import { Jumbotron } from 'components/modules/molecules'
+import { Jumbotron } from '../modules/molecules'
 import useTranslation from 'next-translate/useTranslation'
 import { Fade } from 'react-reveal'
 import { hyfenPlayFeatures } from '../../mock/hyfen-play'

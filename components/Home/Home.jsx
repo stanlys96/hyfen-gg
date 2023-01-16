@@ -1,4 +1,4 @@
-import { Jumbotron } from 'components/modules/molecules'
+import { Jumbotron } from '../modules/molecules'
 import EasiestWay from './EasiestWay'
 import ExploreGames from './ExploreGames'
 import JoinCommunity from './JoinCommunity'

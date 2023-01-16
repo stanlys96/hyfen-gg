@@ -3,7 +3,7 @@ import useTranslation from 'next-translate/useTranslation'
 import Fade from 'react-reveal/Fade'
 import ScrollDown from '../Common/ScrollDown'
 import Image from 'next/image'
-import { Heading1 } from 'components/modules/atoms'
+import { Heading1 } from '../modules/atoms'
 
 function HeroHyfenTools() {
 	const { t } = useTranslation('hyfen-tools')

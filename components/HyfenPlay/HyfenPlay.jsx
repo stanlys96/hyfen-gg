@@ -1,6 +1,4 @@
-import { Jumbotron } from '../modules/molecules'
 import useTranslation from 'next-translate/useTranslation'
-import { Fade } from 'react-reveal'
 import { hyfenPlayFeatures } from '../../mock/hyfen-play'
 import SilderFeature from '../Common/SliderFeature'
 import Enjoying from './Enjoying'

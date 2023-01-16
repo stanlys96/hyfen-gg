@@ -3,7 +3,6 @@ import React from 'react'
 
 export default function Heading1({ text, addClass }) {
 	const { t } = useTranslation()
-	console.log(t(text), 'text')
 	return (
 		<h1
 			className={[

@@ -116,7 +116,12 @@ const SilderFeature = ({
 					</Fade>
 				</div>
 				{/* Image */}
-				<div className='relative mt-6 md:-mt-32 max-h-full'>
+				<div
+					className={[
+						'relative md:-mt-32 max-h-full transition-all duration-300',
+						router.pathname === '/hyfen-tools' ? '-mt-14 pb-0' : 'mt-5',
+					].join(' ')}
+				>
 					<Fade right>
 						<Slider ref={sliderElement} {...settings}>
 							{items.map((item, i) => (
@@ -139,8 +144,8 @@ const SilderFeature = ({
 									<div
 										className={[
 											'text-center relative px-[28px]',
-											router.pathname === '/hyfen-play' && 'mt-8',
-											router.pathname === '/hyfen-tools' && 'mt-5',
+											router.pathname === '/hyfen-play' && 'mt-12',
+											router.pathname === '/hyfen-tools' && '-mt-6',
 										].join(' ')}
 									>
 										<h5 className='text-[24px] text-white font-bold mb-2 md:hidden'>

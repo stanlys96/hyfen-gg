@@ -18,6 +18,8 @@ const EcoSystemBox = ({
 			if (background === 'blue') return 'blue-transparent-full-border'
 		}
 		return
+
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [background])
 
 	const titleSize = useMemo(() => {

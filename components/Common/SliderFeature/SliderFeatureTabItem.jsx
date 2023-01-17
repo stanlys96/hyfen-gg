@@ -25,7 +25,7 @@ const SliderFeatureTabItem = ({
 				{t(title)}
 			</h2>
 			<Collapse isOpen={active}>
-				<p className=' text-[14px] lg:text-[20px] text-white/60'>
+				<p className='text-[14px] lg:text-[20px] text-white/60'>
 					{t(description)}
 				</p>
 			</Collapse>

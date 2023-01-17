@@ -2,7 +2,7 @@
 const nextTranslate = require('next-translate')
 
 module.exports = nextTranslate({
-	reactStrictMode: false,
+	reactStrictMode: true,
 	env: {
 		BASE_URL: process.env.BASE_URL,
 	},

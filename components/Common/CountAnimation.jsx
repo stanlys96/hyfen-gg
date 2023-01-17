@@ -16,6 +16,7 @@ export default function CountAnimation({ min = 0, max }) {
 		return () => {
 			clearTimeout(timer)
 		}
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [])
 	return <span>{formatNumber(count)}</span>
 }

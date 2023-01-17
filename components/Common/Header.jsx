@@ -2,7 +2,7 @@ import useTranslation from 'next-translate/useTranslation'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import React, { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Fade } from 'react-reveal'
 import { languages, menus } from '../../mock'
 import Menu from '../Icons/Menu'
@@ -17,12 +17,13 @@ function Header({ fixed = true }) {
 	const [scrollY, setScrollY] = useState(0)
 	const { t, lang } = useTranslation('common')
 
-	React.useEffect(() => {
+	useEffect(() => {
 		setDomLoaded(true)
 
 		if (open) {
 			setOpen(!open)
 		}
+
 		const handleScroll = () => {
 			setScrollY(window.scrollY)
 		}
@@ -30,15 +31,16 @@ function Header({ fixed = true }) {
 		handleScroll()
 
 		window.addEventListener('scroll', handleScroll)
+
 		return () => {
 			window.removeEventListener('scroll', handleScroll)
 		}
+
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [router.asPath])
 
-	// React.useEffect(() => {}, [])
-
-	return (
-		domLoaded && (
+	return domLoaded ? (
+		<>
 			<Fade top>
 				<div
 					className={`${
@@ -65,6 +67,7 @@ function Header({ fixed = true }) {
 									/>
 								</a>
 							</Link>
+
 							{/* Mobile Button Menu */}
 							<div className='relative md:hidden'>
 								<button
@@ -75,7 +78,7 @@ function Header({ fixed = true }) {
 								</button>
 							</div>
 
-							{/* Table Upper Menu */}
+							{/* Tablet Upper Menu */}
 							<div className='relative hidden items-center md:flex gap-[32px]'>
 								{/* Nav Section */}
 								<nav className='relative items-center flex gap-[32px]'>
@@ -93,6 +96,8 @@ function Header({ fixed = true }) {
 								<DownloadAppButton />
 							</div>
 						</div>
+
+						{/* Mobile Menu */}
 						<SideDrawer
 							setOpen={setOpen}
 							handleClose={() => setOpen(false)}
@@ -101,7 +106,9 @@ function Header({ fixed = true }) {
 					</div>
 				</div>
 			</Fade>
-		)
+		</>
+	) : (
+		<></>
 	)
 }
 

@@ -1,15 +1,21 @@
-import React from 'react'
-import ActiveLink from '../ActiveLink'
+import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 export default function ListMenu({ menu, t }) {
+	const router = useRouter()
+
 	return (
-		<ActiveLink
-			href={menu.link}
-			inActiveClassName='text-white-50 p-0 hover:text-white transition-all duration-300'
-			activeClassName='bg-app-primary text-white rounded-full px-[20px] py-[8px]'
-			disabled={menu.disable}
-		>
-			<p className='cursor-pointer'>{t(menu.title)}</p>
-		</ActiveLink>
+		<Link href={menu?.link} passHref>
+			<a
+				className={[
+					'rounded-full  transition-all duration-300 hover:text-white',
+					router.pathname === menu.link
+						? 'text-white bg-app-primary px-[20px] py-[8px]'
+						: 'text-white/50 p-0',
+				].join(' ')}
+			>
+				{t(menu.title)}
+			</a>
+		</Link>
 	)
 }

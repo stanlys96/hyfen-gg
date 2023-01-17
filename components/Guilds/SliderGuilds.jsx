@@ -21,7 +21,7 @@ export default function SliderGuilds() {
 			{
 				breakpoint: 768,
 				settings: {
-					dots: false
+					dots: false,
 				},
 			},
 		],
@@ -30,6 +30,7 @@ export default function SliderGuilds() {
 	useEffect(() => {
 		slider.current.slickGoTo(tabActive - 1)
 	}, [tabActive])
+
 	return (
 		<div className='container 2xl:px-10 pt-12 mx-auto mt-12 pb-12 slide-player'>
 			<div className='text-center md:text-left'>

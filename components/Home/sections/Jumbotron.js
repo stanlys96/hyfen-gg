@@ -37,24 +37,28 @@ export default function Jumbotron() {
 								passHref
 								href='https://apps.apple.com/us/app/metabase-play/id1624878820'
 							>
-								<Image
-									src='/images/App Store.svg'
-									height={60}
-									width={200}
-									quality={100}
-									alt='apple-store'
-								/>
+								<a className='relative'>
+									<Image
+										src='/images/App Store.svg'
+										height={60}
+										width={200}
+										quality={100}
+										alt='apple-store'
+									/>
+								</a>
 							</Link>
 							<Link
 								passHref
 								href='https://apps.apple.com/us/app/metabase-play/id1624878820'
 							>
-								<Image
-									src='/images/Google Play.svg'
-									height={60}
-									width={200}
-									alt='android'
-								/>
+								<a className='relative'>
+									<Image
+										src='/images/Google Play.svg'
+										height={60}
+										width={200}
+										alt='android'
+									/>
+								</a>
 							</Link>
 						</div>
 					</Fade>
@@ -68,7 +72,7 @@ export default function Jumbotron() {
 				{/* Image Content */}
 				<Fade right delay={100}>
 					{/* Image */}
-					<div className='relative max-h-fit md:mt-4 h-[450px] md:h-[750px] w-full'>
+					<div className='relative lg:max-h-fit md:mt-4 h-[450px] md:h-[750px] w-full'>
 						<Image
 							priority
 							src='/images/home/home-bg-img.png'

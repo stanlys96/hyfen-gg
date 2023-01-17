@@ -34,6 +34,8 @@ const ActiveLink = ({
 		}
 
 		requestAnimationFrame(animate)
+
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [textHoverRef, mouseX, mouseY, ballX, ballY, disabledLink])
 
 	React.useEffect(() => {
@@ -49,6 +51,8 @@ const ActiveLink = ({
 		animate()
 
 		return () => document.removeEventListener('mousemove', onMouseMove)
+
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [disabledLink])
 
 	const child = Children.only(children)

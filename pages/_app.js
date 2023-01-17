@@ -128,6 +128,8 @@ function MyApp({ Component, pageProps }) {
 					});`,
 				}}
 			/>
+			{/* End Google Analytic */}
+
 			<Layout>
 				<Component {...pageProps} />
 				<ToastContainer />

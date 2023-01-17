@@ -12,20 +12,23 @@ export default function PrivacyPolicyComponent() {
 					name='description'
 					content='Play Blockchain Games and Use Axie Infinity Guild Tools'
 				/>
-				<meta
-					property='og:title'
-					content='Hyfen | Make Money Playing Games'
-				/>
+				<meta property='og:title' content='Hyfen | Make Money Playing Games' />
 				<meta
 					property='og:description'
 					content='Play Blockchain Games and Use Axie Infinity Guild Tools'
 				/>
-				<meta property="og:image" content="https://metabase.gg/images/Banner.png"/>
+				<meta
+					property='og:image'
+					content='https://metabase.gg/images/Banner.png'
+				/>
 				<meta
 					property='twitter:title'
 					content='Hyfen | Make Money Playing Games'
 				/>
-				<meta property="twitter:image" content="https://metabase.gg/images/Banner.png"/>
+				<meta
+					property='twitter:image'
+					content='https://metabase.gg/images/Banner.png'
+				/>
 				<meta
 					property='twitter:description'
 					content='Play Blockchain Games and Use Axie Infinity Guild Tools'

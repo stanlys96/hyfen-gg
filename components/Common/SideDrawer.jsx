@@ -4,7 +4,6 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { languages, menus } from '../../mock'
 import ArrowDown from '../Icons/ArrowDown'
-import ActiveLink from './ActiveLink'
 import Collapse from './Collapse'
 import { SocialMedia } from './modules'
 
@@ -16,8 +15,8 @@ export default function SideDrawer({ open, handleClose, setOpen }) {
 	return (
 		<div
 			className={[
-				open ? 'w-screen  z-50 translate-x-0' : 'translate-x-full w-0 -z-10',
-				'sidebar fixed h-screen overflow-scroll bg-app-bg_app top-0 right-0  text-lg transition-all duration-300 ',
+				open ? 'w-screen z-50 translate-x-0' : 'translate-x-full w-0 -z-10',
+				'sidebar fixed h-screen overflow-scroll bg-app-bg_app top-0 right-0 text-lg transition-all duration-300 ',
 			].join(' ')}
 		>
 			<div className='sidebar-header overflow-y-scroll flex justify-between py-4 pl-3 pr-5 border-b border-white/30'>
@@ -110,55 +109,50 @@ export default function SideDrawer({ open, handleClose, setOpen }) {
 									</Collapse>
 								</div>
 							) : (
-								<ActiveLink
-									href={menu.link}
-									disabled={menu.disable}
-									passHref
-									activeClassName='flex items-start'
-								>
-									<div className='w-full relative'>
-										<button
-											onClick={() => {
-												if (router.pathname === menu.link) setOpen(false)
-											}}
-											className={`border-b text-left border-white/20  w-full block py-[20px] px-[31px] text-[20px] leading-[26px] cursor-pointer font-[700] ${
-												router.pathname === menu.link && 'text-blue'
-											} hover:text-blue`}
-										>
-											{t(menu.title)}
-										</button>
-									</div>
-								</ActiveLink>
+								// Menu withou having child
+								<Link href={menu.link} passHref>
+									<a
+										className={[
+											'relative border-b text-left border-white/20  w-full block py-[20px] px-[31px] text-[20px] leading-[26px] cursor-pointer font-[700]',
+											router.pathname === menu.link && 'text-blue',
+										].join(' ')}
+									>
+										{t(menu.title)}
+									</a>
+								</Link>
 							)}
 						</li>
 					))}
 				</ul>
 			</nav>
-
 			{/* Section Button Download App */}
 			<div className='relative mt-10 px-6 flex justify-start items-center'>
 				<Link
 					passHref
 					href='https://apps.apple.com/us/app/metabase-play/id1624878820'
 				>
-					<Image
-						src='/images/App Store.svg'
-						height={50}
-						width={200}
-						quality={100}
-						alt='apple-store'
-					/>
+					<a className='relative'>
+						<Image
+							src='/images/App Store.svg'
+							height={50}
+							width={200}
+							quality={100}
+							alt='apple-store'
+						/>
+					</a>
 				</Link>
 				<Link
 					passHref
 					href='https://apps.apple.com/us/app/metabase-play/id1624878820'
 				>
-					<Image
-						src='/images/Google Play.svg'
-						height={50}
-						width={200}
-						alt='android'
-					/>
+					<a className='relative'>
+						<Image
+							src='/images/Google Play.svg'
+							height={50}
+							width={200}
+							alt='android'
+						/>
+					</a>
 				</Link>
 			</div>
 

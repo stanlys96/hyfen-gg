@@ -43,28 +43,32 @@ function DownloadAppButton() {
 						].join(' ')}
 						aria-labelledby='dropdownMenuButton2'
 					>
-						<Link
-							passHref
-							href='https://apps.apple.com/us/app/metabase-play/id1624878820'
-						>
-							<a className='hover:bg-gray-100 relative flex py-2 gap-4 px-4 items-center cursor-pointer'>
-								<AppleIcon />
-								<p className='col-span-2 text-sm font-semibold text-gray-800'>
-									{t('common:For IOS')}
-								</p>
-							</a>
-						</Link>
-						<Link
-							passHref
-							href='https://play.google.com/store/apps/details?id=com.metabase.gg'
-						>
-							<a className='hover:bg-gray-100 relative flex py-2 gap-4 px-4 items-center cursor-pointer'>
-								<AndroidLogo />
-								<p className='col-span-2 text-sm font-semibold text-gray-800'>
-									{t('common:For Android')}
-								</p>
-							</a>
-						</Link>
+						<li>
+							<Link
+								passHref
+								href='https://apps.apple.com/us/app/metabase-play/id1624878820'
+							>
+								<a className='hover:bg-gray-100 relative flex py-2 gap-4 px-4 items-center cursor-pointer'>
+									<AppleIcon />
+									<p className='col-span-2 text-sm font-semibold text-gray-800'>
+										{t('common:For IOS')}
+									</p>
+								</a>
+							</Link>
+						</li>
+						<li>
+							<Link
+								passHref
+								href='https://play.google.com/store/apps/details?id=com.metabase.gg'
+							>
+								<a className='hover:bg-gray-100 relative flex py-2 gap-4 px-4 items-center cursor-pointer'>
+									<AndroidLogo />
+									<p className='col-span-2 text-sm font-semibold text-gray-800'>
+										{t('common:For Android')}
+									</p>
+								</a>
+							</Link>
+						</li>
 					</ul>
 				</div>
 			</div>

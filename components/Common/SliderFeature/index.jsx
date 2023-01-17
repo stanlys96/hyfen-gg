@@ -118,7 +118,7 @@ const SilderFeature = ({
 				{/* Image */}
 				<div className='relative mt-6 md:-mt-32 max-h-full'>
 					<Fade right>
-						<Slider ref={sliderElement} {...settings}>
+						<Slider ref={[sliderElement, ...settings]}>
 							{items.map((item, i) => (
 								<div className='relative' key={item?.code}>
 									<div

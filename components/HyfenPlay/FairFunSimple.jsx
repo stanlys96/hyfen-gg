@@ -9,7 +9,7 @@ export default function FairFunSimple() {
 	const { t } = useTranslation('hyfen-play')
 	return (
 		<Section size='lg'>
-			<div className='container mx-auto'>
+			<div className='container mx-auto max-w-7xl relative'>
 				<div className='grid grid-cols-1 lg:grid-cols-3 gap-5 xl:gap-10 gap-y-16 grid-ar my-12 md:mt-0'>
 					{fairFunSimpleData.map((item, index) => (
 						<Fade key={item.code} bottom delay={index === 0 ? 0 : index * 100}>

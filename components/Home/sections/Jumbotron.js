@@ -68,7 +68,7 @@ export default function Jumbotron() {
 				{/* Image Content */}
 				<Fade right delay={100}>
 					{/* Image */}
-					<div className='relative max-h-fit md:mt-4 h-[450px] md:h-[800px] w-full'>
+					<div className='relative max-h-fit md:mt-4 h-[450px] md:h-[750px] w-full'>
 						<Image
 							priority
 							src='/images/home/home-bg-img.png'

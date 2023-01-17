@@ -69,36 +69,38 @@ function Enjoying() {
 		],
 	}
 	return (
-		<div className='container mx-auto mb-[40] enjoying-wrap pb-[180px]'>
+		<div className='relative max-w-7xl container mx-auto mb-[20] enjoying-wrap pb-24 md:pb-[180px]'>
 			<Fade left>
-				<p className='text-[28px] px-8 md:text-[48px] text-center md:text-left font-bold'>
+				<p className='text-[28px] px-6 md:px-0 md:text-[48px] text-center md:text-left font-bold'>
 					{t('See How Other Players are')} {t('Enjoying')}{' '}
 					{t('Blockchain Games')}
 				</p>
 			</Fade>
-			<div className='mt-[20px] md:mt-[50px]'>
+			<div className='relative mt-[20px] md:mt-[50px]'>
 				<Fade bottom>
 					<Slider {...settings}>
 						{peopleTestimonials.map((item, i) => (
-							<div key={i} className='p-3 text-base md:text-lg'>
-								<Image
-									src={`/images/hyfen-play/${item.author}.png`}
-									alt='appstore'
-									layout='responsive'
-									width={460}
-									height={256}
-									className='rounded-[30px]'
-								/>
-								<p className='mt-7 md:text-[20px] text-[16px]'>
-									“{t(item.author)}“
-								</p>
-								<div className='flex text-white md:text-[16px] text-[14px] mt-3'>
-									<p className='mr-3'>-</p>
-									<span>
-										<a className='text-white md:text-[16px] text-[14px]'>
-											{item.author}{' '}
-										</a>
-									</span>
+							<div key={i} className='relative text-base md:text-lg p-4'>
+								<div className='relative'>
+									<Image
+										src={`/images/hyfen-play/${item.author}.png`}
+										alt='appstore'
+										layout='responsive'
+										width={460}
+										height={256}
+										className='rounded-[30px]'
+									/>
+									<p className='mt-7 md:text-[20px] text-[16px]'>
+										“{t(item.author)}“
+									</p>
+									<div className='flex text-white md:text-[16px] text-[14px] mt-3'>
+										<p className='mr-3'>-</p>
+										<span>
+											<a className='text-white md:text-[16px] text-[14px]'>
+												{item.author}{' '}
+											</a>
+										</span>
+									</div>
 								</div>
 							</div>
 						))}

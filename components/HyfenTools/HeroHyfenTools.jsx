@@ -1,14 +1,13 @@
-import React from 'react'
 import useTranslation from 'next-translate/useTranslation'
+import Image from 'next/image'
 import Fade from 'react-reveal/Fade'
 import ScrollDown from '../Common/ScrollDown'
-import Image from 'next/image'
 import { Heading1 } from '../modules/atoms'
 
 function HeroHyfenTools() {
 	const { t } = useTranslation('hyfen-tools')
 	return (
-		<div className='relative container mx-auto max-w-6xl pt-24 md:pt-10 px-0'>
+		<div className='relative container mx-auto max-w-7xl pt-24 md:pt-10 px-0'>
 			<div className='relative overflow-hidden flex flex-col md:flex-row md:items-center'>
 				{/* Description */}
 				<div className='relative m-0 p-0'>

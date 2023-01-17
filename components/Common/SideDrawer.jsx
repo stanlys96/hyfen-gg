@@ -55,9 +55,10 @@ export default function SideDrawer({ open, handleClose, setOpen }) {
 					{menuDrawer.map((menu) => (
 						<li key={menu.id} className='relative'>
 							{menu.submenu?.length ? (
-								<div className='relative border-b border-white/20'>
+								<div className='relative border-b border-white/20 transition-all duration-300'>
 									<Collapse
 										trigger={({ show, onClick }) => (
+											// Parrent Menu when have child
 											<button
 												className=' hover:text-blue flex w-full items-center justify-between flex-row font-[700] tracking-wide py-[20px] px-[31px] text-[20px] leading-[26px]'
 												onClick={onClick}
@@ -72,46 +73,37 @@ export default function SideDrawer({ open, handleClose, setOpen }) {
 											</button>
 										)}
 									>
-										<ul className='md:hidden grid gap-6 pb-2'>
+										{/* Sub Sub Menu  */}
+										<ul className='relative grid gap-4 my-2 pb-2'>
 											{menu.submenu.map((submenu) => (
-												<li key={submenu.id}>
-													<ActiveLink href={submenu.link}>
-														<div className='flex items-center'>
-															<a
-																onClick={() => {
-																	if (router.pathname === submenu.link)
-																		setOpen(false)
-																}}
-																className={`text-left block px-10 py-3 lg:text-lg text-sm ${
-																	router.pathname === submenu.link &&
-																	'text-blue'
-																} ${
-																	submenu.active &&
-																	'cursor-pointer hover:text-blue'
-																} ${
-																	!submenu.active &&
-																	'text-white-50 cursor-default'
-																} flex items-center`}
-															>
-																<span className='inline-block mr-3 text-[16px]'>
-																	{t(submenu.title)}
-																</span>
-																{submenu.withIcon && (
-																	<Image
-																		src='/images/home/guidebook-icon.svg'
-																		height={20}
-																		width={20}
-																		alt='icon'
-																	/>
-																)}
-															</a>
+												<li
+													className='relative py-2 w-full flex px-8 text-[16px]'
+													key={submenu.id}
+												>
+													<Link passHref href={submenu.link}>
+														<div
+															className={[
+																'relative flex gap-4 py-2 items-center cursor-pointer w-full hover:text-blue',
+																router.pathname === submenu.link && 'text-blue',
+																submenu.active ? 'text-white' : 'text-white/50',
+															].join(' ')}
+														>
+															<p>{t(submenu.title)}</p>
 															{!submenu.active && (
-																<span className='coming-soon-sign py-1.5 px-3 text-sm'>
+																<span className='bg-app-cyan text-white rounded-full  px-[14px] text-[12px]'>
 																	Coming Soon
 																</span>
 															)}
+															{submenu.withIcon && (
+																<Image
+																	src='/images/home/guidebook-icon.svg'
+																	height={20}
+																	width={20}
+																	alt='icon'
+																/>
+															)}
 														</div>
-													</ActiveLink>
+													</Link>
 												</li>
 											))}
 										</ul>
@@ -145,7 +137,10 @@ export default function SideDrawer({ open, handleClose, setOpen }) {
 
 			{/* Section Button Download App */}
 			<div className='relative mt-10 px-6 flex justify-start items-center'>
-				<a href='https://apps.apple.com/us/app/metabase-play/id1624878820'>
+				<Link
+					passHref
+					href='https://apps.apple.com/us/app/metabase-play/id1624878820'
+				>
 					<Image
 						src='/images/App Store.svg'
 						height={50}
@@ -153,77 +148,62 @@ export default function SideDrawer({ open, handleClose, setOpen }) {
 						quality={100}
 						alt='apple-store'
 					/>
-				</a>
-				<a href='https://apps.apple.com/us/app/metabase-play/id1624878820'>
+				</Link>
+				<Link
+					passHref
+					href='https://apps.apple.com/us/app/metabase-play/id1624878820'
+				>
 					<Image
 						src='/images/Google Play.svg'
 						height={50}
 						width={200}
 						alt='android'
 					/>
-				</a>
+				</Link>
 			</div>
 
 			{/* Section Button Language */}
 			<div className='relative mt-5'>
 				<Collapse
 					trigger={({ show, onClick }) => (
-						<>
-							<button
-								className='md:hidden flex items-center justify-center w-full hover:text-blue py-2 text-lg font-[400]'
-								onClick={onClick}
-							>
-								<Image
-									src='/images/globe.svg'
-									className='block py-2 pr-3'
-									alt='BaseLogo'
-									width={20}
-									height={20}
-									layout='fixed'
-								/>
-								<span className='block pl-2'>
-									{lang === 'id' ? 'ID' : 'ENG'}
-								</span>
-								<ArrowDown
-									className={`fill-current transition-transform w-5 h-5 ${
-										show && 'transform rotate-180'
-									}`}
-								/>
-							</button>
-						</>
+						<button
+							className='md:hidden flex items-center justify-center w-full hover:text-blue py-2 text-lg font-[400]'
+							onClick={onClick}
+						>
+							<Image
+								src='/images/globe.svg'
+								className='block py-2 pr-3'
+								alt='BaseLogo'
+								width={20}
+								height={20}
+								layout='fixed'
+							/>
+							<span className='block pl-2'>{lang === 'id' ? 'ID' : 'EN'}</span>
+							<ArrowDown
+								className={`fill-current transition-transform w-5 h-5 ${
+									show && 'transform rotate-180'
+								}`}
+							/>
+						</button>
 					)}
 				>
-					<ul className='relative md:hidden ml-4'>
+					<ul className='relative transition-all duration-300 flex flex-col justify-center items-center'>
 						{languages.map((language) => (
-							<li key={language.locale} className='text-center font-[400]'>
-								<ActiveLink href='/' locale={language.locale}>
-									<p className='block w-full hover:text-blue py-2 px-4 cursor-pointer text-sm'>
-										{language.title}
-									</p>
-								</ActiveLink>
+							<li key={language.locale} className='text-left font-[400]'>
+								<Link
+									passHref
+									href={`${language.locale}${router.pathname}`}
+									locale={language.locale}
+								>
+									<a className='relative w-fit hover:text-blue py-2 px-4 cursor-pointer text-sm'>
+										{language.title} (
+										{language.locale === 'en' ? 'English' : 'Bahasa Indonesia'})
+									</a>
+								</Link>
 							</li>
 						))}
 					</ul>
 				</Collapse>
-				<div className='group hidden md:flex h-full w-full relative'>
-					<button
-						className={`hidden md:flex h-full items-center justify-between w-full hover:text-blue py-2`}
-					>
-						{lang === 'id' ? 'ID' : 'ENG'}
-						<ArrowDown className='fill-current w-4 h-4' />
-					</button>
-					<ul className='soft-shadow hidden min-w-full absolute top-full group-hover:block py-2'>
-						{languages.map((language) => (
-							<li key={language.locale}>
-								<ActiveLink href='/' locale={language.locale}>
-									<p className='block w-full hover:text-blue py-1 px-3 cursor-pointer'>
-										{language.title}
-									</p>
-								</ActiveLink>
-							</li>
-						))}
-					</ul>
-				</div>
 			</div>
 
 			{/* Section Soscial Media */}

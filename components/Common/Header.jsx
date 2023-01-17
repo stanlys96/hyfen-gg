@@ -48,7 +48,7 @@ function Header({ fixed = true }) {
 					}`}
 				>
 					{/* Section Menu */}
-					<div className='relative mx-auto container'>
+					<div className='relative mx-auto container max-w-7xl'>
 						{/* Container Menu  */}
 						<div className='relative flex justify-between items-center'>
 							{/* Icon App */}

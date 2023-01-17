@@ -7,7 +7,7 @@ import ArrowDown from '../Icons/ArrowDown'
 import Collapse from './Collapse'
 import { SocialMedia } from './modules'
 
-export default function SideDrawer({ open, handleClose, setOpen }) {
+export default function SideDrawer({ open, handleClose }) {
 	const router = useRouter()
 	const menuDrawer = [...menus]
 	const { t, lang } = useTranslation('common')

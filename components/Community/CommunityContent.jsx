@@ -18,7 +18,7 @@ function CommunityContent() {
 						>
 							{/* Section Image */}
 							<Fade right={i % 2 !== 0} left={i % 2 === 0} delay={i * 150}>
-								<div className='relative w-[334px] h-[200px] lg:h-[300px] lg:w-[500px] flex-none'>
+								<div className='relative w-full h-[200px] lg:h-[300px] lg:w-[500px] flex-none'>
 									<Image
 										src={`/images/community/${item.code}.png`}
 										alt={item?.code}

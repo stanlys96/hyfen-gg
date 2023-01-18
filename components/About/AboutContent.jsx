@@ -16,7 +16,7 @@ function AboutContent() {
 						</p>
 					</Fade>
 					<Fade right>
-						<div className='col-span-1 md:col-span-3 text-[16px] tracking-wide flex flex-col gap-2 pr-24'>
+						<div className='col-span-1 md:col-span-3 text-[16px] tracking-wide flex flex-col gap-2 pr-2 lg:pr-24'>
 							<p className='text-white'>{t('About_desc1')}</p>
 							<p className='text-white my-5'>{t('About_desc2')}</p>
 							<p className='text-white'>{t('About_desc3')}</p>

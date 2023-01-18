@@ -44,8 +44,8 @@ export const menus = [
 				id: 1,
 				title: 'Guide Book',
 				link: '#',
-				active: true,
-				withIcon: true,
+				active: false,
+				withIcon: false,
 			},
 			{
 				id: 2,

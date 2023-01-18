@@ -143,7 +143,7 @@ function ContactContent() {
 									userName={userName}
 									imageUrl={data.imageUrl}
 									title={t(data.code)}
-									placeholder=''
+									placeholder={t(data.placeholder)}
 									key={i}
 									thisType={data.type}
 									emailError={emailError}
@@ -168,6 +168,7 @@ function ContactContent() {
 							setTextArea={setTextArea}
 							textArea={textArea}
 							title={t('Message')}
+							placeholder={t('Place Message')}
 							textAreaError={textAreaError}
 							textAreaErrorMessage={textAreaErrorMessage}
 						/>
@@ -330,6 +331,7 @@ function InputTextArea({
 	title,
 	textArea,
 	setTextArea,
+	placeholder,
 	textAreaError,
 	textAreaErrorMessage,
 }) {
@@ -346,6 +348,7 @@ function InputTextArea({
 							value={textArea}
 							name='message'
 							rows='6'
+							placeholder={placeholder}
 							className='
                             block
                             w-full

@@ -8,12 +8,15 @@
     "Sales Inquiry": "Sales Inquiry",
     "Sales Inquiry-desc": "Contact our sales experts to get answers to all your questions about Hyfen and how to work with us.",
     "Your Name": "Your Name*",
+    "Place Name": "Write your full name here",
     "Email Address": "Email Address*",
+    "Place Email": "Write your email here",
     "Your Inquiry": "Your Inquiry",
+    "Message": "Message*",
+    "Place Message": "Write message here",
     "General Inquiry": "General Inquiry",
     "Partnership": "Partnership",
     "Sales": "Sales",
     "Guild Onboard": "Guild Onboard",
-    "Message": "Message*",
     "Send Message": "Send Message"
 }

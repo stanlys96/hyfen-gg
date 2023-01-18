@@ -64,7 +64,7 @@ export default function Jumbotron() {
 					</Fade>
 
 					{/*Animation Scroll when dekstop*/}
-					<div className='hidden relative md:block mt-10'>
+					<div className='relative block mt-10'>
 						<ScrollDown className='relative' />
 					</div>
 				</div>
@@ -72,7 +72,7 @@ export default function Jumbotron() {
 				{/* Image Content */}
 				<Fade right delay={100}>
 					{/* Image */}
-					<div className='relative lg:max-h-fit md:mt-4 h-[450px] md:h-[750px] w-full'>
+					<div className='relative -mt-4 lg:max-h-fit md:mt-4 h-[450px] md:h-[750px] w-full'>
 						<Image
 							priority
 							src='/images/home/home-bg-img.png'
@@ -80,11 +80,6 @@ export default function Jumbotron() {
 							layout='fill'
 							objectFit='cover'
 						/>
-					</div>
-
-					{/*Animation Scroll when mobile*/}
-					<div className='relative block -mt-10 md:hidden'>
-						<ScrollDown className='relative' />
 					</div>
 				</Fade>
 			</div>

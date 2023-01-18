@@ -16,15 +16,18 @@ export default function ButtonLanguage({ lang, languages }) {
 				</div>
 
 				<div className='absolute py-2 top-full group-hover:block hidden'>
-					<ul className='relative grid gap-2 bg-white px-4 rounded-lg text-black-100 soft-shadow w-36 py-2'>
+					<ul className='relative grid gap-2 bg-white rounded-lg text-black-100 soft-shadow w-36 py-2'>
 						{languages.map((language) => (
-							<li key={language.locale} className='relative w-full'>
+							<li
+								key={language.locale}
+								className='relative w-full px-4 py-1.5 text-gray-700 hover:bg-gray-100'
+							>
 								<Link
 									passHref
 									href={`${language.locale}${router.pathname}`}
 									locale={language.locale}
 								>
-									<p className='flex font-[700] w-full hover:text-blue py-1 cursor-pointer'>
+									<p className='flex font-[700] w-full  cursor-pointer'>
 										{language.title} (
 										{language.locale === 'en' ? 'English' : 'Indonesia'})
 									</p>

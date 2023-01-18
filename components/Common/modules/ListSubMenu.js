@@ -13,7 +13,7 @@ export default function ListSubMenu({ submenu, t }) {
 			<Link passHref href={submenu.link}>
 				<a
 					className={`${
-						submenu.active ? '' : 'text-black-50 cursor-default'
+						submenu.active ? '' : 'text-black-50 cursor-not-allowed'
 					} font-bold flex items-center`}
 				>
 					<p className='inline-block mr-2'>{t(submenu.title)}</p>

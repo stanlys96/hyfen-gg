@@ -3,6 +3,7 @@ import useTranslation from 'next-translate/useTranslation'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Fade } from 'react-reveal'
+import ScrollDown from 'components/Common/ScrollDown'
 
 function HeroCommunity() {
 	const { t } = useTranslation('community')
@@ -31,7 +32,7 @@ function HeroCommunity() {
 			</div>
 
 			{/* Description and Icon Sosmed Section */}
-			<div className='absolute top-[200px] md:top-[40%] flex flex-col justify-center items-center w-full h-fit'>
+			<div className='absolute top-[0] md:top-24 translate-y-[50%] md:translate-y-[100%] flex flex-col justify-center items-center w-full h-fit'>
 				{/* <Fade top> */}
 				<h1 className='text-[32px] md:text-[48px] font-bold text-center w-[280px] leading-[41px] md:leading-relaxed md:w-fit'>
 					{t('Home Gamers')}
@@ -61,6 +62,10 @@ function HeroCommunity() {
 							</div>
 						</Fade>
 					))}
+				</div>
+
+				<div className='relative mt-24'>
+					<ScrollDown />
 				</div>
 			</div>
 		</div>

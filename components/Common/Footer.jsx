@@ -6,7 +6,6 @@ import { Fade } from 'react-reveal'
 import { SocialMedia } from './modules'
 
 const Footer = ({ bgColor }) => {
-	// 'Home', 'Player', 'Guild', 'Terms and Conditions', 'Privacy Policy', 'Contact'
 	const listMenu = [
 		{
 			title: 'Home',
@@ -39,7 +38,7 @@ const Footer = ({ bgColor }) => {
 	return (
 		<footer className={`border-t border-slate-500 pt-10 pb-12 ${bgColor}`}>
 			<Fade>
-				<div className='container mx-auto'>
+				<div className='relative container mx-auto max-w-7xl p-0'>
 					<div className='grid grid-cols-4 gap-4 lg:gap-6'>
 						{/* Company Logo */}
 						<div className='col-span-4 lg:col-span-2 order-1 lg:order-1'>
@@ -84,24 +83,23 @@ const Footer = ({ bgColor }) => {
 
 						{/* Links */}
 						<div className='relative col-span-4 lg:col-span-2 order-2 lg:order-4 mb-8'>
-							<div className='relative flex justify-center lg:justify-start flex-wrap lg:pr-32'>
-								{listMenu.map((item, index) => (
+							<div className='relative flex flex-wrap gap-x-3 gap-y-6 divide-x items-center justify-center lg:justify-start lg:pr-24 w-full xl:w-4/5'>
+								{listMenu.map((item) => (
 									<Link href={item.link} key={item.link}>
 										<a
 											className={[
-												'relative w-fit flex justify-between items-center gap-3 pl-2 last:gap-0 text-[14px] text-center tracking-wide py-2.5 lg:py-1.5 first:pl-0 last:pr-0',
-												index === listMenu.length - 2 && 'lg:pl-0',
+												'relative h-2 w-fit flex justify-between items-center gap-3 last:gap-0 text-[14px] text-center tracking-wide first:pl-0 pl-3 last:pr-0',
 												router.pathname === item.link
 													? 'text-white font-[700]'
 													: 'text-white/50 font-[400]',
 											].join(' ')}
 										>
 											{t(item.title)}
-											{item.link !== '/contact' && (
+											{/* {item.link !== '/terms-and-conditions' && (
 												<p className='text-[12px] text-white/50 font-extralight'>
 													|
 												</p>
-											)}
+											)} */}
 										</a>
 									</Link>
 								))}

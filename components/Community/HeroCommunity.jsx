@@ -3,7 +3,7 @@ import useTranslation from 'next-translate/useTranslation'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Fade } from 'react-reveal'
-import ScrollDown from 'components/Common/ScrollDown'
+import ScrollDown from '../Common/ScrollDown'
 
 function HeroCommunity() {
 	const { t } = useTranslation('community')

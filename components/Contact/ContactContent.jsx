@@ -247,15 +247,16 @@ function InputTextWithIcon({
 		<div>
 			<p className='mb-3'>{title}</p>
 			<div className='relative flex items-center'>
-				<img
-					src={imageUrl}
-					className='absolute w-5 h-5 ml-3'
-					width='24px'
-					height='24px'
-					alt='BaseLogo'
-					layout='intrinsic'
-					quality={100}
-				/>
+				<span className='absolute left-3 top-2'>
+					<Image
+						src={imageUrl}
+						width={24}
+						height={24}
+						alt='BaseLogo'
+						layout='intrinsic'
+						quality={100}
+					/>
+				</span>
 				<input
 					onChange={(e) => {
 						if (thisType === 'email') {

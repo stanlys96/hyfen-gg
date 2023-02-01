@@ -5,7 +5,7 @@ import AboutContent from './AboutContent'
 export default function About() {
 	return (
 		<div className='relative w-full h-full overflow-hidden'>
-			<div className='hero-about'>
+			<div className='relative'>
 				<HeroAbout />
 			</div>
 			<AboutContent />

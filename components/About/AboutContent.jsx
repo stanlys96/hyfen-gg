@@ -7,7 +7,7 @@ import { Fade } from 'react-reveal'
 function AboutContent() {
 	const { t } = useTranslation('about')
 	return (
-		<div className='about-content py-24'>
+		<div className='about-content pt-12 xl:pt-24'>
 			<div className='container mx-auto'>
 				<div className='grid grid-cols-1 md:grid-cols-4'>
 					<Fade left>

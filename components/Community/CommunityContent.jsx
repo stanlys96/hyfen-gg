@@ -6,7 +6,7 @@ import { communityData } from '../../mock/community'
 function CommunityContent() {
 	const { t } = useTranslation('community')
 	return (
-		<div className='relative bg-app-bg_app h-full py-24'>
+		<div className='relative bg-app-bg_app h-full pt-4 xl:pt-12 pb-14'>
 			{/* Container */}
 			<div className='relative mx-auto container max-w-7xl '>
 				{/* Section Content  */}

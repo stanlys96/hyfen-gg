@@ -8,13 +8,13 @@ function HeroHyfenTools() {
 	const { t } = useTranslation('hyfen-tools')
 	return (
 		<div className='relative container mx-auto max-w-7xl pt-24 md:pt-10 px-0'>
-			<div className='relative overflow-hidden flex flex-col md:flex-row md:items-center'>
+			<div className='relative overflow-hidden grid grid-cols-2 place-items-center'>
 				{/* Description */}
-				<div className='relative m-0 p-0'>
+				<div className='relative m-0 p-0 mt-10'>
 					<div className='relative'>
 						<Fade top>
 							<Heading1 text={'Hyfen Tools'} addClass='hyfen-play-gradient' />
-							<h2 className='mt-3 text-[22px] lg:text-[36px] leading-[28px] lg:leading-[46px] lg:w-2/3 tracking-wide text-center lg:text-left font-bold'>
+							<h2 className='mt-3 text-[22px] lg:text-[36px] leading-[28px] lg:leading-[46px] lg:w-[85%] tracking-wide text-center lg:text-left font-bold'>
 								{t('Manage Guild')}
 							</h2>
 						</Fade>
@@ -42,7 +42,7 @@ function HeroHyfenTools() {
 				</div>
 				{/* Image */}
 				<Fade right delay={200}>
-					<div className='relative mt-10 md:mt-0 lg:w-1/2 max-w-[1440px] h-56 md:h-[600px] flex flex-col'>
+					<div className='relative mt-24 h-[300px] md:h-[400px] w-[1440px] max-w-full'>
 						<div className='relative h-full w-full'>
 							<Image
 								src='/images/hyfen-tools/hyfen-tools-img.svg'

@@ -37,14 +37,14 @@ export const menus = [
 	},
 	{
 		id: 3,
-		title: 'Resources',
-		link: '/guilds',
+		title: 'Company',
+		link: '/company',
 		submenu: [
 			{
 				id: 1,
-				title: 'Guide Book',
-				link: '#',
-				active: false,
+				title: 'About Us',
+				link: '/about',
+				active: true,
 				withIcon: false,
 			},
 			{
@@ -56,9 +56,9 @@ export const menus = [
 			},
 			{
 				id: 3,
-				title: 'Tutorial Videos',
-				link: '#',
-				active: false,
+				title: 'Community',
+				link: '/community',
+				active: true,
 				withIcon: false,
 			},
 			{
@@ -75,6 +75,29 @@ export const menus = [
 		id: 4,
 		title: 'Support',
 		link: '/contact',
+		submenu: [
+			{
+				id: 1,
+				title: 'Guide Book',
+				link: '#',
+				active: false,
+				withIcon: false,
+			},
+			{
+				id: 2,
+				title: 'Tutorial Videos',
+				link: '#',
+				active: false,
+				withIcon: false,
+			},
+			{
+				id: 3,
+				title: 'Contact Us',
+				link: '/contact',
+				active: true,
+				withIcon: false,
+			},
+		],
 		disable: false,
 	},
 ]

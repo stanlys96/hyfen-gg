@@ -83,7 +83,7 @@ const Footer = ({ bgColor }) => {
 
 						{/* Links */}
 						<div className='relative col-span-4 lg:col-span-2 order-2 lg:order-4 mb-8'>
-							<div className='relative flex flex-wrap gap-x-3 gap-y-6 divide-x items-center justify-center lg:justify-start lg:pr-24 w-full xl:w-4/5'>
+							<div className='relative flex flex-wrap gap-x-3 gap-y-6 divide-x items-center justify-center px-4 lg:px-0 lg:justify-start lg:pr-24 w-full xl:w-4/5'>
 								{listMenu.map((item) => (
 									<Link href={item.link} key={item.link}>
 										<a
@@ -95,11 +95,6 @@ const Footer = ({ bgColor }) => {
 											].join(' ')}
 										>
 											{t(item.title)}
-											{/* {item.link !== '/terms-and-conditions' && (
-												<p className='text-[12px] text-white/50 font-extralight'>
-													|
-												</p>
-											)} */}
 										</a>
 									</Link>
 								))}

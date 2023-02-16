@@ -8,7 +8,7 @@ function HeroHyfenTools() {
 	const { t } = useTranslation('hyfen-tools')
 	return (
 		<div className='relative container mx-auto max-w-7xl pt-24 md:pt-10 px-0'>
-			<div className='relative overflow-hidden grid grid-cols-2 place-items-center'>
+			<div className='relative overflow-hidden grid grid-cols-1 lg:grid-cols-2 place-items-center'>
 				{/* Description */}
 				<div className='relative m-0 p-0 mt-10'>
 					<div className='relative'>
@@ -42,7 +42,7 @@ function HeroHyfenTools() {
 				</div>
 				{/* Image */}
 				<Fade right delay={200}>
-					<div className='relative mt-24 h-[300px] md:h-[400px] w-[1440px] max-w-full'>
+					<div className='relative lg:mt-24 lg:px-0 h-[300px] md:h-[400px] w-[1440px] max-w-full px-8'>
 						<div className='relative h-full w-full'>
 							<Image
 								src='/images/hyfen-tools/hyfen-tools-img.svg'

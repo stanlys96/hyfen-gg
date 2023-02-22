@@ -83,12 +83,18 @@ const Footer = ({ bgColor }) => {
 
 						{/* Links */}
 						<div className='relative col-span-4 lg:col-span-2 order-2 lg:order-4 mb-8'>
-							<div className='relative flex flex-wrap gap-x-3 gap-y-6 divide-x items-center justify-center px-4 lg:px-0 lg:justify-start lg:pr-24 w-full xl:w-4/5'>
+							<div className='relative flex flex-wrap gap-x-2 gap-y-6  items-center justify-center px-4 lg:px-0 lg:justify-start lg:pr-20 w-full xl:w-4/5'>
 								{listMenu.map((item) => (
 									<Link href={item.link} key={item.link}>
 										<a
 											className={[
-												'relative h-2 w-fit flex justify-between items-center gap-3 last:gap-0 text-[14px] text-center tracking-wide first:pl-0 pl-3 last:pr-0',
+												'relative h-2.5 w-fit flex justify-between items-center gap-3 last:gap-0 text-[14px] text-center tracking-wide first:pl-0 pr-2 last:border-none last:pr-0',
+												item.link === '/terms-and-conditions'
+													? 'lg:border-none'
+													: 'border-r',
+												item.link === '/community'
+													? 'border-transparent lg:border-white/50'
+													: 'border-r',
 												router.pathname === item.link
 													? 'text-white font-[700]'
 													: 'text-white/50 font-[400]',

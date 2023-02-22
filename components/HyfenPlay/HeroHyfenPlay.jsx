@@ -12,7 +12,7 @@ function HeroHyfenPlay() {
 			{/* Container Content */}
 			<div className='relative grid place-items-center grid-cols-1 gap-4 lg:grid-cols-2'>
 				{/* Heading, Description, and Button Download */}
-				<div className='relative grid place-items-center justify-items-center md:place-items-start'>
+				<div className='relative grid place-items-center justify-items-center md:place-items-start md:-mt-16'>
 					{/* Heading */}
 					<Fade top>
 						<h1 className='text-[40px] leading-[51px] md:text-[80px] md:leading-[104px] text-center  lg:text-left font-bold hyfen-play-gradient'>

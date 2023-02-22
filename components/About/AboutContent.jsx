@@ -3,6 +3,7 @@ import useTranslation from 'next-translate/useTranslation'
 import Image from 'next/image'
 import { investorsData } from '../../mock/about'
 import { Fade } from 'react-reveal'
+import Link from 'next/link'
 
 function AboutContent() {
 	const { t } = useTranslation('about')
@@ -32,17 +33,23 @@ function AboutContent() {
 					<div className='col-span-1 md:col-span-3 grid grid-cols-2 md:grid-cols-3 gap-6 mt-[52px] lg:-mt-6'>
 						{investorsData.map((data, index) => (
 							<Fade key={index} top delay={index !== 0 ? index * 200 : 0}>
-								<div className='investor-img-container flex justify-center cursor-pointer'>
-									<Image
-										src={`/images/${data.imageUrl}`}
-										className='ml-5'
-										width={231}
-										height={128}
-										alt={`${data.title}`}
-										layout='intrinsic'
-										quality={100}
-									/>
-								</div>
+								<Link href={data.link} passHref>
+									<a
+										target='_blank'
+										rel='noreferrer'
+										className='investor-img-container flex justify-center cursor-pointer'
+									>
+										<Image
+											src={`/images/${data.imageUrl}`}
+											className='ml-5'
+											width={231}
+											height={128}
+											alt={`${data.title}`}
+											layout='intrinsic'
+											quality={100}
+										/>
+									</a>
+								</Link>
 							</Fade>
 						))}
 					</div>

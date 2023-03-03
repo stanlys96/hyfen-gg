@@ -19,13 +19,13 @@ const SliderFeatureTabItem = ({
 		>
 			<h2
 				className={`text-[24px] font-bold transition-all duration-300 mb-3 hover:text-white ${
-					active ? 'text-white' : 'text-white/80'
+					active ? 'text-white' : 'text-white/40'
 				}`}
 			>
 				{t(title)}
 			</h2>
 			<Collapse isOpen={active}>
-				<p className='text-[14px] lg:text-[20px] text-white/60'>
+				<p className='text-[14px] lg:text-[20px] text-white/40'>
 					{t(description)}
 				</p>
 			</Collapse>

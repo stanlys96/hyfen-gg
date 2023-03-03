@@ -120,6 +120,7 @@ const SilderFeature = ({
 					className={[
 						'relative md:-mt-32 max-h-full transition-all duration-300',
 						router.pathname === '/hyfen-tools' ? '-mt-14 pb-0' : 'mt-5',
+						router.pathname === '/hyfen-pay' ? '-mt-14 pb-0' : 'mt-5',
 					].join(' ')}
 				>
 					<Fade right>
@@ -146,12 +147,13 @@ const SilderFeature = ({
 											'text-center relative px-[28px]',
 											router.pathname === '/hyfen-play' && 'mt-12',
 											router.pathname === '/hyfen-tools' && '-mt-6',
+											router.pathname === '/hyfen-pay' && '-mt-6',
 										].join(' ')}
 									>
 										<h5 className='text-[24px] text-white font-bold mb-2 md:hidden'>
 											{t(item.code)}
 										</h5>
-										<p className='text-[14px] md:text-[20px] text-gray-300 md:hidden'>
+										<p className='text-[14px] md:text-[20px] text-white/50 md:hidden'>
 											{t(item.code + '-desc')}
 										</p>
 									</div>

@@ -12,12 +12,13 @@ module.exports = {
 		'/contact': ['contact'],
 		'/hyfen-play': ['hyfen-play'],
 		'/hyfen-tools': ['hyfen-tools'],
+		'/hyfen-pay': ['hyfen-pay'],
 		'/privacy-policy': ['privacy-policy'],
-		'/terms-and-conditions': ['terms-and-conditions']
+		'/terms-and-conditions': ['terms-and-conditions'],
 	},
 	loadLocaleFrom: (lang, ns) =>
 		import(`./locales/${lang}/${ns}.json`).then((m) => m.default),
-	
-		// You can use a dynamic import, fetch, whatever. You should
-		// return a Promise with the JSON file.
+
+	// You can use a dynamic import, fetch, whatever. You should
+	// return a Promise with the JSON file.
 }

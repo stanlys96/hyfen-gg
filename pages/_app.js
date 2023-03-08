@@ -129,6 +129,20 @@ function MyApp({ Component, pageProps }) {
 					});`,
 				}}
 			/>
+			<Script async strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-VF14GL84KB" />
+
+			<Script id='google-analytics-2' strategy='afterInteractive' dangerouslySetInnerHTML={{
+				__html: `
+				window.dataLayer = window.dataLayer || [];
+				function gtag(){
+				dataLayer.push(arguments);
+				}
+				gtag('js', new Date());
+			
+				gtag('config', 'G-VF14GL84KB');
+				`
+			}} />
+
 			{/* End Google Analytic */}
 
 			<Layout>

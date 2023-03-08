@@ -21,8 +21,13 @@ export default function DescriptionSection() {
 					{t('Tailor-desc')}
 				</p>
 
-				<Link href={'#'}>
-					<a className='font-semibold flex items-center gap-3 text-white'>
+				<Link
+					href={'https://documenter.getpostman.com/view/5252073/2s93CHtZwb'}
+				>
+					<a
+						target={'_blank'}
+						className='font-semibold flex items-center gap-3 text-white'
+					>
 						<p className='border-b pb-0.5 border-white'>{t('Read')}</p>
 						<span>
 							<ArrowRight className='h-4' />
@@ -40,6 +45,7 @@ export default function DescriptionSection() {
 							alt='tailor1'
 							layout='fill'
 							objectFit='contain'
+							priority
 						/>
 					</div>
 					<div className='relative w-[153px] h-[201px] lg:w-[319px] lg:h-[420px] transition-all duration-300'>

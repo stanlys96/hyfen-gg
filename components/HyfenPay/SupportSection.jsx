@@ -71,7 +71,7 @@ export default function SupportSection() {
 					</div>
 
 					<div>
-						<button className='bg-white text-black-100 px-6 py-2 rounded-full'>
+						<button className='bg-white font-semibold text-black-100 px-6 py-2 rounded-full'>
 							{t('Contact-btn')}
 						</button>
 					</div>

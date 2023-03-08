@@ -7,6 +7,7 @@ import { pointSales } from '../../mock/hyfen-pay'
 
 export default function PointSalesSection() {
 	const { t } = useTranslation('hyfen-pay')
+
 	return (
 		<Section size='lg'>
 			<div className='container mx-auto max-w-7xl relative lg:-mt-14'>

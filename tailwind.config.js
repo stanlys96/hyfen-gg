@@ -22,6 +22,7 @@ module.exports = {
 			},
 		},
 		extend: {
+			backgroundColor: ['even', 'odd'],
 			fontFamily: {
 				sans: "'DM Sans', sans-serif",
 			},
@@ -91,7 +92,5 @@ module.exports = {
 			},
 		},
 	},
-	plugins: [
-		require('@tailwindcss/forms'),
-	],
+	plugins: [require('@tailwindcss/forms')],
 }

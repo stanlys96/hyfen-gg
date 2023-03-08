@@ -15,19 +15,19 @@ export const pointSales = [
 
 export const poweringFeature = [
 	{
-		images: '/images/hyfen-pay/manage.png',
+		images: '/images/hyfen-pay/powering1.png',
 		code: 'Powering1',
 	},
 	{
-		images: '/images/hyfen-pay/manage.png',
+		images: '/images/hyfen-pay/powering2.png',
 		code: 'Powering2',
 	},
 	{
-		images: '/images/hyfen-pay/manage.png',
+		images: '/images/hyfen-pay/powering3.png',
 		code: 'Powering3',
 	},
 	{
-		images: '/images/hyfen-pay/manage.png',
+		images: '/images/hyfen-pay/powering4.png',
 		code: 'Powering4',
 	},
 ]

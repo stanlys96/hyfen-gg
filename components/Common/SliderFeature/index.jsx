@@ -129,16 +129,36 @@ const SilderFeature = ({
 								<div className='relative' key={item?.code}>
 									<div
 										className={[
-											'h-[400px] max-h-full md:mt-10 md:h-[550px] duration-500',
+											'transition-all duration-500',
+											// router.pathname !== '/hyfen-pay' &&
+											// 	'h-[400px] max-h-full md:mt-10 md:h-[550px] ',
+
+											router.pathname === '/hyfen-pay' &&
+												'pt-2 mt-4 mb-8 lg:mt-0 lg:mb-0',
 											i === activeSlide ? 'translate-y-0' : 'translate-y-20',
 										].join(' ')}
 									>
 										<Image
 											src={item?.images}
 											alt={item?.code}
-											layout='fill'
+											width={
+												router.pathname === '/hyfen-play'
+													? 600
+													: router.pathname === '/hyfen-tools'
+													? 700
+													: router.pathname === '/hyfen-pay'
+													? 600
+													: 600
+											}
+											height={
+												router.pathname === '/hyfen-play'
+													? 600
+													: router.pathname === '/hyfen-tools'
+													? 550
+													: 650
+											}
 											quality={100}
-											objectFit='contain'
+											objectFit='cover'
 											priority
 										/>
 									</div>

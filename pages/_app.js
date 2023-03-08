@@ -16,6 +16,7 @@ function MyApp({ Component, pageProps }) {
 					name='google-site-verification'
 					content='mVszz2-mmGwWyDhkCadd5hADpUOs5VbtrFWRpSZbCK4'
 				/>
+				<meta name="google-site-verification" content="6gh6MuLQ6YYR-BDvTIyJutD86QkjCU295Cn3N4iyUPA" />
 				<link
 					rel='apple-touch-icon'
 					sizes='57x57'

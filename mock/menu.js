@@ -49,7 +49,7 @@ export const menus = [
 			},
 			{
 				id: 2,
-				title: 'White Paper',
+				title: 'Whitepaper',
 				link: '#',
 				active: false,
 				withIcon: false,
